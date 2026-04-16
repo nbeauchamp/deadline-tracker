@@ -3,161 +3,403 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Trade Deadline Win Total Tracker</title>
+<title>Twins Trade Deadline Tracker — 2026</title>
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f7f4; color: #1a1a18; padding: 2rem; }
-  h1 { font-size: 20px; font-weight: 500; margin-bottom: 0.25rem; color: #1a1a18; }
-  .subtitle { font-size: 13px; color: #888; margin-bottom: 1.5rem; }
-  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 1rem; font-size: 13px; color: #666; }
-  .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 4px; }
-  .filter-bar { display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
-  .filter-btn { font-size: 12px; padding: 4px 12px; border-radius: 8px; border: 0.5px solid #ccc; background: transparent; color: #666; cursor: pointer; }
-  .filter-btn.active { background: #eee; color: #1a1a18; border-color: #aaa; font-weight: 500; }
-  .tooltip { position: absolute; background: #fff; border: 0.5px solid #ccc; border-radius: 8px; padding: 10px 14px; font-size: 12px; pointer-events: none; display: none; z-index: 10; min-width: 180px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-  .tooltip .t-name { font-weight: 500; font-size: 13px; color: #1a1a18; margin-bottom: 4px; }
-  .tooltip .t-row { display: flex; justify-content: space-between; gap: 16px; color: #888; margin: 2px 0; }
-  .tooltip .t-val { color: #1a1a18; font-weight: 500; }
-  .tooltip .t-tag { margin-top: 6px; font-size: 11px; padding: 2px 8px; border-radius: 4px; display: inline-block; }
-  .seller-tag { background: #FAECE7; color: #993C1D; }
-  .buyer-tag { background: #EAF3DE; color: #3B6D11; }
-  .fringe-tag { background: #FAEEDA; color: #854F0B; }
-  .twins-tag { background: #E6F1FB; color: #185FA5; }
-  .note { font-size: 12px; color: #888; margin-top: 0.5rem; }
-  .chart-wrap { position: relative; width: 100%; height: 520px; }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:#f5f4f0;color:#1a1a18;min-height:100vh}
+a{color:inherit;text-decoration:none}
+
+/* ── Header ── */
+.header{background:#1a2744;color:#fff;padding:1.25rem 2rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+.header-left h1{font-size:18px;font-weight:500;letter-spacing:-.2px}
+.header-left p{font-size:12px;color:rgba(255,255,255,.55);margin-top:2px}
+.countdown-box{display:flex;align-items:center;gap:12px}
+.countdown-item{text-align:center}
+.countdown-num{font-size:26px;font-weight:500;line-height:1;color:#fff}
+.countdown-label{font-size:10px;color:rgba(255,255,255,.45);text-transform:uppercase;letter-spacing:.5px}
+.countdown-sep{font-size:20px;color:rgba(255,255,255,.3);margin-top:-4px}
+.deadline-tag{font-size:11px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);border-radius:6px;padding:4px 10px;color:rgba(255,255,255,.7)}
+
+/* ── Layout ── */
+.main{display:grid;grid-template-columns:1fr 340px;gap:0;min-height:calc(100vh - 68px)}
+.chart-section{padding:1.5rem 2rem;border-right:1px solid #e0ddd5}
+.panel-section{background:#fff;padding:1.25rem 1.5rem;overflow-y:auto;max-height:calc(100vh - 68px);position:sticky;top:0}
+
+/* ── Controls ── */
+.controls{display:flex;align-items:center;gap:8px;margin-bottom:1rem;flex-wrap:wrap}
+.filter-btn{font-size:12px;padding:5px 14px;border-radius:20px;border:1px solid #ccc;background:#fff;color:#666;cursor:pointer;transition:all .15s}
+.filter-btn:hover{border-color:#888;color:#1a1a18}
+.filter-btn.active{background:#1a2744;border-color:#1a2744;color:#fff}
+.toggle-group{display:flex;border:1px solid #ccc;border-radius:20px;overflow:hidden;margin-left:auto}
+.toggle-btn{font-size:12px;padding:5px 14px;border:none;background:#fff;color:#666;cursor:pointer;transition:all .15s}
+.toggle-btn:hover{background:#f0ede8}
+.toggle-btn.active{background:#1a2744;color:#fff}
+.toggle-btn+.toggle-btn{border-left:1px solid #ccc}
+
+/* ── Chart ── */
+.chart-wrap{position:relative;width:100%;height:480px}
+.chart-note{font-size:11px;color:#999;margin-top:.5rem}
+
+/* ── Legend ── */
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin:.75rem 0;font-size:12px;color:#666}
+.legend-item{display:flex;align-items:center;gap:5px}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* ── Tooltip ── */
+.chart-tooltip{position:absolute;background:#fff;border:1px solid #ddd;border-radius:10px;padding:12px 14px;font-size:12px;pointer-events:none;display:none;z-index:20;min-width:190px;box-shadow:0 4px 16px rgba(0,0,0,.1)}
+.chart-tooltip .tt-name{font-weight:600;font-size:13px;margin-bottom:6px;color:#1a1a18}
+.chart-tooltip .tt-row{display:flex;justify-content:space-between;gap:16px;margin:2px 0;color:#888}
+.chart-tooltip .tt-val{color:#1a1a18;font-weight:500}
+.chart-tooltip .tt-tag{margin-top:8px;font-size:11px;padding:3px 10px;border-radius:5px;display:inline-block}
+.chart-tooltip .tt-targets{margin-top:8px;padding-top:8px;border-top:1px solid #eee}
+.chart-tooltip .tt-targets-label{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#aaa;margin-bottom:4px}
+.chart-tooltip .tt-pitcher{font-size:11px;color:#1a2744;margin:2px 0;display:flex;align-items:center;gap:4px}
+.chart-tooltip .tt-view{font-size:10px;color:#1a2744;margin-top:6px;cursor:pointer;text-decoration:underline}
+
+/* ── Panel ── */
+.panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid #eee}
+.panel-title{font-size:14px;font-weight:600;color:#1a1a18}
+.panel-empty{text-align:center;padding:3rem 1rem;color:#aaa;font-size:13px}
+.panel-empty-icon{font-size:32px;margin-bottom:.75rem}
+.panel-team-header{margin-bottom:.75rem}
+.panel-team-name{font-size:16px;font-weight:600;color:#1a1a18}
+.panel-team-meta{font-size:12px;color:#888;margin-top:2px}
+.panel-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:4px;margin-top:4px}
+.panel-seller-tag{background:#fde8d8;color:#8b3a1a}
+.panel-fringe-tag{background:#fef3d0;color:#7a5200}
+.panel-buyer-tag{background:#dff0d8;color:#2d6a1f}
+.panel-twins-tag{background:#dce8f8;color:#1a3d7a}
+
+.pitcher-card{border:1px solid #eee;border-radius:8px;padding:.75rem 1rem;margin-bottom:.625rem;cursor:pointer;transition:all .15s;background:#fff}
+.pitcher-card:hover{border-color:#b0c4de;background:#f8fafd}
+.pitcher-card.expanded{border-color:#1a2744;background:#f8fafd}
+.pitcher-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
+.pitcher-name{font-size:13px;font-weight:600;color:#1a1a18}
+.pitcher-rank{font-size:10px;color:#aaa;margin-top:1px}
+.pitcher-flags{display:flex;gap:4px;align-items:center}
+.flag-char{font-size:13px;font-weight:600}
+.flag-plus{color:#2d7a2d}
+.flag-minus{color:#c0392b}
+.flag-neutral{color:#aaa}
+.pitcher-archetype{font-size:11px;color:#666;margin-top:3px}
+.pitcher-priority{font-size:10px;padding:2px 7px;border-radius:4px;white-space:nowrap}
+.pri-t2{background:#d9ead3;color:#2d5a1f}
+.pri-t3{background:#cfe2f3;color:#1a3d7a}
+.pri-t4{background:#f3f3f3;color:#666}
+
+.pitcher-detail{margin-top:.625rem;padding-top:.625rem;border-top:1px solid #f0ede8;display:none;font-size:11px;color:#555;line-height:1.5}
+.pitcher-card.expanded .pitcher-detail{display:block}
+.detail-label{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#aaa;margin-top:.5rem;margin-bottom:2px}
+.detail-label:first-child{margin-top:0}
+.health-flag{display:flex;gap:5px;align-items:flex-start}
+.health-icon{font-size:11px;flex-shrink:0;margin-top:1px}
+
+/* ── Targets Table ── */
+.table-section{padding:1.5rem 2rem;border-top:1px solid #e0ddd5;background:#fff}
+.section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1rem;flex-wrap:wrap;gap:8px}
+.section-title{font-size:15px;font-weight:600;color:#1a1a18}
+.section-subtitle{font-size:12px;color:#999;margin-top:2px}
+.table-controls{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.search-input{font-size:12px;padding:5px 10px;border:1px solid #ddd;border-radius:6px;outline:none;width:160px}
+.search-input:focus{border-color:#1a2744}
+.tier-filter{font-size:12px;padding:5px 10px;border:1px solid #ddd;border-radius:6px;background:#fff;outline:none;cursor:pointer}
+
+.targets-table{width:100%;border-collapse:collapse;font-size:12px}
+.targets-table th{text-align:left;padding:8px 10px;border-bottom:2px solid #e0ddd5;font-size:11px;font-weight:600;color:#888;text-transform:uppercase;letter-spacing:.3px;cursor:pointer;user-select:none;white-space:nowrap}
+.targets-table th:hover{color:#1a1a18}
+.targets-table th .sort-arrow{margin-left:3px;opacity:.4}
+.targets-table th.sorted .sort-arrow{opacity:1}
+.targets-table td{padding:8px 10px;border-bottom:1px solid #f0ede8;vertical-align:top;line-height:1.4}
+.targets-table tr:hover td{background:#f8fafd}
+.targets-table tr.row-t2 td{background:#f6fbf4}
+.targets-table tr.row-t2:hover td{background:#edf7ea}
+.targets-table tr.row-t3 td{background:#f6f9fd}
+.targets-table tr.row-t3:hover td{background:#edf3fb}
+.td-name{font-weight:600;color:#1a1a18;white-space:nowrap}
+.td-team{font-size:11px;font-weight:600;color:#fff;background:#1a2744;border-radius:4px;padding:1px 6px;display:inline-block;white-space:nowrap}
+.td-rank{color:#888;text-align:center}
+.td-flags{font-family:monospace;letter-spacing:1px;white-space:nowrap}
+.td-archetype{color:#555;max-width:220px}
+.td-health{color:#555;max-width:200px;font-size:11px}
+.health-ok{color:#2d7a2d}
+.health-warn{color:#b8820a}
+.health-risk{color:#c0392b}
+.td-seller{font-size:11px;white-space:nowrap}
+.seller-label{display:inline-block;padding:1px 7px;border-radius:4px;font-size:10px}
+.seller-tag{background:#fde8d8;color:#8b3a1a}
+.fringe-tag-sm{background:#fef3d0;color:#7a5200}
+
+/* ── Color tags ── */
+.tc-seller{background:#fde8d8;color:#8b3a1a}
+.tc-fringe{background:#fef3d0;color:#7a5200}
+.tc-buyer{background:#dff0d8;color:#2d6a1f}
+.tc-twins{background:#dce8f8;color:#1a3d7a}
+
+/* ── Responsive ── */
+@media(max-width:900px){
+  .main{grid-template-columns:1fr}
+  .panel-section{display:none}
+  .table-section{padding:1rem}
+}
 </style>
 </head>
 <body>
 
-<h1>Trade Deadline Win Total Tracker</h1>
-<p class="subtitle">Projected wins vs. playoff odds — deadline buyer/seller landscape as of April 16, 2026</p>
-
-<div class="filter-bar" id="filters">
-  <button class="filter-btn active" data-filter="all">All teams</button>
-  <button class="filter-btn" data-filter="seller">Likely sellers</button>
-  <button class="filter-btn" data-filter="fringe">Fringe</button>
-  <button class="filter-btn" data-filter="buyer">Likely buyers</button>
-</div>
-
-<div style="position: relative;">
-  <div class="chart-wrap">
-    <canvas id="scatter" role="img" aria-label="Scatter plot of projected wins vs playoff odds change, colored by deadline behavior.">Team projections scatter plot.</canvas>
+<div class="header">
+  <div class="header-left">
+    <h1>Twins Trade Deadline Tracker</h1>
+    <p>2026 SP Acquisition Intelligence — as of April 16, 2026</p>
   </div>
-  <div class="tooltip" id="tip"></div>
+  <div style="display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap">
+    <div class="countdown-box" id="countdown">
+      <div class="countdown-item"><div class="countdown-num" id="cd-days">--</div><div class="countdown-label">Days</div></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item"><div class="countdown-num" id="cd-hrs">--</div><div class="countdown-label">Hrs</div></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-item"><div class="countdown-num" id="cd-min">--</div><div class="countdown-label">Min</div></div>
+    </div>
+    <div class="deadline-tag">Aug 3 Deadline</div>
+  </div>
 </div>
 
-<div class="legend">
-  <span><span class="legend-dot" style="background:#D85A30;"></span>Likely seller (&lt;35% playoff odds, odds declining)</span>
-  <span><span class="legend-dot" style="background:#BA7517;"></span>Fringe (mixed signals)</span>
-  <span><span class="legend-dot" style="background:#639922;"></span>Likely buyer (&gt;50% playoff odds or rising)</span>
-  <span><span class="legend-dot" style="background:#378ADD;"></span>Twins</span>
+<div class="main">
+  <!-- Chart section -->
+  <div class="chart-section">
+    <div class="controls">
+      <button class="filter-btn active" data-filter="all">All teams</button>
+      <button class="filter-btn" data-filter="seller">Likely sellers</button>
+      <button class="filter-btn" data-filter="fringe">Fringe</button>
+      <button class="filter-btn" data-filter="buyer">Likely buyers</button>
+      <div class="toggle-group" style="margin-left:auto">
+        <button class="toggle-btn active" data-league="all">All</button>
+        <button class="toggle-btn" data-league="AL">AL</button>
+        <button class="toggle-btn" data-league="NL">NL</button>
+      </div>
+    </div>
+
+    <div style="position:relative">
+      <div class="chart-wrap">
+        <canvas id="scatter" role="img" aria-label="Scatter plot of projected wins vs playoff odds by team, colored by deadline behavior"></canvas>
+      </div>
+      <div class="chart-tooltip" id="chartTip"></div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:#d85a30"></div>Likely seller</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#ba7517"></div>Fringe</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#639922"></div>Likely buyer</div>
+      <div class="legend-item"><div class="legend-dot" style="background:#378add"></div>Twins</div>
+      <div class="legend-item" style="margin-left:auto"><div class="legend-dot" style="background:#1a2744;border-radius:2px;width:12px;height:8px"></div>Has tracked targets</div>
+    </div>
+    <p class="chart-note">Bubble size = magnitude of playoff odds change from preseason &nbsp;|&nbsp; Click a team to view SP targets in panel &nbsp;|&nbsp; Teams with tracked pitchers shown with ring</p>
+  </div>
+
+  <!-- Side panel -->
+  <div class="panel-section" id="sidePanel">
+    <div class="panel-header">
+      <div class="panel-title" id="panelTitle">Click a team</div>
+      <div id="panelClose" style="display:none;cursor:pointer;color:#aaa;font-size:18px" onclick="clearPanel()">×</div>
+    </div>
+    <div id="panelContent">
+      <div class="panel-empty">
+        <div class="panel-empty-icon">⚾</div>
+        <div>Click any team bubble to view their tracked SP targets</div>
+      </div>
+    </div>
+  </div>
 </div>
-<p class="note">Bubble size = magnitude of playoff odds change from preseason. Hover for details.</p>
+
+<!-- Targets table -->
+<div class="table-section">
+  <div class="section-header">
+    <div>
+      <div class="section-title">Active Watch — SP Acquisition Targets</div>
+      <div class="section-subtitle">Tier 1 &amp; Tier 2 targets from seller &amp; fringe teams · click column headers to sort</div>
+    </div>
+    <div class="table-controls">
+      <input class="search-input" type="text" id="tableSearch" placeholder="Search pitcher or team...">
+      <select class="tier-filter" id="tierFilter">
+        <option value="all">All tiers</option>
+        <option value="t2">Tier 2 – Monitor Closely</option>
+        <option value="t3">Tier 3 – Watchlist</option>
+        <option value="t4">Tier 4 – Low Priority</option>
+      </select>
+      <select class="tier-filter" id="leagueFilter">
+        <option value="all">AL + NL</option>
+        <option value="AL">AL only</option>
+        <option value="NL">NL only</option>
+      </select>
+    </div>
+  </div>
+  <div style="overflow-x:auto">
+    <table class="targets-table" id="targetsTable">
+      <thead>
+        <tr>
+          <th data-col="pitcher" class="sorted">Pitcher <span class="sort-arrow">↕</span></th>
+          <th data-col="team">Team <span class="sort-arrow">↕</span></th>
+          <th data-col="acquisition_score">Score <span class="sort-arrow">↓</span></th>
+          <th data-col="pl_rank">Rank <span class="sort-arrow">↕</span></th>
+          <th data-col="flag_sequence">Flags <span class="sort-arrow">↕</span></th>
+          <th data-col="plus_flags">+ <span class="sort-arrow">↕</span></th>
+          <th data-col="minus_flags">− <span class="sort-arrow">↕</span></th>
+          <th data-col="profile_archetype">Archetype <span class="sort-arrow">↕</span></th>
+          <th data-col="preseason_health_flag">Health <span class="sort-arrow">↕</span></th>
+          <th data-col="team_deadline_label">Seller Status <span class="sort-arrow">↕</span></th>
+          <th data-col="acquisition_priority">Priority <span class="sort-arrow">↕</span></th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+  <p style="font-size:11px;color:#aaa;margin-top:.75rem" id="tableCount"></p>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-const teams = [
-  {name:"Padres",wins:83.3,winsDiff:2.7,playoffOdds:44,oddsDiff:17,league:"NL"},
-  {name:"Twins",wins:81.8,winsDiff:2.8,playoffOdds:44,oddsDiff:16,league:"AL"},
-  {name:"Pirates",wins:85.5,winsDiff:2.0,playoffOdds:61,oddsDiff:16,league:"NL"},
-  {name:"Guardians",wins:79.5,winsDiff:3.5,playoffOdds:30,oddsDiff:14,league:"AL"},
-  {name:"Rays",wins:81.6,winsDiff:1.9,playoffOdds:41,oddsDiff:12,league:"AL"},
-  {name:"Rangers",wins:83.4,winsDiff:1.0,playoffOdds:54,oddsDiff:7,league:"AL"},
-  {name:"Athletics",wins:79.4,winsDiff:1.4,playoffOdds:28,oddsDiff:7,league:"AL"},
-  {name:"Reds",wins:79.9,winsDiff:1.5,playoffOdds:24,oddsDiff:6,league:"NL"},
-  {name:"Braves",wins:90.0,winsDiff:0.4,playoffOdds:84,oddsDiff:5,league:"NL"},
-  {name:"Diamondbacks",wins:82.8,winsDiff:0.4,playoffOdds:41,oddsDiff:4,league:"NL"},
-  {name:"Orioles",wins:82.6,winsDiff:0.3,playoffOdds:47,oddsDiff:3,league:"AL"},
-  {name:"Angels",wins:73.7,winsDiff:1.7,playoffOdds:7,oddsDiff:2,league:"AL"},
-  {name:"Cardinals",wins:76.5,winsDiff:1.1,playoffOdds:11,oddsDiff:2,league:"NL"},
-  {name:"Yankees",wins:88.4,winsDiff:-0.3,playoffOdds:81,oddsDiff:2,league:"AL"},
-  {name:"Dodgers",wins:101.1,winsDiff:3.2,playoffOdds:100,oddsDiff:2,league:"NL"},
-  {name:"Tigers",wins:84.4,winsDiff:0.3,playoffOdds:62,oddsDiff:1,league:"AL"},
-  {name:"Nationals",wins:69.2,winsDiff:0.9,playoffOdds:1,oddsDiff:0,league:"NL"},
-  {name:"Rockies",wins:61.9,winsDiff:-1.2,playoffOdds:0,oddsDiff:0,league:"NL"},
-  {name:"Marlins",wins:75.9,winsDiff:-0.2,playoffOdds:9,oddsDiff:0,league:"NL"},
-  {name:"White Sox",wins:65.9,winsDiff:-1.5,playoffOdds:0,oddsDiff:-1,league:"AL"},
-  {name:"Brewers",wins:82.3,winsDiff:-0.7,playoffOdds:39,oddsDiff:-4,league:"NL"},
-  {name:"Cubs",wins:84.0,winsDiff:-0.8,playoffOdds:50,oddsDiff:-4,league:"NL"},
-  {name:"Astros",wins:79.3,winsDiff:-1.0,playoffOdds:27,oddsDiff:-6,league:"AL"},
-  {name:"Phillies",wins:86.0,winsDiff:-1.5,playoffOdds:63,oddsDiff:-6,league:"NL"},
-  {name:"Mariners",wins:86.1,winsDiff:-2.2,playoffOdds:71,oddsDiff:-8,league:"AL"},
-  {name:"Royals",wins:80.0,winsDiff:-1.7,playoffOdds:33,oddsDiff:-12,league:"AL"},
-  {name:"Giants",wins:78.2,winsDiff:-3.7,playoffOdds:17,oddsDiff:-15,league:"NL"},
-  {name:"Blue Jays",wins:80.8,winsDiff:-2.9,playoffOdds:36,oddsDiff:-17,league:"AL"},
-  {name:"Red Sox",wins:81.4,winsDiff:-3.6,playoffOdds:40,oddsDiff:-21,league:"AL"},
-  {name:"Mets",wins:85.0,winsDiff:-4.9,playoffOdds:57,oddsDiff:-23,league:"NL"},
+// ── Data ──────────────────────────────────────────────────────────────────────
+const WIN_TOTALS = [
+  {name:"Padres",team:"SDP",wins:83.3,winsDiff:2.7,playoffOdds:44,oddsDiff:17,league:"NL"},
+  {name:"Twins",team:"MIN",wins:81.8,winsDiff:2.8,playoffOdds:44,oddsDiff:16,league:"AL"},
+  {name:"Pirates",team:"PIT",wins:85.5,winsDiff:2.0,playoffOdds:61,oddsDiff:16,league:"NL"},
+  {name:"Guardians",team:"CLE",wins:79.5,winsDiff:3.5,playoffOdds:30,oddsDiff:14,league:"AL"},
+  {name:"Rays",team:"TBR",wins:81.6,winsDiff:1.9,playoffOdds:41,oddsDiff:12,league:"AL"},
+  {name:"Rangers",team:"TEX",wins:83.4,winsDiff:1.0,playoffOdds:54,oddsDiff:7,league:"AL"},
+  {name:"Athletics",team:"ATH",wins:79.4,winsDiff:1.4,playoffOdds:28,oddsDiff:7,league:"AL"},
+  {name:"Reds",team:"CIN",wins:79.9,winsDiff:1.5,playoffOdds:24,oddsDiff:6,league:"NL"},
+  {name:"Braves",team:"ATL",wins:90.0,winsDiff:0.4,playoffOdds:84,oddsDiff:5,league:"NL"},
+  {name:"Diamondbacks",team:"ARI",wins:82.8,winsDiff:0.4,playoffOdds:41,oddsDiff:4,league:"NL"},
+  {name:"Orioles",team:"BAL",wins:82.6,winsDiff:0.3,playoffOdds:47,oddsDiff:3,league:"AL"},
+  {name:"Angels",team:"LAA",wins:73.7,winsDiff:1.7,playoffOdds:7,oddsDiff:2,league:"AL"},
+  {name:"Cardinals",team:"STL",wins:76.5,winsDiff:1.1,playoffOdds:11,oddsDiff:2,league:"NL"},
+  {name:"Yankees",team:"NYY",wins:88.4,winsDiff:-0.3,playoffOdds:81,oddsDiff:2,league:"AL"},
+  {name:"Dodgers",team:"LAD",wins:101.1,winsDiff:3.2,playoffOdds:100,oddsDiff:2,league:"NL"},
+  {name:"Tigers",team:"DET",wins:84.4,winsDiff:0.3,playoffOdds:62,oddsDiff:1,league:"AL"},
+  {name:"Nationals",team:"WSN",wins:69.2,winsDiff:0.9,playoffOdds:1,oddsDiff:0,league:"NL"},
+  {name:"Rockies",team:"COL",wins:61.9,winsDiff:-1.2,playoffOdds:0,oddsDiff:0,league:"NL"},
+  {name:"Marlins",team:"MIA",wins:75.9,winsDiff:-0.2,playoffOdds:9,oddsDiff:0,league:"NL"},
+  {name:"White Sox",team:"CHW",wins:65.9,winsDiff:-1.5,playoffOdds:0,oddsDiff:-1,league:"AL"},
+  {name:"Brewers",team:"MIL",wins:82.3,winsDiff:-0.7,playoffOdds:39,oddsDiff:-4,league:"NL"},
+  {name:"Cubs",team:"CHC",wins:84.0,winsDiff:-0.8,playoffOdds:50,oddsDiff:-4,league:"NL"},
+  {name:"Astros",team:"HOU",wins:79.3,winsDiff:-1.0,playoffOdds:27,oddsDiff:-6,league:"AL"},
+  {name:"Phillies",team:"PHI",wins:86.0,winsDiff:-1.5,playoffOdds:63,oddsDiff:-6,league:"NL"},
+  {name:"Mariners",team:"SEA",wins:86.1,winsDiff:-2.2,playoffOdds:71,oddsDiff:-8,league:"AL"},
+  {name:"Royals",team:"KCR",wins:80.0,winsDiff:-1.7,playoffOdds:33,oddsDiff:-12,league:"AL"},
+  {name:"Giants",team:"SFG",wins:78.2,winsDiff:-3.7,playoffOdds:17,oddsDiff:-15,league:"NL"},
+  {name:"Blue Jays",team:"TOR",wins:80.8,winsDiff:-2.9,playoffOdds:36,oddsDiff:-17,league:"AL"},
+  {name:"Red Sox",team:"BOS",wins:81.4,winsDiff:-3.6,playoffOdds:40,oddsDiff:-21,league:"AL"},
+  {name:"Mets",team:"NYM",wins:85.0,winsDiff:-4.9,playoffOdds:57,oddsDiff:-23,league:"NL"},
 ];
 
+const TARGETS = [{"pitcher":"Garrett Crochet","team":"BOS","team_deadline_label":"Likely Seller","team_playoff_odds":40,"team_odds_diff":-21,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":60,"pl_rank":1.0,"pl_tier_label":"Tier 1 \u2013 STUD","profile_archetype":"Workhorse / Power LHP","primary_weapons":"4-seam/cutter combo to RHB; sinker/cutter/sweeper to LHB","total_starts":4,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~~\u2212","preseason_health_flag":"2025 playoff push was heaviest workload of career; general injury risk only","key_identified_flaw":"No reliable third weapon in early counts; sweeper is two-strike only; 2025 playoff overuse could signal injury risk","team_seller_notes":"Steep freefall from 61% preseason odds; window closing fast","status":"Watchlist"},{"pitcher":"Robbie Ray","team":"SFG","team_deadline_label":"Likely Seller","team_playoff_odds":17,"team_odds_diff":-15,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":59,"pl_rank":38.0,"pl_tier_label":"Tier 8 \u2013 Cherry Bomb But Moreso","profile_archetype":"High-velo LHP / Inconsistent secondary","primary_weapons":"4-seam (94+ mph, legit vert); slider; changeup; curve","total_starts":3,"plus_flags":3,"minus_flags":0,"flag_sequence":"+++","preseason_health_flag":"No health flags; late-season collapse was approach/command not injury","key_identified_flaw":"Slider and changeup usage wildly inconsistent; walk rate unsustainable","team_seller_notes":"Development org; will sell expiring and controllable arms","status":"Watchlist"},{"pitcher":"Dylan Cease","team":"TOR","team_deadline_label":"Likely Seller","team_playoff_odds":36,"team_odds_diff":-17,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":58,"pl_rank":29.0,"pl_tier_label":"Tier 6 \u2013 Cherry Bomb","profile_archetype":"HIPSTER / Two-pitch volatile","primary_weapons":"4-seam (96-98 mph); slider; cutter (underutilized)","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"+~~","preseason_health_flag":"No significant health flags","key_identified_flaw":"Two-pitch arm; hyper-reliant on out-of-zone swings; walk rate chronic","team_seller_notes":"Roster rebuild posture; controllable arms most moveable","status":"Watchlist"},{"pitcher":"Bryan Woo","team":"SEA","team_deadline_label":"Fringe","team_playoff_odds":71,"team_odds_diff":-8,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":58,"pl_rank":4.0,"pl_tier_label":"Tier 2 \u2013 AGA 1","profile_archetype":"Wheeler 2.0 / Fastball-first","primary_weapons":"4-seam/sinker combo (elite); slider/sweeper developing","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"~+~","preseason_health_flag":"Injury scares in 2024 but 30 starts / 187 IP in 2025 addressed concern","key_identified_flaw":"Slider and sweeper command inconsistent; lacks secondary depth","team_seller_notes":"High odds but big drop; monitor closely — could tip to seller","status":"Watchlist"},{"pitcher":"George Kirby","team":"SEA","team_deadline_label":"Fringe","team_playoff_odds":71,"team_odds_diff":-8,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":56,"pl_rank":17.0,"pl_tier_label":"Tier 4 \u2013 AGA Injury Risk","profile_archetype":"Approach-limited / High ceiling","primary_weapons":"Curveball (elite); slider (elite when down); sinker; 4-seam","total_starts":4,"plus_flags":2,"minus_flags":0,"flag_sequence":"~~++","preseason_health_flag":"Recurring shoulder problems; history of mid-season IL stints; high ceiling / high health risk","key_identified_flaw":"4-seam used 72% in early counts despite deadzone movement; recurring shoulder problems","team_seller_notes":"High odds but big drop; monitor closely — could tip to seller","status":"Watchlist"},{"pitcher":"Nolan McLean","team":"NYM","team_deadline_label":"Likely Seller","team_playoff_odds":57,"team_odds_diff":-23,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":51,"pl_rank":34.0,"pl_tier_label":"Tier 7 \u2013 Holly","profile_archetype":"Sinker/sweeper emerging arm","primary_weapons":"Sinker (96 mph, elite); sweeper/curve; cutter; 4-seam (two-strike)","total_starts":3,"plus_flags":2,"minus_flags":0,"flag_sequence":"++~","preseason_health_flag":"Limited MLB experience; converted from SS; control development ongoing","key_identified_flaw":"Sweeper to RHB sub-10% SwStr despite good movement (location issue)","team_seller_notes":"Massive preseason expectations collapse; motivated sellers","status":"Watchlist"},{"pitcher":"Hunter Brown","team":"HOU","team_deadline_label":"Fringe","team_playoff_odds":27,"team_odds_diff":-6,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":50,"pl_rank":10.0,"pl_tier_label":"Tier 2 \u2013 AGA 1","profile_archetype":"Two-fastball workhorse","primary_weapons":"4-seam/sinker pair at 97 mph (elite); curveball (primary put-away)","total_starts":2,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~","preseason_health_flag":"No significant health flags; 2025 BABIP/LOB regression due in 2026","key_identified_flaw":"LHB approach unsolved; changeup at 54% strikes; curveball sub-60% strikes","team_seller_notes":"Declining window; may sell if >5 games back at deadline","status":"Watchlist"},{"pitcher":"Kevin Gausman","team":"TOR","team_deadline_label":"Likely Seller","team_playoff_odds":36,"team_odds_diff":-17,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":48,"pl_rank":31.0,"pl_tier_label":"Tier 7 \u2013 Holly","profile_archetype":"Splitter-dependent workhorse","primary_weapons":"Splitter (primary weapon; gained 2\" drop in 2025); 4-seam (loLoc command)","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"+~~","preseason_health_flag":"No significant health flags; durability is a strength","key_identified_flaw":"4-seam BABIP -12 hit luck in 2025; K rate unlikely to sustain 30%","team_seller_notes":"Roster rebuild posture; controllable arms most moveable","status":"Watchlist"},{"pitcher":"Logan Gilbert","team":"SEA","team_deadline_label":"Fringe","team_playoff_odds":71,"team_odds_diff":-8,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":48,"pl_rank":8.0,"pl_tier_label":"Tier 2 \u2013 AGA 1","profile_archetype":"Fastball/slider stud","primary_weapons":"4-seam (95/96 mph, 7.6 ft extension – elite); slider; splitter (new #3)","total_starts":4,"plus_flags":1,"minus_flags":0,"flag_sequence":"~~~+","preseason_health_flag":"Grade 1 forearm strain in 2025; missed ~6 weeks; close to a year removed from injury","key_identified_flaw":"Slider command poor in 2025; splitter unreliable for strikes","team_seller_notes":"High odds but big drop; monitor closely — could tip to seller","status":"Watchlist"},{"pitcher":"Cole Ragans","team":"KCR","team_deadline_label":"Likely Seller","team_playoff_odds":33,"team_odds_diff":-12,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":48,"pl_rank":16.0,"pl_tier_label":"Tier 4 \u2013 AGA Injury Risk","profile_archetype":"SWATCH with elite fastball","primary_weapons":"4-seam (most total break in MLB; 95+ mph); changeup (obliterates RHB); slider","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"~+~","preseason_health_flag":"Groin + rotator cuff strain in 2025; three months IL; returned healthy late Sept","key_identified_flaw":"Slider declined in 2024; LHB approach dependent on it; rotator cuff strain (3 months IL)","team_seller_notes":"Walk-year arms and declining roster; seller profile","status":"Watchlist"},{"pitcher":"Sonny Gray","team":"BOS","team_deadline_label":"Likely Seller","team_playoff_odds":40,"team_odds_diff":-21,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":48,"pl_rank":54.0,"pl_tier_label":"Tier 12 \u2013 Toby Upside 1","profile_archetype":"Ratio arm / Hard contact problem needs fix","primary_weapons":"Sinker; sweeper (elite command); 4-seam; curveball","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"~+~","preseason_health_flag":"No health flags; STL→BOS move is the key context change","key_identified_flaw":"40%+ ICR across ALL pitches to LHB; left pitcher-friendly STL for BOS","team_seller_notes":"Steep freefall from 61% preseason odds; window closing fast","status":"Watchlist"},{"pitcher":"Logan Webb","team":"SFG","team_deadline_label":"Likely Seller","team_playoff_odds":17,"team_odds_diff":-15,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":45,"pl_rank":12.0,"pl_tier_label":"Tier 3 \u2013 AGA 2","profile_archetype":"SWATCH / Durability workhorse","primary_weapons":"Changeup (primary; 30% putaway to RHB); sweeper; sinker (elite grounders)","total_starts":3,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~~","preseason_health_flag":"No significant health flags; durability is a strength","key_identified_flaw":"Changeup putaway rate may not fully sustain; BABIP luck risk","team_seller_notes":"Development org; will sell expiring and controllable arms","status":"Watchlist"},{"pitcher":"Freddy Peralta","team":"NYM","team_deadline_label":"Likely Seller","team_playoff_odds":57,"team_odds_diff":-23,"acquisition_priority":"Tier 2 \u2013 Monitor Closely","acquisition_score":45,"pl_rank":14.0,"pl_tier_label":"Tier 3 \u2013 AGA 2","profile_archetype":"Cherry Bomb (stabilizing)","primary_weapons":"4-seam (94-95 mph, elite movement); curveball (new primary putaway); changeup","total_starts":4,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~~~","preseason_health_flag":"No significant health flags; Miller Park departure addressed in framing","key_identified_flaw":"2025 HOTEL-inflated (.256 BABIP, 85%+ LOB) will regress","team_seller_notes":"Massive preseason expectations collapse; motivated sellers","status":"Watchlist"},{"pitcher":"Aaron Nola","team":"PHI","team_deadline_label":"Fringe","team_playoff_odds":63,"team_odds_diff":-6,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":41,"pl_rank":49.0,"pl_tier_label":"Tier 10 \u2013 Holly","profile_archetype":"Unlucky 2025 / Holly floor","primary_weapons":"Curveball (elite); sinker; 4-seam (two-strike to LHB); cutter (underused)","total_starts":3,"plus_flags":2,"minus_flags":0,"flag_sequence":"~++","preseason_health_flag":"No health flags; 2025 poor results were bad luck not skills decline","key_identified_flaw":"2025 extreme HOTEL; sinker not used inside to RHB enough","team_seller_notes":"Expected contender underperforming; unlikely to sell top arms","status":"Watchlist"},{"pitcher":"Connelly Early","team":"BOS","team_deadline_label":"Likely Seller","team_playoff_odds":40,"team_odds_diff":-21,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":41,"pl_rank":112.0,"pl_tier_label":"Tier 19 \u2013 Dope But No Job","profile_archetype":"Wide arsenal LHP / Minor league start likely","primary_weapons":"4-seam (94+ mph); changeup; sinker; slider; curveball; full 6-pitch SWATCH","total_starts":3,"plus_flags":2,"minus_flags":0,"flag_sequence":"++~","preseason_health_flag":"~120 IP in 2025 minor leagues; BOS managing workload; velo dip in August stint","key_identified_flaw":"Likely starts in minors; never threw more than 5 frames in 4 MLB starts","team_seller_notes":"Steep freefall from 61% preseason odds; window closing fast","status":"Watchlist"},{"pitcher":"Noah Cameron","team":"KCR","team_deadline_label":"Likely Seller","team_playoff_odds":33,"team_odds_diff":-12,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":40,"pl_rank":56.0,"pl_tier_label":"Tier 12 \u2013 Toby Upside 1","profile_archetype":"Command pitcher / HOTEL 2025","primary_weapons":"Slider; cutter; curveball; changeup; 4-seam (92 mph)","total_starts":3,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~~","preseason_health_flag":"No health flags; HOTEL regression is the concern not injury","key_identified_flaw":"2025 .241 BABIP and 84% LOB rate — clear HOTEL not skill","team_seller_notes":"Walk-year arms and declining roster; seller profile","status":"Watchlist"},{"pitcher":"Cristopher Sanchez","team":"PHI","team_deadline_label":"Fringe","team_playoff_odds":63,"team_odds_diff":-6,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":35,"pl_rank":7.0,"pl_tier_label":"Tier 2 \u2013 AGA 1","profile_archetype":"SWATCH (breakout)","primary_weapons":"Changeup (39% putaway rate – elite); sinker; slider","total_starts":3,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~~","preseason_health_flag":"Forearm soreness in 2025 reduced velocity for ~2 weeks; monitor velo baseline","key_identified_flaw":"Putaway rates may not fully sustain; forearm soreness scare in 2025","team_seller_notes":"Expected contender underperforming; unlikely to sell top arms","status":"Watchlist"},{"pitcher":"Ranger Suarez","team":"BOS","team_deadline_label":"Likely Seller","team_playoff_odds":40,"team_odds_diff":-21,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":35,"pl_rank":55.0,"pl_tier_label":"Tier 12 \u2013 Toby Upside 1","profile_archetype":"Six-pitch SWATCH / Low-volume ceiling","primary_weapons":"Sinker (90 mph, bowling ball drop); changeup; curveball; cutter; 4-seam","total_starts":2,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~","preseason_health_flag":"Back injury missed April 2025; never above 160 IP; velocity decline risk","key_identified_flaw":"90 mph sinker is profile foundation; velocity drop risk; never above 160 IP","team_seller_notes":"Steep freefall from 61% preseason odds; window closing fast","status":"Watchlist"},{"pitcher":"Jesus Luzardo","team":"PHI","team_deadline_label":"Fringe","team_playoff_odds":63,"team_odds_diff":-6,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":35,"pl_rank":30.0,"pl_tier_label":"Tier 6 \u2013 Cherry Bomb","profile_archetype":"Cherry Bomb / Great Undulator","primary_weapons":"Sinker (inside to LHB – new); sweeper; changeup; 4-seam","total_starts":2,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~","preseason_health_flag":"Significant recurring injury history; PHI medical staff concern","key_identified_flaw":"4-seam to RHB is deadzone; LOB rate historically sub-70%; injury history significant","team_seller_notes":"Expected contender underperforming; unlikely to sell top arms","status":"Watchlist"},{"pitcher":"Cade Horton","team":"CHC","team_deadline_label":"Fringe","team_playoff_odds":50,"team_odds_diff":-4,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":33,"pl_rank":37.0,"pl_tier_label":"Tier 7 \u2013 Holly","profile_archetype":"Command arm / Volume over ceiling","primary_weapons":"Cut-4-seam (95+ mph); sweeper (20% SwStr); changeup; curveball","total_starts":2,"plus_flags":1,"minus_flags":0,"flag_sequence":"+\u2212","preseason_health_flag":"No significant health flags; most durable of sophomore class","key_identified_flaw":"Sweeper putaway only 17% in two-strike counts; changeup sub-60% strikes to LHB","team_seller_notes":"Borderline; could go either way depending on July standings","status":"Watchlist"},{"pitcher":"Landen Roupp","team":"SFG","team_deadline_label":"Likely Seller","team_playoff_odds":17,"team_odds_diff":-15,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":33,"pl_rank":86.0,"pl_tier_label":"Tier 16 \u2013 Toby Upside 3","profile_archetype":"Elite curveball / Sinker location gap","primary_weapons":"Curveball (elite, 22% SwStr); sinker (19\" horiz); changeup; 4-seam","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"~+~","preseason_health_flag":"No health flags; sinker location and changeup command are execution concerns","key_identified_flaw":"Sinker inside to RHB only 41% → .427 BABIP; changeup at 56% strikes","team_seller_notes":"Development org; will sell expiring and controllable arms","status":"Watchlist"},{"pitcher":"Tyler Mahle","team":"SFG","team_deadline_label":"Likely Seller","team_playoff_odds":17,"team_odds_diff":-15,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":33,"pl_rank":87.0,"pl_tier_label":"Tier 16 \u2013 Toby Upside 3","profile_archetype":"HOTEL 2025 / Velocity watch","primary_weapons":"4-seam (two-plane, dropped 93→92 mph); cutter (new); splitter","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"~~+","preseason_health_flag":"Shoulder fatigue IL 3 months in 2025; two solid starts to close season","key_identified_flaw":"Shoulder IL in 2025; 4-seam dropped 1-2 ticks; HOTEL fueled best stretch","team_seller_notes":"Development org; will sell expiring and controllable arms","status":"Watchlist"},{"pitcher":"Matthew Boyd","team":"CHC","team_deadline_label":"Fringe","team_playoff_odds":50,"team_odds_diff":-4,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":31,"pl_rank":69.0,"pl_tier_label":"Tier 14 \u2013 Toby Upside 2","profile_archetype":"SWATCH workhorse / Second-half collapse","primary_weapons":"Changeup (elite to RHB); sweeper (kills LHB); 4-seam; sinker","total_starts":2,"plus_flags":2,"minus_flags":0,"flag_sequence":"++","preseason_health_flag":"No health flags; second-half collapse was execution not injury","key_identified_flaw":"2025 second-half collapse; 4-seam leaked middle; changeup missed armside","team_seller_notes":"Borderline; could go either way depending on July standings","status":"Watchlist"},{"pitcher":"Cody Ponce","team":"TOR","team_deadline_label":"Likely Seller","team_playoff_odds":36,"team_odds_diff":-17,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":30,"pl_rank":83.0,"pl_tier_label":"Tier 16 \u2013 Toby Upside 3","profile_archetype":"KBO import / Volume sleeper","primary_weapons":"4-seam (95-96 mph); kick-changeup; cutter/slider 88 mph","total_starts":1,"plus_flags":0,"minus_flags":0,"flag_sequence":"\u2212","preseason_health_flag":"No MLB experience; KBO→MLB transition risk","key_identified_flaw":"Never pitched in MLB; KBO results may be inflated","team_seller_notes":"Roster rebuild posture; controllable arms most moveable","status":"Watchlist"},{"pitcher":"Tatsuya Imai","team":"HOU","team_deadline_label":"Fringe","team_playoff_odds":27,"team_odds_diff":-6,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":30,"pl_rank":33.0,"pl_tier_label":"Tier 7 \u2013 Holly","profile_archetype":"NPB import / Joe Ryan comp","primary_weapons":"4-seam (93-98 mph, ultra-flat); reverse slider; splitter trio (3 grips)","total_starts":3,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~\u2212","preseason_health_flag":"No MLB experience; adaptation risk; HOU workload management is protective","key_identified_flaw":"Never pitched in MLB; ultra-steep arm angle reduces vert impact; six-man caps volume","team_seller_notes":"Declining window; may sell if >5 games back at deadline","status":"Watchlist"},{"pitcher":"Kris Bubic","team":"KCR","team_deadline_label":"Likely Seller","team_playoff_odds":33,"team_odds_diff":-12,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":30,"pl_rank":43.0,"pl_tier_label":"Tier 9 \u2013 Cherry Bomb But Moreso","profile_archetype":"SWATCH / Health question","primary_weapons":"Changeup (primary); sweeper (35% CSW); sinker; 4-seam","total_starts":3,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~~","preseason_health_flag":"Rotator cuff strain IL late July 2025; healthy entering 2026 per reports","key_identified_flaw":"Rotator cuff strain 2025; sweeper not effective enough vs. LHB","team_seller_notes":"Walk-year arms and declining roster; seller profile","status":"Watchlist"},{"pitcher":"Shota Imanaga","team":"CHC","team_deadline_label":"Fringe","team_playoff_odds":50,"team_odds_diff":-4,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":28,"pl_rank":48.0,"pl_tier_label":"Tier 10 \u2013 Holly","profile_archetype":"High-WHIP workhorse / 4-seam velo recovery needed","primary_weapons":"4-seam (90-91 mph; lost vert in 2025 H2); splitter (primary K); sweeper","total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"~~+","preseason_health_flag":"Hamstring injury in 2025; left hamstring is the monitoring signal","key_identified_flaw":"4-seam vert dropped in H2 2025 (hamstring); splitter putaway fell 6 pts","team_seller_notes":"Borderline; could go either way depending on July standings","status":"Watchlist"},{"pitcher":"Michael Wacha","team":"KCR","team_deadline_label":"Likely Seller","team_playoff_odds":33,"team_odds_diff":-12,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":28,"pl_rank":null,"pl_tier_label":null,"profile_archetype":null,"primary_weapons":null,"total_starts":3,"plus_flags":1,"minus_flags":0,"flag_sequence":"~~+","preseason_health_flag":null,"key_identified_flaw":null,"team_seller_notes":"Walk-year arms and declining roster; seller profile","status":"Watchlist"},{"pitcher":"Seth Lugo","team":"KCR","team_deadline_label":"Likely Seller","team_playoff_odds":33,"team_odds_diff":-12,"acquisition_priority":"Tier 3 \u2013 Watchlist","acquisition_score":25,"pl_rank":85.0,"pl_tier_label":"Tier 16 \u2013 Toby Upside 3","profile_archetype":"Curveball-dependent / Back injury","primary_weapons":"Curveball (the tether; down 2 ticks to 77 mph); 4-seam; sinker; changeup","total_starts":3,"plus_flags":0,"minus_flags":0,"flag_sequence":"~~~","preseason_health_flag":"Back injury cut 2025 season short; curveball velocity dip likely back-related","key_identified_flaw":"Curveball velocity down 2 ticks; putaway rate collapsed; back injury history","team_seller_notes":"Walk-year arms and declining roster; seller profile","status":"Watchlist"}];
+
+// ── Team league mapping ───────────────────────────────────────────────────────
+const TEAM_LEAGUE = {};
+WIN_TOTALS.forEach(t => TEAM_LEAGUE[t.team] = t.league);
+
+// ── Countdown ─────────────────────────────────────────────────────────────────
+function updateCountdown() {
+  const deadline = new Date('2026-08-03T17:00:00Z');
+  const now = new Date();
+  const diff = deadline - now;
+  if (diff <= 0) { document.getElementById('countdown').innerHTML = '<div style="color:rgba(255,255,255,.6);font-size:13px">Deadline passed</div>'; return; }
+  const days = Math.floor(diff / 86400000);
+  const hrs = Math.floor((diff % 86400000) / 3600000);
+  const min = Math.floor((diff % 3600000) / 60000);
+  document.getElementById('cd-days').textContent = days;
+  document.getElementById('cd-hrs').textContent = String(hrs).padStart(2,'0');
+  document.getElementById('cd-min').textContent = String(min).padStart(2,'0');
+}
+updateCountdown();
+setInterval(updateCountdown, 30000);
+
+// ── Chart ─────────────────────────────────────────────────────────────────────
+const targetTeams = new Set(TARGETS.map(t => t.team));
+
 function classify(t) {
-  if (t.name === "Twins") return "twins";
-  if (t.playoffOdds <= 20 || (t.playoffOdds <= 35 && t.oddsDiff <= -5)) return "seller";
-  if (t.playoffOdds >= 55 || (t.playoffOdds >= 40 && t.oddsDiff >= 5)) return "buyer";
-  return "fringe";
+  if (t.team === 'MIN') return 'twins';
+  if (t.playoffOdds <= 20 || (t.playoffOdds <= 35 && t.oddsDiff <= -5)) return 'seller';
+  if (t.playoffOdds >= 55 || (t.playoffOdds >= 40 && t.oddsDiff >= 5)) return 'buyer';
+  return 'fringe';
 }
 
-const colors = { seller:"#D85A30", fringe:"#BA7517", buyer:"#639922", twins:"#378ADD" };
-const borders = { seller:"#993C1D", fringe:"#854F0B", buyer:"#3B6D11", twins:"#185FA5" };
-const labels = { seller:"Likely seller", fringe:"Fringe", buyer:"Likely buyer", twins:"Twins" };
+const C = { seller:'#D85A30', fringe:'#BA7517', buyer:'#639922', twins:'#378ADD' };
+const CB = { seller:'#993C1D', fringe:'#854F0B', buyer:'#3B6D11', twins:'#185FA5' };
+const CLABELS = { seller:'Likely seller', fringe:'Fringe', buyer:'Likely buyer', twins:'Twins' };
 
-function buildDatasets(filter) {
-  const groups = { seller:[], fringe:[], buyer:[], twins:[] };
-  teams.forEach(t => {
+let activeFilter = 'all', activeLeague = 'all', activeTeam = null;
+
+function buildDatasets(filter, league) {
+  const groups = {seller:[],fringe:[],buyer:[],twins:[]};
+  WIN_TOTALS.forEach(t => {
+    if (league !== 'all' && t.league !== league) return;
     const cat = classify(t);
+    if (filter !== 'all' && cat !== filter && !(cat === 'twins' && filter === 'buyer')) return;
     groups[cat].push({
       x: t.wins, y: t.playoffOdds,
       r: Math.max(5, Math.abs(t.oddsDiff) * 1.4 + 4),
-      label: t.name, wins: t.wins, winsDiff: t.winsDiff,
-      playoffOdds: t.playoffOdds, oddsDiff: t.oddsDiff, cat: cat
+      label: t.name, teamCode: t.team, wins: t.wins, winsDiff: t.winsDiff,
+      playoffOdds: t.playoffOdds, oddsDiff: t.oddsDiff, cat, league: t.league,
+      hasTargets: targetTeams.has(t.team)
     });
   });
   return Object.entries(groups).map(([cat, pts]) => ({
-    label: labels[cat],
-    data: filter === "all" || cat === filter || cat === "twins" ? pts : [],
-    backgroundColor: colors[cat] + "bb",
-    borderColor: borders[cat],
-    borderWidth: cat === "twins" ? 2 : 1,
+    label: CLABELS[cat], data: pts,
+    backgroundColor: C[cat] + 'bb', borderColor: CB[cat], borderWidth: 1.5,
   }));
 }
 
-const ctx = document.getElementById("scatter").getContext("2d");
+const ctx = document.getElementById('scatter').getContext('2d');
 const chart = new Chart(ctx, {
-  type: "bubble",
-  data: { datasets: buildDatasets("all") },
+  type: 'bubble',
+  data: { datasets: buildDatasets('all', 'all') },
   options: {
     responsive: true, maintainAspectRatio: false,
     plugins: { legend: { display: false }, tooltip: { enabled: false } },
     scales: {
-      x: {
-        title: { display: true, text: "Projected wins (Apr 16)", font: { size: 12 }, color: "#888" },
-        min: 58, max: 105,
-        ticks: { font: { size: 11 }, color: "#888" },
-        grid: { color: "rgba(128,128,128,0.15)" }
-      },
-      y: {
-        title: { display: true, text: "Playoff odds %", font: { size: 12 }, color: "#888" },
-        min: -5, max: 105,
-        ticks: { font: { size: 11 }, color: "#888", callback: v => v + "%" },
-        grid: { color: "rgba(128,128,128,0.15)" }
-      }
+      x: { title: { display:true, text:'Projected wins (Apr 16)', font:{size:11}, color:'#999' }, min:58, max:105,
+           ticks:{font:{size:10},color:'#999'}, grid:{color:'rgba(0,0,0,.06)'} },
+      y: { title: { display:true, text:'Playoff odds %', font:{size:11}, color:'#999' }, min:-5, max:108,
+           ticks:{font:{size:10},color:'#999',callback:v=>v+'%'}, grid:{color:'rgba(0,0,0,.06)'} }
     },
-    layout: { padding: 20 }
+    layout: { padding: 24 },
+    onClick(e, els) {
+      if (!els.length) return;
+      const pt = chart.data.datasets[els[0].datasetIndex].data[els[0].index];
+      showPanel(pt.teamCode);
+    }
   },
   plugins: [{
-    id: "labels",
+    id: 'labelsDraw',
     afterDatasetsDraw(chart) {
       const ctx = chart.ctx;
       ctx.save();
-      ctx.font = "10px sans-serif";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
       chart.data.datasets.forEach((ds, di) => {
         ds.data.forEach((pt, i) => {
           const meta = chart.getDatasetMeta(di);
           if (!meta.data[i]) return;
           const {x, y} = meta.data[i].getCenterPoint();
-          ctx.fillStyle = borders[pt.cat] || "#333";
-          ctx.fillText(pt.label, x, y + pt.r + 9);
+          // Ring for teams with targets
+          if (pt.hasTargets) {
+            ctx.beginPath();
+            ctx.arc(x, y, pt.r + 5, 0, Math.PI * 2);
+            ctx.strokeStyle = '#1a2744';
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+          }
+          // Highlight selected
+          if (activeTeam === pt.teamCode) {
+            ctx.beginPath();
+            ctx.arc(x, y, pt.r + 8, 0, Math.PI * 2);
+            ctx.strokeStyle = '#1a2744';
+            ctx.lineWidth = 2.5;
+            ctx.stroke();
+          }
+          // Label
+          ctx.fillStyle = CB[pt.cat] || '#333';
+          ctx.font = pt.teamCode === 'MIN' ? 'bold 10px sans-serif' : '10px sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'top';
+          ctx.fillText(pt.label, x, y + pt.r + 6);
         });
       });
       ctx.restore();
@@ -165,10 +407,11 @@ const chart = new Chart(ctx, {
   }]
 });
 
-const canvas = document.getElementById("scatter");
-const tip = document.getElementById("tip");
+// Tooltip
+const canvas = document.getElementById('scatter');
+const tip = document.getElementById('chartTip');
 
-canvas.addEventListener("mousemove", (e) => {
+canvas.addEventListener('mousemove', e => {
   const rect = canvas.getBoundingClientRect();
   const mx = e.clientX - rect.left, my = e.clientY - rect.top;
   let found = null;
@@ -178,40 +421,237 @@ canvas.addEventListener("mousemove", (e) => {
       const idx = ds.data.indexOf(pt);
       if (!meta.data[idx]) return;
       const {x, y} = meta.data[idx].getCenterPoint();
-      if (Math.hypot(mx - x, my - y) < pt.r + 8) found = { pt, x: e.clientX - rect.left, y: e.clientY - rect.top };
+      if (Math.hypot(mx - x, my - y) < pt.r + 10 && (!found || pt.r > found.pt.r)) {
+        found = {pt, x: e.clientX - rect.left, y: e.clientY - rect.top};
+      }
     });
   });
   if (found) {
     const {pt, x, y} = found;
-    const tagClass = pt.cat === "twins" ? "twins-tag" : pt.cat + "-tag";
-    const tagLabel = pt.cat === "twins" ? "Your team" : labels[pt.cat];
-    tip.innerHTML = `
-      <div class="t-name">${pt.label}</div>
-      <div class="t-row"><span>Proj. wins</span><span class="t-val">${pt.wins.toFixed(1)}</span></div>
-      <div class="t-row"><span>vs preseason</span><span class="t-val">${pt.winsDiff > 0 ? '+' : ''}${pt.winsDiff.toFixed(1)}</span></div>
-      <div class="t-row"><span>Playoff odds</span><span class="t-val">${pt.playoffOdds}%</span></div>
-      <div class="t-row"><span>Odds change</span><span class="t-val">${pt.oddsDiff > 0 ? '+' : ''}${pt.oddsDiff}%</span></div>
-      <span class="t-tag ${tagClass}">${tagLabel}</span>
-    `;
-    tip.style.display = "block";
-    tip.style.left = (x + 14) + "px";
-    tip.style.top = (y - 20) + "px";
-    canvas.style.cursor = "pointer";
+    const teamTargets = TARGETS.filter(t => t.team === pt.teamCode && ['Tier 2 \u2013 Monitor Closely','Tier 3 \u2013 Watchlist'].includes(t.acquisition_priority)).slice(0, 3);
+    const tagClass = pt.cat === 'twins' ? 'tc-twins' : `tc-${pt.cat}`;
+    const tagLabel = pt.cat === 'twins' ? 'Your team' : CLABELS[pt.cat];
+    let targetsHtml = '';
+    if (teamTargets.length) {
+      targetsHtml = `<div class="tt-targets"><div class="tt-targets-label">Tracked targets</div>${teamTargets.map(t=>`<div class="tt-pitcher"><span style="color:${t.plus_flags>0?'#2d7a2d':t.minus_flags>0?'#c0392b':'#aaa'}">${t.flag_sequence}</span> ${t.pitcher} <span style="color:#aaa">#${t.pl_rank||'—'}</span></div>`).join('')}<div class="tt-view" onclick="showPanel('${pt.teamCode}')">View all targets →</div></div>`;
+    }
+    tip.innerHTML = `<div class="tt-name">${pt.label} (${pt.teamCode})</div>
+      <div class="tt-row"><span>Proj. wins</span><span class="tt-val">${pt.wins.toFixed(1)}</span></div>
+      <div class="tt-row"><span>vs preseason</span><span class="tt-val">${pt.winsDiff>0?'+':''}${pt.winsDiff.toFixed(1)}</span></div>
+      <div class="tt-row"><span>Playoff odds</span><span class="tt-val">${pt.playoffOdds}%</span></div>
+      <div class="tt-row"><span>Odds change</span><span class="tt-val">${pt.oddsDiff>0?'+':''}${pt.oddsDiff}%</span></div>
+      <span class="tt-tag ${tagClass}">${tagLabel}</span>${targetsHtml}`;
+    tip.style.display = 'block';
+    const tipW = 200, tipH = 160;
+    let tx = x + 16, ty = y - 20;
+    if (tx + tipW > rect.width) tx = x - tipW - 10;
+    if (ty + tipH > rect.height) ty = y - tipH;
+    tip.style.left = tx + 'px'; tip.style.top = ty + 'px';
+    canvas.style.cursor = 'pointer';
   } else {
-    tip.style.display = "none";
-    canvas.style.cursor = "default";
+    tip.style.display = 'none';
+    canvas.style.cursor = 'default';
   }
 });
-canvas.addEventListener("mouseleave", () => { tip.style.display = "none"; });
+canvas.addEventListener('mouseleave', () => { tip.style.display = 'none'; });
 
-document.getElementById("filters").addEventListener("click", e => {
-  const btn = e.target.closest(".filter-btn");
-  if (!btn) return;
-  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-  btn.classList.add("active");
-  chart.data.datasets = buildDatasets(btn.dataset.filter);
-  chart.update();
+// Filter buttons
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    chart.data.datasets = buildDatasets(activeFilter, activeLeague);
+    chart.update();
+  });
 });
+
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeLeague = btn.dataset.league;
+    chart.data.datasets = buildDatasets(activeFilter, activeLeague);
+    chart.update();
+    if (leagueFilter) leagueFilter.value = activeLeague === 'all' ? 'all' : activeLeague;
+    renderTable();
+  });
+});
+
+// ── Side Panel ────────────────────────────────────────────────────────────────
+function flagHtml(seq) {
+  if (!seq) return '<span style="color:#ccc">—</span>';
+  return seq.split('').map(c => {
+    if (c === '+') return `<span class="flag-char flag-plus">+</span>`;
+    if (c === '−' || c === '-') return `<span class="flag-char flag-minus">−</span>`;
+    return `<span class="flag-char flag-neutral">~</span>`;
+  }).join('');
+}
+
+function healthIcon(h) {
+  if (!h) return '';
+  const hl = h.toLowerCase();
+  if (hl.includes('no significant') || hl.includes('no health') || hl.includes('no injury') || hl.includes('no major')) return '✓';
+  if (hl.includes('surgery') || hl.includes('tjs') || hl.includes('rotator') || hl.includes('elbow')) return '⚠';
+  return '◦';
+}
+
+function healthClass(h) {
+  if (!h) return '';
+  const hl = h.toLowerCase();
+  if (hl.includes('no significant') || hl.includes('no health') || hl.includes('no injury')) return 'health-ok';
+  if (hl.includes('surgery') || hl.includes('tjs') || hl.includes('rotator') || hl.includes('elbow') || hl.includes('shoulder')) return 'health-risk';
+  return 'health-warn';
+}
+
+function priClass(p) {
+  if (!p) return 'pri-t4';
+  if (p.includes('Tier 2')) return 'pri-t2';
+  if (p.includes('Tier 3')) return 'pri-t3';
+  return 'pri-t4';
+}
+
+function showPanel(teamCode) {
+  activeTeam = teamCode;
+  chart.update();
+  const teamData = WIN_TOTALS.find(t => t.team === teamCode);
+  const teamTargets = TARGETS.filter(t => t.team === teamCode).sort((a,b) => b.acquisition_score - a.acquisition_score);
+  const panelTitle = document.getElementById('panelTitle');
+  const panelContent = document.getElementById('panelContent');
+  const panelClose = document.getElementById('panelClose');
+  if (!teamData) return;
+  const cat = classify(teamData);
+  const tagClass = cat === 'twins' ? 'panel-twins-tag' : `panel-${cat}-tag`;
+  const tagLabel = cat === 'twins' ? 'Your team' : CLABELS[cat];
+  panelTitle.textContent = teamData.name;
+  panelClose.style.display = 'block';
+  if (!teamTargets.length) {
+    panelContent.innerHTML = `<div class="panel-team-meta">${teamCode} &nbsp;·&nbsp; ${teamData.playoffOdds}% playoff odds &nbsp;·&nbsp; ${teamData.oddsDiff>0?'+':''}${teamData.oddsDiff}% vs preseason</div><span class="panel-tag ${tagClass}">${tagLabel}</span><div style="margin-top:2rem;text-align:center;color:#aaa;font-size:13px">No tracked SP targets for this team.</div>`;
+    return;
+  }
+  panelContent.innerHTML = `
+    <div class="panel-team-header">
+      <div class="panel-team-meta">${teamCode} &nbsp;·&nbsp; ${teamData.playoffOdds}% playoff odds &nbsp;·&nbsp; ${teamData.oddsDiff>0?'+':''}${teamData.oddsDiff}% vs preseason</div>
+      <span class="panel-tag ${tagClass}">${tagLabel}</span>
+      <div style="font-size:11px;color:#aaa;margin-top:4px">${teamTargets.length} tracked pitchers</div>
+    </div>
+    ${teamTargets.map(p => `
+      <div class="pitcher-card" onclick="toggleCard(this)">
+        <div class="pitcher-card-top">
+          <div>
+            <div class="pitcher-name">${p.pitcher}</div>
+            <div class="pitcher-rank">${p.pl_rank ? `#${Math.round(p.pl_rank)} · ${p.pl_tier_label||''}` : 'Unranked'}</div>
+            ${p.profile_archetype ? `<div class="pitcher-archetype">${p.profile_archetype}</div>` : ''}
+          </div>
+          <div style="text-align:right;flex-shrink:0">
+            <div class="pitcher-flags">${flagHtml(p.flag_sequence)}</div>
+            <span class="pitcher-priority ${priClass(p.acquisition_priority)}">${(p.acquisition_priority||'').replace('Tier ','T').replace(' \u2013 ',' – ')}</span>
+          </div>
+        </div>
+        <div class="pitcher-detail">
+          ${p.primary_weapons ? `<div class="detail-label">Arsenal</div><div>${p.primary_weapons}</div>` : ''}
+          ${p.key_identified_flaw ? `<div class="detail-label">Key flaw</div><div>${p.key_identified_flaw}</div>` : ''}
+          ${p.preseason_health_flag ? `<div class="detail-label">Health</div><div class="health-flag"><span class="health-icon ${healthClass(p.preseason_health_flag)}">${healthIcon(p.preseason_health_flag)}</span><span>${p.preseason_health_flag}</span></div>` : ''}
+          <div class="detail-label">Seller context</div><div style="color:#8b3a1a">${p.team_seller_notes}</div>
+        </div>
+      </div>
+    `).join('')}
+  `;
+}
+
+function toggleCard(el) { el.classList.toggle('expanded'); }
+function clearPanel() {
+  activeTeam = null;
+  chart.update();
+  document.getElementById('panelTitle').textContent = 'Click a team';
+  document.getElementById('panelClose').style.display = 'none';
+  document.getElementById('panelContent').innerHTML = `<div class="panel-empty"><div class="panel-empty-icon">⚾</div><div>Click any team bubble to view their tracked SP targets</div></div>`;
+}
+
+// ── Targets Table ─────────────────────────────────────────────────────────────
+let sortCol = 'acquisition_score', sortDir = -1;
+
+const leagueFilter = document.getElementById('leagueFilter');
+
+function renderTable() {
+  const search = document.getElementById('tableSearch').value.toLowerCase();
+  const tier = document.getElementById('tierFilter').value;
+  const league = leagueFilter.value;
+
+  let rows = TARGETS.filter(p => {
+    if (search && !p.pitcher.toLowerCase().includes(search) && !p.team.toLowerCase().includes(search)) return false;
+    if (tier === 't2' && !p.acquisition_priority.includes('Tier 2')) return false;
+    if (tier === 't3' && !p.acquisition_priority.includes('Tier 3')) return false;
+    if (tier === 't4' && !p.acquisition_priority.includes('Tier 4')) return false;
+    if (league !== 'all' && TEAM_LEAGUE[p.team] !== league) return false;
+    return true;
+  });
+
+  rows.sort((a,b) => {
+    let av = a[sortCol], bv = b[sortCol];
+    if (av === null || av === undefined) av = sortDir === 1 ? Infinity : -Infinity;
+    if (bv === null || bv === undefined) bv = sortDir === 1 ? Infinity : -Infinity;
+    return typeof av === 'string' ? av.localeCompare(bv) * sortDir : (av - bv) * sortDir;
+  });
+
+  const tbody = document.getElementById('tableBody');
+  tbody.innerHTML = rows.map(p => {
+    const rowClass = p.acquisition_priority.includes('Tier 2') ? 'row-t2' : p.acquisition_priority.includes('Tier 3') ? 'row-t3' : '';
+    const hClass = healthClass(p.preseason_health_flag||'');
+    const sellerClass = p.team_deadline_label === 'Likely Seller' ? 'seller-tag' : 'fringe-tag-sm';
+    const priShort = (p.acquisition_priority||'').replace('Tier 2 \u2013 Monitor Closely','T2 – Monitor').replace('Tier 3 \u2013 Watchlist','T3 – Watchlist').replace('Tier 4 \u2013 Low Priority','T4 – Low');
+    const lg = TEAM_LEAGUE[p.team] || '';
+    return `<tr class="${rowClass}">
+      <td class="td-name">${p.pitcher}<br><span style="font-size:10px;color:#aaa;font-weight:400">${lg}</span></td>
+      <td><span class="td-team">${p.team}</span></td>
+      <td class="td-rank" style="font-weight:600;color:#1a2744">${p.acquisition_score}</td>
+      <td class="td-rank">${p.pl_rank ? Math.round(p.pl_rank) : '—'}</td>
+      <td class="td-flags">${flagHtml(p.flag_sequence)}</td>
+      <td class="td-rank" style="color:#2d7a2d;font-weight:600">${p.plus_flags||0}</td>
+      <td class="td-rank" style="color:#c0392b;font-weight:600">${p.minus_flags||0}</td>
+      <td class="td-archetype">${p.profile_archetype||'—'}</td>
+      <td class="td-health ${hClass}">${p.preseason_health_flag ? p.preseason_health_flag.substring(0,80) + (p.preseason_health_flag.length>80?'…':'') : '—'}</td>
+      <td class="td-seller"><span class="seller-label ${sellerClass}">${p.team_deadline_label}</span></td>
+      <td><span class="pitcher-priority ${priClass(p.acquisition_priority)}">${priShort}</span></td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('tableCount').textContent = `Showing ${rows.length} of ${TARGETS.length} tracked pitchers`;
+
+  // Sort arrows
+  document.querySelectorAll('.targets-table th').forEach(th => {
+    th.classList.remove('sorted');
+    const arrow = th.querySelector('.sort-arrow');
+    if (th.dataset.col === sortCol) {
+      th.classList.add('sorted');
+      if (arrow) arrow.textContent = sortDir === 1 ? '↑' : '↓';
+    } else {
+      if (arrow) arrow.textContent = '↕';
+    }
+  });
+}
+
+document.querySelectorAll('.targets-table th[data-col]').forEach(th => {
+  th.addEventListener('click', () => {
+    if (sortCol === th.dataset.col) sortDir *= -1;
+    else { sortCol = th.dataset.col; sortDir = th.dataset.col === 'acquisition_score' ? -1 : 1; }
+    renderTable();
+  });
+});
+
+document.getElementById('tableSearch').addEventListener('input', renderTable);
+document.getElementById('tierFilter').addEventListener('change', renderTable);
+leagueFilter.addEventListener('change', e => {
+  activeLeague = e.target.value;
+  document.querySelectorAll('.toggle-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.league === activeLeague);
+  });
+  chart.data.datasets = buildDatasets(activeFilter, activeLeague);
+  chart.update();
+  renderTable();
+});
+
+renderTable();
 </script>
 </body>
 </html>
