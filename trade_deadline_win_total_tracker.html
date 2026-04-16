@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trade Deadline Win Total Tracker</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8f7f4; color: #1a1a18; padding: 2rem; }
+  h1 { font-size: 20px; font-weight: 500; margin-bottom: 0.25rem; color: #1a1a18; }
+  .subtitle { font-size: 13px; color: #888; margin-bottom: 1.5rem; }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 1rem; font-size: 13px; color: #666; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 4px; }
+  .filter-bar { display: flex; gap: 8px; margin-bottom: 1rem; flex-wrap: wrap; }
+  .filter-btn { font-size: 12px; padding: 4px 12px; border-radius: 8px; border: 0.5px solid #ccc; background: transparent; color: #666; cursor: pointer; }
+  .filter-btn.active { background: #eee; color: #1a1a18; border-color: #aaa; font-weight: 500; }
+  .tooltip { position: absolute; background: #fff; border: 0.5px solid #ccc; border-radius: 8px; padding: 10px 14px; font-size: 12px; pointer-events: none; display: none; z-index: 10; min-width: 180px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+  .tooltip .t-name { font-weight: 500; font-size: 13px; color: #1a1a18; margin-bottom: 4px; }
+  .tooltip .t-row { display: flex; justify-content: space-between; gap: 16px; color: #888; margin: 2px 0; }
+  .tooltip .t-val { color: #1a1a18; font-weight: 500; }
+  .tooltip .t-tag { margin-top: 6px; font-size: 11px; padding: 2px 8px; border-radius: 4px; display: inline-block; }
+  .seller-tag { background: #FAECE7; color: #993C1D; }
+  .buyer-tag { background: #EAF3DE; color: #3B6D11; }
+  .fringe-tag { background: #FAEEDA; color: #854F0B; }
+  .twins-tag { background: #E6F1FB; color: #185FA5; }
+  .note { font-size: 12px; color: #888; margin-top: 0.5rem; }
+  .chart-wrap { position: relative; width: 100%; height: 520px; }
+</style>
+</head>
+<body>
+
+<h1>Trade Deadline Win Total Tracker</h1>
+<p class="subtitle">Projected wins vs. playoff odds — deadline buyer/seller landscape as of April 16, 2026</p>
+
+<div class="filter-bar" id="filters">
+  <button class="filter-btn active" data-filter="all">All teams</button>
+  <button class="filter-btn" data-filter="seller">Likely sellers</button>
+  <button class="filter-btn" data-filter="fringe">Fringe</button>
+  <button class="filter-btn" data-filter="buyer">Likely buyers</button>
+</div>
+
+<div style="position: relative;">
+  <div class="chart-wrap">
+    <canvas id="scatter" role="img" aria-label="Scatter plot of projected wins vs playoff odds change, colored by deadline behavior.">Team projections scatter plot.</canvas>
+  </div>
+  <div class="tooltip" id="tip"></div>
+</div>
+
+<div class="legend">
+  <span><span class="legend-dot" style="background:#D85A30;"></span>Likely seller (&lt;35% playoff odds, odds declining)</span>
+  <span><span class="legend-dot" style="background:#BA7517;"></span>Fringe (mixed signals)</span>
+  <span><span class="legend-dot" style="background:#639922;"></span>Likely buyer (&gt;50% playoff odds or rising)</span>
+  <span><span class="legend-dot" style="background:#378ADD;"></span>Twins</span>
+</div>
+<p class="note">Bubble size = magnitude of playoff odds change from preseason. Hover for details.</p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const teams = [
+  {name:"Padres",wins:83.3,winsDiff:2.7,playoffOdds:44,oddsDiff:17,league:"NL"},
+  {name:"Twins",wins:81.8,winsDiff:2.8,playoffOdds:44,oddsDiff:16,league:"AL"},
+  {name:"Pirates",wins:85.5,winsDiff:2.0,playoffOdds:61,oddsDiff:16,league:"NL"},
+  {name:"Guardians",wins:79.5,winsDiff:3.5,playoffOdds:30,oddsDiff:14,league:"AL"},
+  {name:"Rays",wins:81.6,winsDiff:1.9,playoffOdds:41,oddsDiff:12,league:"AL"},
+  {name:"Rangers",wins:83.4,winsDiff:1.0,playoffOdds:54,oddsDiff:7,league:"AL"},
+  {name:"Athletics",wins:79.4,winsDiff:1.4,playoffOdds:28,oddsDiff:7,league:"AL"},
+  {name:"Reds",wins:79.9,winsDiff:1.5,playoffOdds:24,oddsDiff:6,league:"NL"},
+  {name:"Braves",wins:90.0,winsDiff:0.4,playoffOdds:84,oddsDiff:5,league:"NL"},
+  {name:"Diamondbacks",wins:82.8,winsDiff:0.4,playoffOdds:41,oddsDiff:4,league:"NL"},
+  {name:"Orioles",wins:82.6,winsDiff:0.3,playoffOdds:47,oddsDiff:3,league:"AL"},
+  {name:"Angels",wins:73.7,winsDiff:1.7,playoffOdds:7,oddsDiff:2,league:"AL"},
+  {name:"Cardinals",wins:76.5,winsDiff:1.1,playoffOdds:11,oddsDiff:2,league:"NL"},
+  {name:"Yankees",wins:88.4,winsDiff:-0.3,playoffOdds:81,oddsDiff:2,league:"AL"},
+  {name:"Dodgers",wins:101.1,winsDiff:3.2,playoffOdds:100,oddsDiff:2,league:"NL"},
+  {name:"Tigers",wins:84.4,winsDiff:0.3,playoffOdds:62,oddsDiff:1,league:"AL"},
+  {name:"Nationals",wins:69.2,winsDiff:0.9,playoffOdds:1,oddsDiff:0,league:"NL"},
+  {name:"Rockies",wins:61.9,winsDiff:-1.2,playoffOdds:0,oddsDiff:0,league:"NL"},
+  {name:"Marlins",wins:75.9,winsDiff:-0.2,playoffOdds:9,oddsDiff:0,league:"NL"},
+  {name:"White Sox",wins:65.9,winsDiff:-1.5,playoffOdds:0,oddsDiff:-1,league:"AL"},
+  {name:"Brewers",wins:82.3,winsDiff:-0.7,playoffOdds:39,oddsDiff:-4,league:"NL"},
+  {name:"Cubs",wins:84.0,winsDiff:-0.8,playoffOdds:50,oddsDiff:-4,league:"NL"},
+  {name:"Astros",wins:79.3,winsDiff:-1.0,playoffOdds:27,oddsDiff:-6,league:"AL"},
+  {name:"Phillies",wins:86.0,winsDiff:-1.5,playoffOdds:63,oddsDiff:-6,league:"NL"},
+  {name:"Mariners",wins:86.1,winsDiff:-2.2,playoffOdds:71,oddsDiff:-8,league:"AL"},
+  {name:"Royals",wins:80.0,winsDiff:-1.7,playoffOdds:33,oddsDiff:-12,league:"AL"},
+  {name:"Giants",wins:78.2,winsDiff:-3.7,playoffOdds:17,oddsDiff:-15,league:"NL"},
+  {name:"Blue Jays",wins:80.8,winsDiff:-2.9,playoffOdds:36,oddsDiff:-17,league:"AL"},
+  {name:"Red Sox",wins:81.4,winsDiff:-3.6,playoffOdds:40,oddsDiff:-21,league:"AL"},
+  {name:"Mets",wins:85.0,winsDiff:-4.9,playoffOdds:57,oddsDiff:-23,league:"NL"},
+];
+
+function classify(t) {
+  if (t.name === "Twins") return "twins";
+  if (t.playoffOdds <= 20 || (t.playoffOdds <= 35 && t.oddsDiff <= -5)) return "seller";
+  if (t.playoffOdds >= 55 || (t.playoffOdds >= 40 && t.oddsDiff >= 5)) return "buyer";
+  return "fringe";
+}
+
+const colors = { seller:"#D85A30", fringe:"#BA7517", buyer:"#639922", twins:"#378ADD" };
+const borders = { seller:"#993C1D", fringe:"#854F0B", buyer:"#3B6D11", twins:"#185FA5" };
+const labels = { seller:"Likely seller", fringe:"Fringe", buyer:"Likely buyer", twins:"Twins" };
+
+function buildDatasets(filter) {
+  const groups = { seller:[], fringe:[], buyer:[], twins:[] };
+  teams.forEach(t => {
+    const cat = classify(t);
+    groups[cat].push({
+      x: t.wins, y: t.playoffOdds,
+      r: Math.max(5, Math.abs(t.oddsDiff) * 1.4 + 4),
+      label: t.name, wins: t.wins, winsDiff: t.winsDiff,
+      playoffOdds: t.playoffOdds, oddsDiff: t.oddsDiff, cat: cat
+    });
+  });
+  return Object.entries(groups).map(([cat, pts]) => ({
+    label: labels[cat],
+    data: filter === "all" || cat === filter || cat === "twins" ? pts : [],
+    backgroundColor: colors[cat] + "bb",
+    borderColor: borders[cat],
+    borderWidth: cat === "twins" ? 2 : 1,
+  }));
+}
+
+const ctx = document.getElementById("scatter").getContext("2d");
+const chart = new Chart(ctx, {
+  type: "bubble",
+  data: { datasets: buildDatasets("all") },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, tooltip: { enabled: false } },
+    scales: {
+      x: {
+        title: { display: true, text: "Projected wins (Apr 16)", font: { size: 12 }, color: "#888" },
+        min: 58, max: 105,
+        ticks: { font: { size: 11 }, color: "#888" },
+        grid: { color: "rgba(128,128,128,0.15)" }
+      },
+      y: {
+        title: { display: true, text: "Playoff odds %", font: { size: 12 }, color: "#888" },
+        min: -5, max: 105,
+        ticks: { font: { size: 11 }, color: "#888", callback: v => v + "%" },
+        grid: { color: "rgba(128,128,128,0.15)" }
+      }
+    },
+    layout: { padding: 20 }
+  },
+  plugins: [{
+    id: "labels",
+    afterDatasetsDraw(chart) {
+      const ctx = chart.ctx;
+      ctx.save();
+      ctx.font = "10px sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      chart.data.datasets.forEach((ds, di) => {
+        ds.data.forEach((pt, i) => {
+          const meta = chart.getDatasetMeta(di);
+          if (!meta.data[i]) return;
+          const {x, y} = meta.data[i].getCenterPoint();
+          ctx.fillStyle = borders[pt.cat] || "#333";
+          ctx.fillText(pt.label, x, y + pt.r + 9);
+        });
+      });
+      ctx.restore();
+    }
+  }]
+});
+
+const canvas = document.getElementById("scatter");
+const tip = document.getElementById("tip");
+
+canvas.addEventListener("mousemove", (e) => {
+  const rect = canvas.getBoundingClientRect();
+  const mx = e.clientX - rect.left, my = e.clientY - rect.top;
+  let found = null;
+  chart.data.datasets.forEach((ds, di) => {
+    ds.data.forEach(pt => {
+      const meta = chart.getDatasetMeta(di);
+      const idx = ds.data.indexOf(pt);
+      if (!meta.data[idx]) return;
+      const {x, y} = meta.data[idx].getCenterPoint();
+      if (Math.hypot(mx - x, my - y) < pt.r + 8) found = { pt, x: e.clientX - rect.left, y: e.clientY - rect.top };
+    });
+  });
+  if (found) {
+    const {pt, x, y} = found;
+    const tagClass = pt.cat === "twins" ? "twins-tag" : pt.cat + "-tag";
+    const tagLabel = pt.cat === "twins" ? "Your team" : labels[pt.cat];
+    tip.innerHTML = `
+      <div class="t-name">${pt.label}</div>
+      <div class="t-row"><span>Proj. wins</span><span class="t-val">${pt.wins.toFixed(1)}</span></div>
+      <div class="t-row"><span>vs preseason</span><span class="t-val">${pt.winsDiff > 0 ? '+' : ''}${pt.winsDiff.toFixed(1)}</span></div>
+      <div class="t-row"><span>Playoff odds</span><span class="t-val">${pt.playoffOdds}%</span></div>
+      <div class="t-row"><span>Odds change</span><span class="t-val">${pt.oddsDiff > 0 ? '+' : ''}${pt.oddsDiff}%</span></div>
+      <span class="t-tag ${tagClass}">${tagLabel}</span>
+    `;
+    tip.style.display = "block";
+    tip.style.left = (x + 14) + "px";
+    tip.style.top = (y - 20) + "px";
+    canvas.style.cursor = "pointer";
+  } else {
+    tip.style.display = "none";
+    canvas.style.cursor = "default";
+  }
+});
+canvas.addEventListener("mouseleave", () => { tip.style.display = "none"; });
+
+document.getElementById("filters").addEventListener("click", e => {
+  const btn = e.target.closest(".filter-btn");
+  if (!btn) return;
+  document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+  btn.classList.add("active");
+  chart.data.datasets = buildDatasets(btn.dataset.filter);
+  chart.update();
+});
+</script>
+</body>
+</html>
