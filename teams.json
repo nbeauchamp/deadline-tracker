@@ -1,0 +1,1187 @@
+{
+  "_meta": {
+    "description": "MLB team data for Twins Trade Deadline Tracker 2026",
+    "schema_version": "1.0",
+    "notes": [
+      "identity: static team info \u2014 never changes within a season",
+      "preseason: locked baseline from Opening Day \u2014 never updated",
+      "snapshots: time-series of in-season win total projections and playoff odds, keyed by date (YYYY-MM-DD)",
+      "Add a new snapshot object each time you update odds (weekly or after significant moves)",
+      "winsDiff and oddsDiff in each snapshot are always relative to the preseason baseline",
+      "aliases: maps our primary abbreviation to codes used by external sources (fangraphs, baseball_reference) for joins"
+    ]
+  },
+  "teams": {
+    "ATH": {
+      "identity": {
+        "name": "Athletics",
+        "city": "Sacramento",
+        "league": "AL",
+        "division": "AL West"
+      },
+      "preseason": {
+        "wins": 78.0,
+        "playoffOdds": 21
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 79.4,
+          "winsDiff": 1.4,
+          "playoffOdds": 28,
+          "oddsDiff": 7
+        }
+      ],
+      "aliases": {
+        "baseball_reference": "OAK"
+      },
+      "org_context": {
+        "baseball_head": "David Forst",
+        "bh_tenure": 11,
+        "manager": "Mark Kotsay",
+        "mgr_tenure": 5,
+        "context_blurb": "Attempting to capitalize on an above average position player core."
+      },
+      "payroll": {
+        "cash_payroll": 94625714,
+        "tax_payroll": 136029542,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 136029542,
+        "cbt_threshold": 244000000,
+        "space": 107970458
+      }
+    },
+    "ATL": {
+      "identity": {
+        "name": "Braves",
+        "city": "Atlanta",
+        "league": "NL",
+        "division": "NL East"
+      },
+      "preseason": {
+        "wins": 89.6,
+        "playoffOdds": 79
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 90.0,
+          "winsDiff": 0.4,
+          "playoffOdds": 84,
+          "oddsDiff": 5
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Alex Anthopoulos",
+        "bh_tenure": 9,
+        "manager": "Walt Weiss",
+        "mgr_tenure": 1,
+        "context_blurb": "In need of a bounce back to prior status as kings of the NLE after an injury fueled lost season."
+      },
+      "payroll": {
+        "cash_payroll": 250167765,
+        "tax_payroll": 246048670,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "1st-Time",
+        "tax_bill_est": 409734,
+        "total_tax_burden": 246458404,
+        "cbt_threshold": 244000000,
+        "space": -2048670
+      }
+    },
+    "AZ": {
+      "identity": {
+        "name": "Diamondbacks",
+        "city": "Phoenix",
+        "league": "NL",
+        "division": "NL West"
+      },
+      "preseason": {
+        "wins": 82.4,
+        "playoffOdds": 37
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 82.8,
+          "winsDiff": 0.4,
+          "playoffOdds": 41,
+          "oddsDiff": 4
+        }
+      ],
+      "aliases": {
+        "fangraphs": "ARI",
+        "baseball_reference": "ARI"
+      },
+      "org_context": {
+        "baseball_head": "Mike Hazen",
+        "bh_tenure": 10,
+        "manager": "Torey Lovullo",
+        "mgr_tenure": 10,
+        "context_blurb": "Competitive mid market team; no urgent pressure."
+      },
+      "payroll": {
+        "cash_payroll": 195664257,
+        "tax_payroll": 232680420,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 232680420,
+        "cbt_threshold": 244000000,
+        "space": 11319580
+      }
+    },
+    "BAL": {
+      "identity": {
+        "name": "Orioles",
+        "city": "Baltimore",
+        "league": "AL",
+        "division": "AL East"
+      },
+      "preseason": {
+        "wins": 82.3,
+        "playoffOdds": 44
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 82.6,
+          "winsDiff": 0.3,
+          "playoffOdds": 47,
+          "oddsDiff": 3
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Mike Elias",
+        "bh_tenure": 8,
+        "manager": "Craig Albernaz",
+        "mgr_tenure": 1,
+        "context_blurb": "Young core nearing peak trying to recapture momentum with a new manager and aggressive FA spend."
+      },
+      "payroll": {
+        "cash_payroll": 164731700,
+        "tax_payroll": 217700311,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 217700311,
+        "cbt_threshold": 244000000,
+        "space": 26299689
+      }
+    },
+    "BOS": {
+      "identity": {
+        "name": "Red Sox",
+        "city": "Boston",
+        "league": "AL",
+        "division": "AL East"
+      },
+      "preseason": {
+        "wins": 85.0,
+        "playoffOdds": 61
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 81.4,
+          "winsDiff": -3.6,
+          "playoffOdds": 40,
+          "oddsDiff": -21
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Craig Breslow",
+        "bh_tenure": 3,
+        "manager": "Alex Cora",
+        "mgr_tenure": 8,
+        "context_blurb": "Market expectations exceed recent results, immense pressure to reestablish contender status."
+      },
+      "payroll": {
+        "cash_payroll": 195822167,
+        "tax_payroll": 266101898,
+        "cbt_status_2025": "1st-Time",
+        "cbt_status_2026": "2nd-Time",
+        "tax_bill_est": 6882797,
+        "total_tax_burden": 272984695,
+        "cbt_threshold": 244000000,
+        "space": -22101898
+      }
+    },
+    "CHC": {
+      "identity": {
+        "name": "Cubs",
+        "city": "Chicago",
+        "league": "NL",
+        "division": "NL Central"
+      },
+      "preseason": {
+        "wins": 84.8,
+        "playoffOdds": 54
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 84.0,
+          "winsDiff": -0.8,
+          "playoffOdds": 50,
+          "oddsDiff": -4
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Jed Hoyer",
+        "bh_tenure": 6,
+        "manager": "Craig Counsell",
+        "mgr_tenure": 3,
+        "context_blurb": "Big market momentum demands turning progress into wins now."
+      },
+      "payroll": {
+        "cash_payroll": 232289209,
+        "tax_payroll": 248474822,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "1st-Time",
+        "tax_bill_est": 894964,
+        "total_tax_burden": 249369786,
+        "cbt_threshold": 244000000,
+        "space": -4474822
+      }
+    },
+    "CWS": {
+      "identity": {
+        "name": "White Sox",
+        "city": "Chicago",
+        "league": "AL",
+        "division": "AL Central"
+      },
+      "preseason": {
+        "wins": 67.4,
+        "playoffOdds": 1
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 65.9,
+          "winsDiff": -1.5,
+          "playoffOdds": 0,
+          "oddsDiff": -1
+        }
+      ],
+      "aliases": {
+        "fangraphs": "CHW",
+        "baseball_reference": "CHW"
+      },
+      "org_context": {
+        "baseball_head": "Chris Getz",
+        "bh_tenure": 3,
+        "manager": "Will Venable",
+        "mgr_tenure": 2,
+        "context_blurb": "Pressure to show rebuild coherence."
+      },
+      "payroll": {
+        "cash_payroll": 87562350,
+        "tax_payroll": 108344343,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 108344343,
+        "cbt_threshold": 244000000,
+        "space": 135655657
+      }
+    },
+    "CIN": {
+      "identity": {
+        "name": "Reds",
+        "city": "Cincinnati",
+        "league": "NL",
+        "division": "NL Central"
+      },
+      "preseason": {
+        "wins": 78.4,
+        "playoffOdds": 18
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 79.9,
+          "winsDiff": 1.5,
+          "playoffOdds": 24,
+          "oddsDiff": 6
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Nick Krall",
+        "bh_tenure": 6,
+        "manager": "Terry Francona",
+        "mgr_tenure": 2,
+        "context_blurb": "Must show young core is progressing off of a surprise playoff appearance."
+      },
+      "payroll": {
+        "cash_payroll": 127776411,
+        "tax_payroll": 148667572,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 148667572,
+        "cbt_threshold": 244000000,
+        "space": 95332428
+      }
+    },
+    "CLE": {
+      "identity": {
+        "name": "Guardians",
+        "city": "Cleveland",
+        "league": "AL",
+        "division": "AL Central"
+      },
+      "preseason": {
+        "wins": 76.0,
+        "playoffOdds": 16
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 79.5,
+          "winsDiff": 3.5,
+          "playoffOdds": 30,
+          "oddsDiff": 14
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Chris Antonetti",
+        "bh_tenure": 17,
+        "manager": "Stephen Vogt",
+        "mgr_tenure": 3,
+        "context_blurb": "Small market, internal development oriented, almost never pushing chips in."
+      },
+      "payroll": {
+        "cash_payroll": 84303729,
+        "tax_payroll": 87827999,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 87827999,
+        "cbt_threshold": 244000000,
+        "space": 156172001
+      }
+    },
+    "COL": {
+      "identity": {
+        "name": "Rockies",
+        "city": "Denver",
+        "league": "NL",
+        "division": "NL West"
+      },
+      "preseason": {
+        "wins": 63.1,
+        "playoffOdds": 0
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 61.9,
+          "winsDiff": -1.2,
+          "playoffOdds": 0,
+          "oddsDiff": 0
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Paul DePodesta",
+        "bh_tenure": 1,
+        "manager": "Warren Schaeffer",
+        "mgr_tenure": 2,
+        "context_blurb": "Pressure on new leadership to define a modern direction out of an organizational bottoming out."
+      },
+      "payroll": {
+        "cash_payroll": 121867036,
+        "tax_payroll": 131609949,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 131609949,
+        "cbt_threshold": 244000000,
+        "space": 112390051
+      }
+    },
+    "DET": {
+      "identity": {
+        "name": "Tigers",
+        "city": "Detroit",
+        "league": "AL",
+        "division": "AL Central"
+      },
+      "preseason": {
+        "wins": 84.1,
+        "playoffOdds": 61
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 84.4,
+          "winsDiff": 0.3,
+          "playoffOdds": 62,
+          "oddsDiff": 1
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Scott Harris",
+        "bh_tenure": 4,
+        "manager": "A.J. Hinch",
+        "mgr_tenure": 6,
+        "context_blurb": "Rebuild phase is over and now must translate into playoff appearances."
+      },
+      "payroll": {
+        "cash_payroll": 206672333,
+        "tax_payroll": 239806674,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 239806674,
+        "cbt_threshold": 244000000,
+        "space": 4193326
+      }
+    },
+    "HOU": {
+      "identity": {
+        "name": "Astros",
+        "city": "Houston",
+        "league": "AL",
+        "division": "AL West"
+      },
+      "preseason": {
+        "wins": 80.3,
+        "playoffOdds": 33
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 79.3,
+          "winsDiff": -1.0,
+          "playoffOdds": 27,
+          "oddsDiff": -6
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Dana Brown",
+        "bh_tenure": 4,
+        "manager": "Joe Espada",
+        "mgr_tenure": 3,
+        "context_blurb": "Hanging onto the vestiges of a waning dynasty attempting to prove competitive window is still open."
+      },
+      "payroll": {
+        "cash_payroll": 237077405,
+        "tax_payroll": 235856724,
+        "cbt_status_2025": "2nd-Time",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 235856724,
+        "cbt_threshold": 244000000,
+        "space": 8143276
+      }
+    },
+    "KC": {
+      "identity": {
+        "name": "Royals",
+        "city": "Kansas City",
+        "league": "AL",
+        "division": "AL Central"
+      },
+      "preseason": {
+        "wins": 81.7,
+        "playoffOdds": 45
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 80.0,
+          "winsDiff": -1.7,
+          "playoffOdds": 33,
+          "oddsDiff": -12
+        }
+      ],
+      "aliases": {
+        "fangraphs": "KCR",
+        "baseball_reference": "KCR"
+      },
+      "org_context": {
+        "baseball_head": "J.J. Picollo",
+        "bh_tenure": 4,
+        "manager": "Matt Quatraro",
+        "mgr_tenure": 4,
+        "context_blurb": "Small market team trying to stay competitive; second consecutive year running a payroll in $140M, well above where they were in year's prior."
+      },
+      "payroll": {
+        "cash_payroll": 144632904,
+        "tax_payroll": 183197498,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 183197498,
+        "cbt_threshold": 244000000,
+        "space": 60802502
+      }
+    },
+    "LAA": {
+      "identity": {
+        "name": "Angels",
+        "city": "Anaheim",
+        "league": "AL",
+        "division": "AL West"
+      },
+      "preseason": {
+        "wins": 72.0,
+        "playoffOdds": 5
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 73.7,
+          "winsDiff": 1.7,
+          "playoffOdds": 7,
+          "oddsDiff": 2
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Perry Minasian",
+        "bh_tenure": 6,
+        "manager": "Kurt Suzuki",
+        "mgr_tenure": 1,
+        "context_blurb": "Big market looking to find their way; always pressure to win."
+      },
+      "payroll": {
+        "cash_payroll": 181745795,
+        "tax_payroll": 194530851,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 194530851,
+        "cbt_threshold": 244000000,
+        "space": 49469149
+      }
+    },
+    "LAD": {
+      "identity": {
+        "name": "Dodgers",
+        "city": "Los Angeles",
+        "league": "NL",
+        "division": "NL West"
+      },
+      "preseason": {
+        "wins": 97.9,
+        "playoffOdds": 98
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 101.1,
+          "winsDiff": 3.2,
+          "playoffOdds": 100,
+          "oddsDiff": 2
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Andrew Friedman",
+        "bh_tenure": 12,
+        "manager": "Dave Roberts",
+        "mgr_tenure": 12,
+        "context_blurb": "Modern dynasty trying to cement themselves as a historic dynasty by 3-peating."
+      },
+      "payroll": {
+        "cash_payroll": 397403333,
+        "tax_payroll": 415212461,
+        "cbt_status_2025": "3+-Time",
+        "cbt_status_2026": "3+-Time",
+        "tax_bill_est": 163733707,
+        "total_tax_burden": 578946168,
+        "cbt_threshold": 244000000,
+        "space": -171212461
+      }
+    },
+    "MIA": {
+      "identity": {
+        "name": "Marlins",
+        "city": "Miami",
+        "league": "NL",
+        "division": "NL East"
+      },
+      "preseason": {
+        "wins": 76.1,
+        "playoffOdds": 9
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 75.9,
+          "winsDiff": -0.2,
+          "playoffOdds": 9,
+          "oddsDiff": 0
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Peter Bendix",
+        "bh_tenure": 3,
+        "manager": "Clayton McCullough",
+        "mgr_tenure": 2,
+        "context_blurb": "Low payroll club focused on long-term development over immediate results."
+      },
+      "payroll": {
+        "cash_payroll": 73360200,
+        "tax_payroll": 81941404,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 81941404,
+        "cbt_threshold": 244000000,
+        "space": 162058596
+      }
+    },
+    "MIL": {
+      "identity": {
+        "name": "Brewers",
+        "city": "Milwaukee",
+        "league": "NL",
+        "division": "NL Central"
+      },
+      "preseason": {
+        "wins": 83.0,
+        "playoffOdds": 43
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 82.3,
+          "winsDiff": -0.7,
+          "playoffOdds": 39,
+          "oddsDiff": -4
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Matt Arnold",
+        "bh_tenure": 4,
+        "manager": "Pat Murphy",
+        "mgr_tenure": 3,
+        "context_blurb": "Small market overacheiver coming off their best season in a decade."
+      },
+      "payroll": {
+        "cash_payroll": 131266100,
+        "tax_payroll": 139000376,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 139000376,
+        "cbt_threshold": 244000000,
+        "space": 104999624
+      }
+    },
+    "MIN": {
+      "identity": {
+        "name": "Twins",
+        "city": "Minneapolis",
+        "league": "AL",
+        "division": "AL Central"
+      },
+      "preseason": {
+        "wins": 79.0,
+        "playoffOdds": 28
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 81.8,
+          "winsDiff": 2.8,
+          "playoffOdds": 44,
+          "oddsDiff": 16
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Jeremy Zoll",
+        "bh_tenure": 1,
+        "manager": "Derek Shelton",
+        "mgr_tenure": 1,
+        "context_blurb": "Fringe contender trying to find stability after years of tumult."
+      },
+      "payroll": {
+        "cash_payroll": 107061940,
+        "tax_payroll": 123266143,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 123266143,
+        "cbt_threshold": 244000000,
+        "space": 120733857
+      }
+    },
+    "NYM": {
+      "identity": {
+        "name": "Mets",
+        "city": "New York",
+        "league": "NL",
+        "division": "NL East"
+      },
+      "preseason": {
+        "wins": 89.9,
+        "playoffOdds": 80
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 85.0,
+          "winsDiff": -4.9,
+          "playoffOdds": 57,
+          "oddsDiff": -23
+        }
+      ],
+      "org_context": {
+        "baseball_head": "David Stearns",
+        "bh_tenure": 3,
+        "manager": "Carlos Mendoza",
+        "mgr_tenure": 3,
+        "context_blurb": "Spending at historic levels and coming off epic collapse demands a postseason breakthrough immediately"
+      },
+      "payroll": {
+        "cash_payroll": 369560162,
+        "tax_payroll": 381023634,
+        "cbt_status_2025": "3+-Time",
+        "cbt_status_2026": "3+-Time",
+        "tax_bill_est": 126125997,
+        "total_tax_burden": 507149631,
+        "cbt_threshold": 244000000,
+        "space": -137023634
+      }
+    },
+    "NYY": {
+      "identity": {
+        "name": "Yankees",
+        "city": "New York",
+        "league": "AL",
+        "division": "AL East"
+      },
+      "preseason": {
+        "wins": 88.7,
+        "playoffOdds": 79
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 88.4,
+          "winsDiff": -0.3,
+          "playoffOdds": 81,
+          "oddsDiff": 2
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Brian Cashman",
+        "bh_tenure": 29,
+        "manager": "Aaron Boone",
+        "mgr_tenure": 9,
+        "context_blurb": "World Series or bust at all times, no excuses for failure."
+      },
+      "payroll": {
+        "cash_payroll": 309510883,
+        "tax_payroll": 337140544,
+        "cbt_status_2025": "3+-Time",
+        "cbt_status_2026": "3+-Time",
+        "tax_bill_est": 77854598,
+        "total_tax_burden": 414995142,
+        "cbt_threshold": 244000000,
+        "space": -93140544
+      }
+    },
+    "PHI": {
+      "identity": {
+        "name": "Phillies",
+        "city": "Philadelphia",
+        "league": "NL",
+        "division": "NL East"
+      },
+      "preseason": {
+        "wins": 87.5,
+        "playoffOdds": 69
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 86.0,
+          "winsDiff": -1.5,
+          "playoffOdds": 63,
+          "oddsDiff": -6
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Dave Dombrowski",
+        "bh_tenure": 6,
+        "manager": "Rob Thomson",
+        "mgr_tenure": 5,
+        "context_blurb": "Veteran, expensive core means the window is now with no margin for failure with mounting frustration in the market."
+      },
+      "payroll": {
+        "cash_payroll": 285423118,
+        "tax_payroll": 313494378,
+        "cbt_status_2025": "3+-Time",
+        "cbt_status_2026": "3+-Time",
+        "tax_bill_est": 51843816,
+        "total_tax_burden": 365338194,
+        "cbt_threshold": 244000000,
+        "space": -69494378
+      }
+    },
+    "PIT": {
+      "identity": {
+        "name": "Pirates",
+        "city": "Pittsburgh",
+        "league": "NL",
+        "division": "NL Central"
+      },
+      "preseason": {
+        "wins": 83.5,
+        "playoffOdds": 45
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 85.5,
+          "winsDiff": 2.0,
+          "playoffOdds": 61,
+          "oddsDiff": 16
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Ben Cherington",
+        "bh_tenure": 7,
+        "manager": "Don Kelly",
+        "mgr_tenure": 1,
+        "context_blurb": "Small market team looking to take a step forward with pressure mounting."
+      },
+      "payroll": {
+        "cash_payroll": 106983233,
+        "tax_payroll": 134501207,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 134501207,
+        "cbt_threshold": 244000000,
+        "space": 109498793
+      }
+    },
+    "SD": {
+      "identity": {
+        "name": "Padres",
+        "city": "San Diego",
+        "league": "NL",
+        "division": "NL West"
+      },
+      "preseason": {
+        "wins": 80.6,
+        "playoffOdds": 27
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 83.3,
+          "winsDiff": 2.7,
+          "playoffOdds": 44,
+          "oddsDiff": 17
+        }
+      ],
+      "aliases": {
+        "fangraphs": "SDP",
+        "baseball_reference": "SDP"
+      },
+      "org_context": {
+        "baseball_head": "A.J. Preller",
+        "bh_tenure": 12,
+        "manager": "Craig Stammen",
+        "mgr_tenure": 1,
+        "context_blurb": "Continued spend above their market size demands success amidst franchise sale."
+      },
+      "payroll": {
+        "cash_payroll": 208498199,
+        "tax_payroll": 255992138,
+        "cbt_status_2025": "1st-Time",
+        "cbt_status_2026": "2nd-Time",
+        "tax_bill_est": 3597641,
+        "total_tax_burden": 259589779,
+        "cbt_threshold": 244000000,
+        "space": -11992138
+      }
+    },
+    "SEA": {
+      "identity": {
+        "name": "Mariners",
+        "city": "Seattle",
+        "league": "AL",
+        "division": "AL West"
+      },
+      "preseason": {
+        "wins": 88.3,
+        "playoffOdds": 79
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 86.1,
+          "winsDiff": -2.2,
+          "playoffOdds": 71,
+          "oddsDiff": -8
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Jerry Dipoto",
+        "bh_tenure": 11,
+        "manager": "Dan Wilson",
+        "mgr_tenure": 2,
+        "context_blurb": "Strong projections demand validation as a true top-tier contender."
+      },
+      "payroll": {
+        "cash_payroll": 162257981,
+        "tax_payroll": 197631230,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 197631230,
+        "cbt_threshold": 244000000,
+        "space": 46368770
+      }
+    },
+    "SF": {
+      "identity": {
+        "name": "Giants",
+        "city": "San Francisco",
+        "league": "NL",
+        "division": "NL West"
+      },
+      "preseason": {
+        "wins": 81.9,
+        "playoffOdds": 32
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 78.2,
+          "winsDiff": -3.7,
+          "playoffOdds": 17,
+          "oddsDiff": -15
+        }
+      ],
+      "aliases": {
+        "fangraphs": "SFG",
+        "baseball_reference": "SFG"
+      },
+      "org_context": {
+        "baseball_head": "Buster Posey",
+        "bh_tenure": 2,
+        "manager": "Tony Vitello",
+        "mgr_tenure": 1,
+        "context_blurb": "Big market trying to find former glory in the early years of a leadership revamp."
+      },
+      "payroll": {
+        "cash_payroll": 199542857,
+        "tax_payroll": 230520940,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 230520940,
+        "cbt_threshold": 244000000,
+        "space": 13479060
+      }
+    },
+    "STL": {
+      "identity": {
+        "name": "Cardinals",
+        "city": "St. Louis",
+        "league": "NL",
+        "division": "NL Central"
+      },
+      "preseason": {
+        "wins": 75.4,
+        "playoffOdds": 9
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 76.5,
+          "winsDiff": 1.1,
+          "playoffOdds": 11,
+          "oddsDiff": 2
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Chaim Bloom",
+        "bh_tenure": 1,
+        "manager": "Oliver Marmol",
+        "mgr_tenure": 5,
+        "context_blurb": "New leadership looking to reset the franchise."
+      },
+      "payroll": {
+        "cash_payroll": 97905750,
+        "tax_payroll": 111559321,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 111559321,
+        "cbt_threshold": 244000000,
+        "space": 132440679
+      }
+    },
+    "TB": {
+      "identity": {
+        "name": "Rays",
+        "city": "St. Petersburg",
+        "league": "AL",
+        "division": "AL East"
+      },
+      "preseason": {
+        "wins": 79.7,
+        "playoffOdds": 29
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 81.6,
+          "winsDiff": 1.9,
+          "playoffOdds": 41,
+          "oddsDiff": 12
+        }
+      ],
+      "aliases": {
+        "fangraphs": "TBR",
+        "baseball_reference": "TBR"
+      },
+      "org_context": {
+        "baseball_head": "Erik Neander",
+        "bh_tenure": 10,
+        "manager": "Kevin Cash",
+        "mgr_tenure": 12,
+        "context_blurb": "Small market, process-driven org with a hardened strategy though seemingly acting with a slightly quicker pace as they hunt a new stadium."
+      },
+      "payroll": {
+        "cash_payroll": 87360700,
+        "tax_payroll": 108325756,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 108325756,
+        "cbt_threshold": 244000000,
+        "space": 135674244
+      }
+    },
+    "TEX": {
+      "identity": {
+        "name": "Rangers",
+        "city": "Arlington",
+        "league": "AL",
+        "division": "AL West"
+      },
+      "preseason": {
+        "wins": 82.4,
+        "playoffOdds": 47
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 83.4,
+          "winsDiff": 1.0,
+          "playoffOdds": 54,
+          "oddsDiff": 7
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Chris Young",
+        "bh_tenure": 4,
+        "manager": "Skip Schumaker",
+        "mgr_tenure": 1,
+        "context_blurb": "Recent success and spending create expectation of continued deep runs."
+      },
+      "payroll": {
+        "cash_payroll": 185780500,
+        "tax_payroll": 203949109,
+        "cbt_status_2025": "3+-Time",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 203949109,
+        "cbt_threshold": 244000000,
+        "space": 40050891
+      }
+    },
+    "TOR": {
+      "identity": {
+        "name": "Blue Jays",
+        "city": "Toronto",
+        "league": "AL",
+        "division": "AL East"
+      },
+      "preseason": {
+        "wins": 83.7,
+        "playoffOdds": 53
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 80.8,
+          "winsDiff": -2.9,
+          "playoffOdds": 36,
+          "oddsDiff": -17
+        }
+      ],
+      "org_context": {
+        "baseball_head": "Ross Atkins",
+        "bh_tenure": 11,
+        "manager": "John Schneider",
+        "mgr_tenure": 5,
+        "context_blurb": "Doubling down on near title miss in a magical season by stepping up the investment."
+      },
+      "payroll": {
+        "cash_payroll": 289556935,
+        "tax_payroll": 309484438,
+        "cbt_status_2025": "1st-Time",
+        "cbt_status_2026": "2nd-Time",
+        "tax_bill_est": 34335994,
+        "total_tax_burden": 343820432,
+        "cbt_threshold": 244000000,
+        "space": -65484438
+      }
+    },
+    "WSH": {
+      "identity": {
+        "name": "Nationals",
+        "city": "Washington",
+        "league": "NL",
+        "division": "NL East"
+      },
+      "preseason": {
+        "wins": 68.3,
+        "playoffOdds": 1
+      },
+      "snapshots": [
+        {
+          "date": "2026-04-17",
+          "wins": 69.2,
+          "winsDiff": 0.9,
+          "playoffOdds": 1,
+          "oddsDiff": 0
+        }
+      ],
+      "aliases": {
+        "fangraphs": "WSN",
+        "baseball_reference": "WSN"
+      },
+      "org_context": {
+        "baseball_head": "Paul Toboni",
+        "bh_tenure": 1,
+        "manager": "Blake Butera",
+        "mgr_tenure": 1,
+        "context_blurb": "Year 0 of a total rebuild with a fresh new energy at the top."
+      },
+      "payroll": {
+        "cash_payroll": 96746805,
+        "tax_payroll": 115501467,
+        "cbt_status_2025": "Non-Tax",
+        "cbt_status_2026": "Non-Tax",
+        "tax_bill_est": null,
+        "total_tax_burden": 115501467,
+        "cbt_threshold": 244000000,
+        "space": 128498533
+      }
+    }
+  }
+}
