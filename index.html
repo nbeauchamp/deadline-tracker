@@ -152,6 +152,84 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .cbt-first{background:#fff3cd;color:#7a5200}
 .cbt-second{background:#fde8d8;color:#8b3a1a}
 .cbt-repeat{background:#fcd6d6;color:#7a1a1a}
+
+/* ── Tab navigation ─────────────────────────────────────────────────────────── */
+.tab-nav{display:flex;background:#12203a;border-bottom:1px solid rgba(255,255,255,.08)}
+.tab-btn{font-size:13px;font-weight:500;padding:.7rem 1.5rem;color:rgba(255,255,255,.5);background:none;border:none;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s;letter-spacing:-.1px}
+.tab-btn:hover{color:rgba(255,255,255,.8)}
+.tab-btn.active{color:#fff;border-bottom-color:#5b9cf6}
+.page{display:none}
+.page.active{display:block}
+
+/* ── Teams page ─────────────────────────────────────────────────────────────── */
+.teams-page{padding:1.25rem 2rem;background:#f5f4f0;min-height:calc(100vh - 100px)}
+.teams-toolbar{display:flex;align-items:center;gap:10px;margin-bottom:1.25rem;flex-wrap:wrap}
+.teams-toolbar-title{font-size:14px;font-weight:600;color:#1a1a18;margin-right:auto}
+.view-toggle{display:flex;border:1px solid #ccc;border-radius:20px;overflow:hidden;background:#fff}
+.view-toggle-btn{font-size:12px;padding:5px 16px;border:none;background:transparent;color:#666;cursor:pointer;transition:all .15s}
+.view-toggle-btn.active{background:#1a2744;color:#fff}
+.view-toggle-btn+.view-toggle-btn{border-left:1px solid #ccc}
+.teams-league-toggle{display:flex;border:1px solid #ccc;border-radius:20px;overflow:hidden;background:#fff}
+.teams-league-btn{font-size:12px;padding:5px 14px;border:none;background:transparent;color:#666;cursor:pointer;transition:all .15s}
+.teams-league-btn.active{background:#1a2744;color:#fff}
+.teams-league-btn+.teams-league-btn{border-left:1px solid #ccc}
+
+/* Division view */
+.division-block{margin-bottom:1.75rem}
+.division-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;color:#888;margin-bottom:.625rem;padding-bottom:.375rem;border-bottom:2px solid #e0ddd5}
+.teams-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.875rem}
+
+/* Deadline status view */
+.deadline-block{margin-bottom:1.75rem}
+.deadline-block-header{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:.4rem .875rem;border-radius:6px;display:inline-block;margin-bottom:.625rem}
+.dh-seller{background:#fde8d8;color:#8b3a1a}
+.dh-fringe{background:#fef3d0;color:#7a5200}
+.dh-buyer{background:#dff0d8;color:#2d6a1f}
+.dh-twins{background:#dce8f8;color:#1a3d7a}
+
+/* Team card */
+.team-card{background:#fff;border:1px solid #e0ddd5;border-radius:10px;overflow:hidden;transition:box-shadow .15s}
+.team-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.team-card-header{display:flex;align-items:center;justify-content:space-between;padding:.625rem .875rem;background:#f8f7f4;border-bottom:1px solid #eee;cursor:pointer;user-select:none}
+.team-card-left{display:flex;align-items:center;gap:.5rem}
+.team-code{font-size:14px;font-weight:700;color:#1a1a18}
+.team-record{font-size:11px;color:#999}
+.team-deadline-badge{font-size:10px;padding:2px 8px;border-radius:4px;font-weight:600}
+.tdb-seller{background:#fde8d8;color:#8b3a1a}
+.tdb-fringe{background:#fef3d0;color:#7a5200}
+.tdb-buyer{background:#dff0d8;color:#2d6a1f}
+.tdb-twins{background:#dce8f8;color:#1a3d7a}
+.team-card-toggle{font-size:12px;color:#bbb;transition:transform .2s}
+.team-card-toggle.open{transform:rotate(180deg)}
+.team-pitcher-list{padding:.375rem 0}
+.team-pitcher-row{display:flex;align-items:center;gap:0;padding:.35rem .875rem;cursor:pointer;border-bottom:1px solid #f5f4f0;transition:background .12s;position:relative}
+.team-pitcher-row:last-child{border-bottom:none}
+.team-pitcher-row:hover{background:#f8fafd}
+.team-pitcher-row.is-target{border-left:3px solid #2d7a2d;padding-left:calc(.875rem - 3px)}
+.tpr-name{font-size:12px;font-weight:600;color:#1a1a18;min-width:130px;flex-shrink:0}
+.tpr-flags{font-size:11px;color:#888;min-width:44px;flex-shrink:0;letter-spacing:1px}
+.tpr-archetype{font-size:11px;color:#666;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
+.tpr-score{font-size:11px;font-weight:700;color:#1a2744;min-width:28px;text-align:right;flex-shrink:0}
+
+/* Pitcher detail panel (teams page inline expand) */
+.teams-detail-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:100;align-items:flex-start;justify-content:center;padding-top:60px}
+.teams-detail-overlay.open{display:flex}
+.teams-detail-modal{background:#fff;border-radius:14px;width:100%;max-width:520px;max-height:80vh;overflow-y:auto;box-shadow:0 12px 48px rgba(0,0,0,.2);padding:1.5rem}
+.tdm-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem}
+.tdm-name{font-size:16px;font-weight:700;color:#1a1a18}
+.tdm-team{font-size:12px;color:#888;margin-top:2px}
+.tdm-close{font-size:22px;color:#aaa;cursor:pointer;line-height:1;flex-shrink:0;margin-left:1rem}
+.tdm-close:hover{color:#1a1a18}
+.tdm-section{margin-bottom:.875rem}
+.tdm-label{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#aaa;margin-bottom:4px}
+.tdm-value{font-size:12px;color:#333;line-height:1.5}
+.tdm-flags-row{display:flex;align-items:center;gap:12px;margin-bottom:.875rem}
+.tdm-flag-char{font-size:18px;font-weight:700}
+.tdm-flag-plus{color:#2d7a2d}
+.tdm-flag-minus{color:#c0392b}
+.tdm-flag-neutral{color:#ccc}
+.tdm-score-badge{background:#1a2744;color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:6px}
+.tdm-target-banner{background:#f0f8f0;border:1px solid #b5d9b5;border-radius:8px;padding:.5rem .875rem;font-size:12px;color:#2d6a1f;margin-bottom:.875rem;display:flex;align-items:center;gap:6px}
 </style>
 </head>
 <body>
@@ -172,6 +250,14 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   </div>
 </div>
 
+<!-- Tab navigation -->
+<nav class="tab-nav">
+  <button class="tab-btn active" data-tab="scout" onclick="switchTab('scout')">📊 Scout</button>
+  <button class="tab-btn" data-tab="teams" onclick="switchTab('teams')">⚾ Teams</button>
+</nav>
+
+<!-- PAGE: Scout (existing content) -->
+<div class="page active" id="page-scout">
 <div class="main">
   <div class="chart-section">
     <div class="controls">
@@ -265,6 +351,40 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
     </table>
   </div>
   <p style="font-size:11px;color:#aaa;margin-top:.75rem" id="tableCount"></p>
+</div>
+</div><!-- end page-scout -->
+
+<!-- PAGE: Teams -->
+<div class="page" id="page-teams">
+  <div class="teams-page">
+    <div class="teams-toolbar">
+      <div class="teams-toolbar-title">All 30 Teams — Starting Rotation Overview</div>
+      <div class="view-toggle">
+        <button class="view-toggle-btn active" data-view="division" onclick="setTeamsView('division')">By Division</button>
+        <button class="view-toggle-btn" data-view="deadline" onclick="setTeamsView('deadline')">By Deadline Status</button>
+      </div>
+      <div class="teams-league-toggle">
+        <button class="teams-league-btn active" data-lg="all" onclick="setTeamsLeague('all')">All</button>
+        <button class="teams-league-btn" data-lg="AL" onclick="setTeamsLeague('AL')">AL</button>
+        <button class="teams-league-btn" data-lg="NL" onclick="setTeamsLeague('NL')">NL</button>
+      </div>
+    </div>
+    <div id="teamsContent"></div>
+  </div>
+</div>
+
+<!-- Pitcher detail modal (teams page) -->
+<div class="teams-detail-overlay" id="teamsDetailOverlay" onclick="closeTeamsModal(event)">
+  <div class="teams-detail-modal" id="teamsDetailModal">
+    <div class="tdm-header">
+      <div>
+        <div class="tdm-name" id="tdmName"></div>
+        <div class="tdm-team" id="tdmTeam"></div>
+      </div>
+      <div class="tdm-close" onclick="closeTeamsModalDirect()">×</div>
+    </div>
+    <div id="tdmBody"></div>
+  </div>
 </div>
 
 
@@ -1186,12 +1306,228 @@ async function initApp() {
       };
     });
     WIN_TOTALS.forEach(t => TEAM_LEAGUE[t.team] = t.league);
+    // Populate division lookup for teams page
+    Object.entries(teamsObj).forEach(([code, td]) => {
+      TEAM_DIVISION[code] = td.identity ? td.identity.division : '';
+    });
   } catch(e) {
     console.warn('Could not load teams.json, chart will be empty:', e);
   }
   renderDumbbell();
   window.addEventListener('resize', () => renderDumbbell());
 }
+// ── Tab navigation ─────────────────────────────────────────────────────────────
+const DIVISIONS = [
+  'AL East','AL Central','AL West','NL East','NL Central','NL West'
+];
+const TEAM_DIVISION = {};
+let teamsView = 'division';
+let teamsLeague = 'all';
+let teamsExpanded = {};
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.toggle('active', b.dataset.tab === tab));
+  document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === 'page-' + tab));
+  if (tab === 'teams') renderTeamsPage();
+}
+
+// ── Teams page ─────────────────────────────────────────────────────────────────
+
+// Deadline status classifier reuses classify() from main chart
+function teamDeadlineStatus(teamCode) {
+  const t = WIN_TOTALS.find(x => x.team === teamCode);
+  if (!t) return 'fringe';
+  return classify(t);
+}
+
+let teamsBuilt = false;
+
+function setTeamsView(v) {
+  teamsView = v;
+  document.querySelectorAll('.view-toggle-btn').forEach(b => b.classList.toggle('active', b.dataset.view === v));
+  renderTeamsPage();
+}
+
+function setTeamsLeague(lg) {
+  teamsLeague = lg;
+  document.querySelectorAll('.teams-league-btn').forEach(b => b.classList.toggle('active', b.dataset.lg === lg));
+  renderTeamsPage();
+}
+
+function toggleTeamCard(code) {
+  teamsExpanded[code] = !teamsExpanded[code];
+  renderTeamsPage();
+}
+
+function renderTeamsPage() {
+  // Ensure TEAM_DIVISION is populated (teams.json data loaded into WIN_TOTALS)
+  if (Object.keys(TEAM_DIVISION).length === 0) {
+    WIN_TOTALS.forEach(t => {
+      // division comes from teams.json identity; we'll store via the fetch below
+    });
+  }
+
+  const container = document.getElementById('teamsContent');
+  if (!container) return;
+
+  // Get teams filtered by league
+  let teams = WIN_TOTALS.filter(t => teamsLeague === 'all' || t.league === teamsLeague);
+
+  if (teamsView === 'division') {
+    renderTeamsByDivision(teams, container);
+  } else {
+    renderTeamsByDeadline(teams, container);
+  }
+}
+
+function renderTeamsByDivision(teams, container) {
+  const byDiv = {};
+  teams.forEach(t => {
+    const div = TEAM_DIVISION[t.team] || 'Unknown';
+    if (!byDiv[div]) byDiv[div] = [];
+    byDiv[div].push(t);
+  });
+
+  const order = DIVISIONS.filter(d => byDiv[d]);
+  container.innerHTML = order.map(div => `
+    <div class="division-block">
+      <div class="division-label">${div}</div>
+      <div class="teams-grid">${byDiv[div].map(t => buildTeamCard(t)).join('')}</div>
+    </div>
+  `).join('');
+  attachTeamCardListeners();
+}
+
+function renderTeamsByDeadline(teams, container) {
+  const groups = {seller:[],fringe:[],buyer:[],twins:[]};
+  teams.forEach(t => { const s = teamDeadlineStatus(t.team); groups[s].push(t); });
+  ['seller','fringe','buyer','twins'].forEach(g => groups[g].sort((a,b) => b.playoffOdds - a.playoffOdds));
+
+  const labels = {seller:'Likely Sellers',fringe:'Fringe Teams',buyer:'Likely Buyers',twins:'Your Team (MIN)'};
+  const dhClass = {seller:'dh-seller',fringe:'dh-fringe',buyer:'dh-buyer',twins:'dh-twins'};
+
+  container.innerHTML = ['twins','buyer','fringe','seller'].filter(g => groups[g].length).map(g => `
+    <div class="deadline-block">
+      <div class="deadline-block-header ${dhClass[g]}">${labels[g]}</div>
+      <div class="teams-grid">${groups[g].map(t => buildTeamCard(t)).join('')}</div>
+    </div>
+  `).join('');
+  attachTeamCardListeners();
+}
+
+function buildTeamCard(teamObj) {
+  const code = teamObj.team;
+  const status = teamDeadlineStatus(code);
+  const badgeClass = `tdb-${status}`;
+  const badgeLabel = status === 'twins' ? 'Your Team' : {seller:'Likely Seller',fringe:'Fringe',buyer:'Likely Buyer'}[status];
+  const pitchers = ROSTER_MAP[code] || [];
+  const isOpen = !!teamsExpanded[code];
+  const hasTargets = TARGET_TEAMS.has(code);
+
+  // Compact header — always visible
+  const header = `
+    <div class="team-card-header" data-team="${code}">
+      <div class="team-card-left">
+        <span class="team-code">${code}</span>
+        ${hasTargets ? '<span style="font-size:9px;font-weight:700;color:#2d7a2d;letter-spacing:.3px">●TGT</span>' : ''}
+        <span class="team-record" style="margin-left:4px">${teamObj.playoffOdds}% playoff</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px">
+        <span class="team-deadline-badge ${badgeClass}">${badgeLabel}</span>
+        <span class="team-card-toggle${isOpen?' open':''}">▾</span>
+      </div>
+    </div>`;
+
+  if (!isOpen) {
+    // Collapsed: show first 3 pitcher names as a slim preview
+    const preview = pitchers.slice(0, 3).map(p => `<span style="font-size:11px;color:#666;padding:.3rem .875rem;display:inline-block">${p.pitcher}</span>`).join('<span style="color:#ddd">·</span>');
+    const more = pitchers.length > 3 ? `<span style="font-size:11px;color:#aaa;padding:.3rem .5rem">+${pitchers.length - 3} more</span>` : '';
+    return `<div class="team-card">${header}<div style="border-top:1px solid #f0ede8;overflow:hidden;white-space:nowrap;text-overflow:ellipsis">${preview}${more}</div></div>`;
+  }
+
+  // Expanded: full pitcher list
+  const rows = pitchers.map(p => {
+    const tgt = isTarget(p.pitcher, code);
+    const tInfo = (TARGET_MAP[code]||[]).find(t => t.pitcher === p.pitcher);
+    const score = tInfo ? `<span class="tpr-score">${tInfo.acquisition_score}</span>` : '';
+    const arch = p.profile_archetype ? p.profile_archetype.substring(0, 38) + (p.profile_archetype.length > 38 ? '…' : '') : '—';
+    const safeName = p.pitcher.replace(/'/g, "\\'");
+    return `<div class="team-pitcher-row${tgt?' is-target':''}" data-pitcher="${safeName}" data-team="${code}">
+      <span class="tpr-name">${p.pitcher}</span>
+      <span class="tpr-flags">${p.flag_sequence||'—'}</span>
+      <span class="tpr-archetype">${arch}</span>
+      ${score}
+    </div>`;
+  }).join('');
+
+  return `<div class="team-card">${header}<div class="team-pitcher-list">${rows}</div></div>`;
+}
+
+function attachTeamCardListeners() {
+  document.querySelectorAll('.team-card-header').forEach(h => {
+    h.addEventListener('click', () => toggleTeamCard(h.dataset.team));
+  });
+  document.querySelectorAll('.team-pitcher-row').forEach(row => {
+    row.addEventListener('click', e => {
+      e.stopPropagation();
+      openTeamsModal(row.dataset.pitcher, row.dataset.team);
+    });
+  });
+}
+
+// ── Teams modal ────────────────────────────────────────────────────────────────
+function openTeamsModal(name, team) {
+  const p = ALL_PITCHERS.find(x => x.pitcher === name && x.team === team)
+         || ALL_PITCHERS.find(x => x.pitcher === name); // fallback any team
+  if (!p) return;
+
+  const tInfo = (TARGET_MAP[team]||[]).find(t => t.pitcher === name);
+  const overlay = document.getElementById('teamsDetailOverlay');
+  document.getElementById('tdmName').textContent = name;
+  document.getElementById('tdmTeam').textContent = `${team} · ${TEAM_LEAGUE[team]||''}`;
+
+  // Build flags display
+  const flagChars = (p.flag_sequence||'').split('').map(c => {
+    if (c === '+') return `<span class="tdm-flag-char tdm-flag-plus">+</span>`;
+    if (c === '−' || c === '-') return `<span class="tdm-flag-char tdm-flag-minus">−</span>`;
+    return `<span class="tdm-flag-char tdm-flag-neutral">~</span>`;
+  }).join('');
+
+  const scoreHtml = tInfo ? `<span class="tdm-score-badge">Score ${tInfo.acquisition_score}</span>` : '';
+  const targetBanner = tInfo ? `<div class="tdm-target-banner">✅ Active acquisition target — ${tInfo.acquisition_priority||''}</div>` : '';
+
+  const sections = [
+    { label: 'Profile Archetype', val: p.profile_archetype },
+    { label: 'Primary Weapons', val: p.primary_weapons },
+    { label: 'Arsenal Notes', val: p.arsenal },
+    { label: 'Health / Flags', val: p.preseason_health_flag },
+    { label: 'Key Flaw', val: p.key_identified_flaw },
+    { label: 'PL Rank', val: p.pl_rank ? `#${Math.round(p.pl_rank)} — ${p.pl_tier_label||''}` : null },
+    { label: 'Starts Tracked', val: p.total_starts != null ? `${p.total_starts}` : null },
+  ];
+
+  const body = `
+    ${targetBanner}
+    <div class="tdm-flags-row">${flagChars} <span style="font-size:12px;color:#aaa;margin-left:4px">${p.plus_flags||0}+ / ${p.minus_flags||0}−</span> ${scoreHtml}</div>
+    ${sections.filter(s => s.val).map(s => `
+      <div class="tdm-section">
+        <div class="tdm-label">${s.label}</div>
+        <div class="tdm-value">${s.val}</div>
+      </div>`).join('')}
+  `;
+
+  document.getElementById('tdmBody').innerHTML = body;
+  overlay.classList.add('open');
+}
+
+function closeTeamsModal(e) {
+  if (e.target === document.getElementById('teamsDetailOverlay')) closeTeamsModalDirect();
+}
+function closeTeamsModalDirect() {
+  document.getElementById('teamsDetailOverlay').classList.remove('open');
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTeamsModalDirect(); });
+
 initApp();
 renderTable();
 </script>
