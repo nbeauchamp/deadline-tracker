@@ -893,7 +893,8 @@ async function loadPlayers() {
   ALL_PITCHERS = players.map(p => ({
     ...p,
     proj_ros_417: p.proj_ros,   // keep legacy key for existing code
-    proj_delta:   p.proj_delta ?? null,  // explicitly carry through  }));
+    proj_delta:   p.proj_delta ?? null,  // explicitly carry through
+  }));
 }
 const TEAM_LEAGUE = {};
 WIN_TOTALS.forEach(t => TEAM_LEAGUE[t.team] = t.league);
