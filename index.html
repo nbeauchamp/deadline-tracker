@@ -262,6 +262,17 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tdm-tags-group-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.4px;color:#bbb;margin-bottom:4px}
 .tag-note-tooltip{font-size:10px;color:#666;margin-top:3px;line-height:1.4;padding:4px 6px;background:#f8f7f4;border-radius:4px;display:none}
 .tag-badge:hover + .tag-note-tooltip{display:block}
+
+/* ── Contract styles ──────────────────────────────────────────────────────── */
+.contract-section { border-top: 1px solid #f0ede8; padding-top: .75rem; }
+.contract-aav { font-size: 18px; font-weight: 700; color: #1a1a18; }
+.contract-aav-label { font-size: 11px; color: #aaa; margin-left: 2px; font-weight: 400; }
+.contract-thru { font-size: 12px; color: #888; }
+.contract-yrs { font-size: 11px; font-weight: 600; padding: 1px 6px; border-radius: 4px; background: rgba(0,0,0,.04); }
+.contract-cell { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.2; }
+.contract-aav-sm { font-size: 11px; font-weight: 700; color: #1a1a18; white-space: nowrap; }
+.contract-yr-sm { font-size: 10px; font-weight: 600; white-space: nowrap; }
+.td-contract { min-width: 70px; }
 </style>
 </head>
 <body>
@@ -373,6 +384,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <th data-col="proj_ip">IP <span class="sort-arrow">↕</span></th>
         <th data-col="profile_archetype">Archetype <span class="sort-arrow">↕</span></th>
         <th data-col="preseason_health_flag">Health <span class="sort-arrow">↕</span></th>
+        <th data-col="contract_aav" title="AAV / Contract End">Contract <span class="sort-arrow">↕</span></th>
       </tr></thead>
       <tbody id="tableBody"></tbody>
     </table>
@@ -872,6 +884,35 @@ let WIN_TOTALS = [];
 // ── Player data — loaded from players.json ────────────────────────────────────
 let ALL_PITCHERS = [];
 
+function buildContractHtml(name, style='modal') {
+  const c = getContract(name);
+  if (!c) return '';
+  const yr2026 = 2026;
+  const yrsRemaining = c.end - yr2026 + 1;
+  const yrsLabel = yrsRemaining <= 0 ? 'Expiring' : yrsRemaining === 1 ? '1 yr left' : yrsRemaining + ' yrs left';
+  const expColor = yrsRemaining <= 1 ? '#c0392b' : yrsRemaining <= 2 ? '#b8820a' : '#2d7a2d';
+  // Clean AAV to readable
+  const aavNum = parseFloat(c.aav.replace(/[$,]/g,''));
+  const aavDisp = aavNum >= 1e6 ? '$' + (aavNum/1e6).toFixed(1) + 'M' : '$' + Math.round(aavNum/1e3) + 'K';
+  const endYear = c.end;
+  
+  if (style === 'modal') {
+    return `<div class="tdm-section contract-section">
+      <div class="tdm-label">Contract</div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:2px">
+        <span class="contract-aav">${aavDisp}<span class="contract-aav-label">/yr</span></span>
+        <span class="contract-thru">thru ${endYear}</span>
+        <span class="contract-yrs" style="color:${expColor}">${yrsLabel}</span>
+      </div>
+      ${c.team_signed !== c.currently_with ? `<div style="font-size:10px;color:#aaa;margin-top:3px">Signed with ${c.team_signed} · ${c.years}-yr ${c.value}</div>` : `<div style="font-size:10px;color:#aaa;margin-top:3px">${c.years}-yr deal · ${c.value}</div>`}
+    </div>`;
+  } else {
+    // table cell style
+    return `<div class="contract-cell"><span class="contract-aav-sm">${aavDisp}</span><span class="contract-yr-sm" style="color:${expColor}">'${String(endYear).slice(2)}</span></div>`;
+  }
+}
+
+
 async function loadPlayers() {
   const res = await fetch('players.json');
   const players = await res.json();
@@ -1066,6 +1107,33 @@ document.querySelectorAll('.toggle-btn').forEach(btn=>btn.addEventListener('clic
   renderTable();
 }));
 
+
+// ── Contract helpers ──────────────────────────────────────────────────────────
+function buildContractHtml(c, style='modal') {
+  if (!c) return '';
+  const yr2026 = 2026;
+  const yrsRemaining = c.contract_end - yr2026 + 1;
+  const yrsLabel = yrsRemaining <= 0 ? 'Expiring' : yrsRemaining === 1 ? '1 yr left' : yrsRemaining + ' yrs left';
+  const expColor = yrsRemaining <= 1 ? '#c0392b' : yrsRemaining <= 2 ? '#b8820a' : '#2d7a2d';
+  const aavNum = c.contract_aav;
+  const aavDisp = aavNum >= 1e6 ? '$' + (aavNum/1e6).toFixed(1) + 'M' : '$' + Math.round(aavNum/1e3) + 'K';
+  const endYear = c.contract_end;
+  if (style === 'modal') {
+    return `<div class="tdm-section contract-section">
+      <div class="tdm-label">Contract</div>
+      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:2px">
+        <span class="contract-aav">${aavDisp}<span class="contract-aav-label">/yr</span></span>
+        <span class="contract-thru">thru ${endYear}</span>
+        <span class="contract-yrs" style="color:${expColor}">${yrsLabel}</span>
+      </div>
+      ${c.team_signed !== c.currently_with
+        ? `<div style="font-size:10px;color:#aaa;margin-top:3px">Signed with ${c.team_signed} · ${c.contract_years}-yr ${c.contract_value}</div>`
+        : `<div style="font-size:10px;color:#aaa;margin-top:3px">${c.contract_years}-yr deal · ${c.contract_value}</div>`}
+    </div>`;
+  } else {
+    return `<div class="contract-cell"><span class="contract-aav-sm">${aavDisp}</span><span class="contract-yr-sm" style="color:${expColor}">'${String(endYear).slice(2)}</span></div>`;
+  }
+}
 // ── Panel helpers ─────────────────────────────────────────────────────────────
 function flagHtml(seq) {
   if(!seq) return '<span style="color:#ccc">—</span>';
@@ -1393,6 +1461,14 @@ function renderTable() {
       av=rpa?.proj_preseason?.[field]??null;
       bv=rpb?.proj_preseason?.[field]??null;
     }
+    if(sortCol==='contract_aav') {
+      const getAav = p => {
+        const c = p.contract;
+        if (!c) return sortDir===1 ? Infinity : -Infinity;
+        return parseFloat(c.aav.replace(/[$,]/g,''));
+      };
+      av = getAav(a); bv = getAav(b);
+    }
     if(sortCol==='proj_fip_delta') {
       const rpa=ALL_PITCHERS.find(x=>x.pitcher===a.pitcher&&x.team===a.team)||ALL_PITCHERS.find(x=>x.pitcher===a.pitcher);
       const rpb=ALL_PITCHERS.find(x=>x.pitcher===b.pitcher&&x.team===b.team)||ALL_PITCHERS.find(x=>x.pitcher===b.pitcher);
@@ -1434,6 +1510,7 @@ function renderTable() {
       <td class="td-rank">${ipDisp}</td>
       <td class="td-archetype">${p.profile_archetype||'—'}</td>
       <td class="td-health ${hClass}">${p.preseason_health_flag?p.preseason_health_flag.substring(0,80)+(p.preseason_health_flag.length>80?'…':''):'—'}</td>
+      <td class="td-contract">${buildContractHtml(p.contract, 'table')}</td>
     </tr>`;
   }).join('');
   document.getElementById('tableCount').textContent=`Showing ${rows.length} of ${ALL_PITCHERS.length} pitchers · click any row to view full profile`;
@@ -1732,6 +1809,7 @@ function openTeamsModal(name, team) {
 
   const body = `
     ${buildILModal(p)}
+    ${buildContractHtml(p.contract, 'modal')}
     <div class="tdm-flags-row">${flagChars} <span style="font-size:12px;color:#aaa;margin-left:4px">${p.plus_flags||0}+ / ${p.minus_flags||0}−</span></div>
     ${tierHtml(p.tags)}
     ${buildProjModal(p)}
