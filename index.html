@@ -922,6 +922,7 @@ async function loadPlayers() {
   ALL_PITCHERS = players.map(p => ({
     ...p,
     proj_ros_417: p.proj_ros,   // keep legacy key for existing code
+    proj_delta:   p.proj_delta ?? null,  // explicitly carry through
     // Flatten acquisition fields for backwards compat with table/panel code
     acquisition_priority: p.acquisition?.priority ?? null,
     acquisition_score:    p.acquisition?.score ?? null,
@@ -1563,6 +1564,7 @@ async function initApp() {
   }
   renderDumbbell();
   buildPlayerMaps(); // rebuild after WIN_TOTALS populated so team labels are correct
+  renderMovers();    // prime movers panel now that all data is ready
   window.addEventListener('resize', () => renderDumbbell());
 }
 // ── Tab navigation ─────────────────────────────────────────────────────────────
@@ -1799,20 +1801,30 @@ function setMoversLeague(lg) {
   renderMovers();
 }
 
+function getFipDelta(p) {
+  // Primary: use pre-computed proj_delta
+  if (p.proj_delta?.FIP != null) return p.proj_delta.FIP;
+  // Fallback: compute on the fly from raw projections
+  const preFIP = p.proj_preseason?.FIP;
+  const rosFIP = (p.proj_ros_417 || p.proj_ros)?.FIP;
+  if (preFIP != null && rosFIP != null) return Math.round((rosFIP - preFIP) * 100) / 100;
+  return null;
+}
+
 function renderMovers() {
   const source = moversPool === 'targets' ? TARGETS : ALL_PITCHERS;
 
-  // Deduplicate by pitcher|team (same name/team might appear twice in edge cases)
+  // Deduplicate by pitcher|team
   const seen = new Set();
   const pool = source.filter(p => {
     const key = p.pitcher + '|' + p.team;
     if (seen.has(key)) return false;
     seen.add(key);
     if (moversLeague !== 'all' && TEAM_LEAGUE[p.team] !== moversLeague) return false;
-    return p.proj_delta?.FIP != null;
+    return getFipDelta(p) !== null;
   });
 
-  const sorted = pool.slice().sort((a, b) => a.proj_delta.FIP - b.proj_delta.FIP);
+  const sorted = pool.slice().sort((a, b) => getFipDelta(a) - getFipDelta(b));
   const improvers = sorted.slice(0, 10);
   const decliners = sorted.slice(-10).reverse();
 
@@ -1824,8 +1836,8 @@ function buildMoversList(pitchers, dir) {
   if (!pitchers.length) return '<div class="movers-empty">No data available.</div>';
   const rows = pitchers.map((p, i) => {
     const pre = p.proj_preseason;
-    const ros = p.proj_ros_417;
-    const delta = p.proj_delta?.FIP ?? 0;
+    const ros = p.proj_ros_417 || p.proj_ros;
+    const delta = getFipDelta(p) ?? 0;
     const sign = delta > 0 ? '+' : '';
     const deltaClass = dir === 'improve' ? 'improve' : 'decline';
     const rosColor = dir === 'improve' ? '#2d7a2d' : '#c0392b';
