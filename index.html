@@ -252,6 +252,42 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tdm-flag-neutral{color:#ccc}
 .tdm-score-badge{background:#1a2744;color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:6px}
 .tdm-target-banner{background:#f0f8f0;border:1px solid #b5d9b5;border-radius:8px;padding:.5rem .875rem;font-size:12px;color:#2d6a1f;margin-bottom:.875rem;display:flex;align-items:center;gap:6px}
+
+/* ── Movers page ────────────────────────────────────────────────────────────── */
+.movers-page{max-width:1100px;margin:0 auto;padding:1.25rem 1rem 2rem}
+.movers-header{margin-bottom:1.5rem}
+.movers-title{font-size:22px;font-weight:700;color:#1a2744;margin-bottom:.3rem}
+.movers-subtitle{font-size:13px;color:#777;margin-bottom:.875rem;line-height:1.5;max-width:680px}
+.movers-filter-row{display:flex;align-items:center;gap:.4rem;flex-wrap:wrap}
+.movers-filter-label{font-size:12px;color:#888;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.movers-pool-btn{font-size:12px;font-weight:500;padding:4px 12px;border:1px solid #d0cdc7;border-radius:20px;background:#fff;color:#555;cursor:pointer;transition:all .15s}
+.movers-pool-btn.active{background:#1a2744;color:#fff;border-color:#1a2744}
+.movers-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+@media(max-width:700px){.movers-grid{grid-template-columns:1fr}}
+.movers-col-header{font-size:14px;font-weight:700;padding:.6rem 1rem;border-radius:8px 8px 0 0;letter-spacing:-.1px}
+.movers-col-sub{font-size:11px;font-weight:400;opacity:.75;margin-left:.3rem}
+.improvers-header{background:#eaf5ea;color:#1d5c1d;border:1px solid #b5d9b5;border-bottom:none}
+.decliners-header{background:#fdf0ef;color:#8b2e1a;border:1px solid #f0b8b2;border-bottom:none}
+.movers-list{border:1px solid #e0ddd6;border-radius:0 0 8px 8px;overflow:hidden}
+.mover-row{display:flex;align-items:center;gap:.75rem;padding:.65rem 1rem;border-bottom:1px solid #f0ede6;background:#fff;cursor:pointer;transition:background .12s}
+.mover-row:last-child{border-bottom:none}
+.mover-row:hover{background:#f8f6f2}
+.mover-rank{font-size:12px;color:#bbb;font-weight:600;width:18px;text-align:right;flex-shrink:0}
+.mover-name{font-size:13px;font-weight:600;color:#1a1a18;flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mover-team{font-size:11px;color:#aaa;margin-left:.25rem;font-weight:400}
+.mover-fip-wrap{display:flex;align-items:center;gap:.4rem;flex-shrink:0}
+.mover-fip-pre{font-size:12px;color:#999}
+.mover-fip-arrow{font-size:12px;color:#bbb}
+.mover-fip-ros{font-size:13px;font-weight:600}
+.mover-delta{font-size:13px;font-weight:700;min-width:48px;text-align:right;flex-shrink:0}
+.mover-delta.improve{color:#2d7a2d}
+.mover-delta.decline{color:#c0392b}
+.mover-tier{font-size:10px;padding:2px 7px;border-radius:10px;font-weight:600;flex-shrink:0}
+.mover-tier.t2{background:#e8f0fd;color:#1a4aad}
+.mover-tier.t3{background:#fff3e0;color:#b36c00}
+.mover-tier.t4{background:#f5f5f5;color:#888}
+.mover-tier.none{display:none}
+.movers-empty{text-align:center;color:#aaa;font-size:13px;padding:2rem;background:#fff;border:1px solid #e0ddd6;border-radius:0 0 8px 8px}
 </style>
 </head>
 <body>
@@ -276,6 +312,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 <nav class="tab-nav">
   <button class="tab-btn active" data-tab="scout" onclick="switchTab('scout')">📊 Scout</button>
   <button class="tab-btn" data-tab="players" onclick="switchTab('players')">🗒️ Players</button>
+  <button class="tab-btn" data-tab="movers" onclick="switchTab('movers')">📈 Movers</button>
   <button class="tab-btn" data-tab="teams" onclick="switchTab('teams')">⚾ Teams</button>
 </nav>
 
@@ -371,6 +408,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <th data-col="minus_flags">− <span class="sort-arrow">↕</span></th>
         <th data-col="proj_era">ERA <span class="sort-arrow">↕</span></th>
         <th data-col="proj_fip">FIP <span class="sort-arrow">↕</span></th>
+        <th data-col="proj_fip_delta" title="ROS FIP minus Preseason FIP — negative = improving">FIP Δ <span class="sort-arrow">↕</span></th>
         <th data-col="proj_k">K% <span class="sort-arrow">↕</span></th>
         <th data-col="proj_ip">IP <span class="sort-arrow">↕</span></th>
         <th data-col="profile_archetype">Archetype <span class="sort-arrow">↕</span></th>
@@ -384,6 +422,35 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <p style="font-size:11px;color:#aaa;margin-top:.75rem" id="tableCount"></p>
 </div>
 </div><!-- end page-players -->
+
+<!-- PAGE: Movers -->
+<div class="page" id="page-movers">
+  <div class="movers-page">
+    <div class="movers-header">
+      <div class="movers-title">📈 FIP Projection Movers</div>
+      <div class="movers-subtitle">ROS FIP vs. Preseason FIP — tracks which pitchers' outlooks have shifted most since opening day projections were set</div>
+      <div class="movers-filter-row">
+        <label class="movers-filter-label">Pool:</label>
+        <button class="movers-pool-btn active" data-pool="all" onclick="setMoversPool('all')">All Pitchers</button>
+        <button class="movers-pool-btn" data-pool="targets" onclick="setMoversPool('targets')">Targets Only</button>
+        <label class="movers-filter-label" style="margin-left:1rem">League:</label>
+        <button class="movers-pool-btn active" data-pool-lg="all" onclick="setMoversLeague('all')">All</button>
+        <button class="movers-pool-btn" data-pool-lg="AL" onclick="setMoversLeague('AL')">AL</button>
+        <button class="movers-pool-btn" data-pool-lg="NL" onclick="setMoversLeague('NL')">NL</button>
+      </div>
+    </div>
+    <div class="movers-grid">
+      <div class="movers-col">
+        <div class="movers-col-header improvers-header">🟢 Top 10 Improvers <span class="movers-col-sub">(FIP trending down)</span></div>
+        <div id="improversPanel"></div>
+      </div>
+      <div class="movers-col">
+        <div class="movers-col-header decliners-header">🔴 Top 10 Decliners <span class="movers-col-sub">(FIP trending up)</span></div>
+        <div id="declinersPanel"></div>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- PAGE: Teams -->
 <div class="page" id="page-teams">
@@ -1390,6 +1457,12 @@ function renderTable() {
       av=rpa?.proj_preseason?.[field]??null;
       bv=rpb?.proj_preseason?.[field]??null;
     }
+    if(sortCol==='proj_fip_delta') {
+      const rpa=ALL_PITCHERS.find(x=>x.pitcher===a.pitcher&&x.team===a.team)||ALL_PITCHERS.find(x=>x.pitcher===a.pitcher);
+      const rpb=ALL_PITCHERS.find(x=>x.pitcher===b.pitcher&&x.team===b.team)||ALL_PITCHERS.find(x=>x.pitcher===b.pitcher);
+      av=rpa?.proj_delta?.FIP??null;
+      bv=rpb?.proj_delta?.FIP??null;
+    }
     if(av==null) av=sortDir===1?Infinity:-Infinity;
     if(bv==null) bv=sortDir===1?Infinity:-Infinity;
     return typeof av==='string'?av.localeCompare(bv)*sortDir:(av-bv)*sortDir;
@@ -1405,11 +1478,15 @@ function renderTable() {
     const rp = ALL_PITCHERS.find(x => x.pitcher===p.pitcher && x.team===p.team) || ALL_PITCHERS.find(x => x.pitcher===p.pitcher);
     const pre = rp?.proj_preseason;
     const ros = rp?.proj_ros_417;
+    const delta = rp?.proj_delta;
     const eraDisp = pre ? pre.ERA.toFixed(2) : '—';
     const fipDisp = pre ? pre.FIP.toFixed(2) : '—';
     const kDisp = pre ? pre.K_pct.toFixed(1)+'%' : '—';
     const ipDisp = pre?.IP ? pre.IP : '—';
     const eraStyle = pre ? (pre.ERA < 3.5 ? 'color:#2d7a2d;font-weight:600' : pre.ERA > 4.5 ? 'color:#c0392b' : 'color:#1a1a18') : '';
+    const fipDelta = delta?.FIP ?? null;
+    const fipDeltaDisp = fipDelta != null ? (fipDelta > 0 ? '+' : '') + fipDelta.toFixed(2) : '—';
+    const fipDeltaStyle = fipDelta == null ? '' : fipDelta < -0.1 ? 'color:#2d7a2d;font-weight:600' : fipDelta > 0.1 ? 'color:#c0392b;font-weight:600' : 'color:#888';
     return `<tr class="${rowClass}" style="cursor:pointer" onclick="showPitcherDetail('${p.pitcher.replace(/'/g,"\'")}','${p.team}')">
       <td class="td-name">${p.pitcher}${rp?.injury ? '<span class="il-badge">IL</span>' : ''}<br><span style="font-size:10px;color:#aaa;font-weight:400">${lg}</span></td>
       <td><span class="td-team">${p.team}</span></td>
@@ -1420,6 +1497,7 @@ function renderTable() {
       <td class="td-rank" style="color:#c0392b;font-weight:600">${p.minus_flags||0}</td>
       <td class="td-rank" style="${eraStyle}">${eraDisp}</td>
       <td class="td-rank">${fipDisp}</td>
+      <td class="td-rank" style="${fipDeltaStyle}">${fipDeltaDisp}</td>
       <td class="td-rank">${kDisp}</td>
       <td class="td-rank">${ipDisp}</td>
       <td class="td-archetype">${p.profile_archetype||'—'}</td>
@@ -1484,6 +1562,7 @@ async function initApp() {
     console.warn('Could not load teams.json, chart will be empty:', e);
   }
   renderDumbbell();
+  buildPlayerMaps(); // rebuild after WIN_TOTALS populated so team labels are correct
   window.addEventListener('resize', () => renderDumbbell());
 }
 // ── Tab navigation ─────────────────────────────────────────────────────────────
@@ -1500,6 +1579,7 @@ function switchTab(tab) {
   document.querySelectorAll('.page').forEach(p => p.classList.toggle('active', p.id === 'page-' + tab));
   if (tab === 'teams') renderTeamsPage();
   if (tab === 'players') renderTable();
+  if (tab === 'movers') renderMovers();
 }
 
 // ── Teams page ─────────────────────────────────────────────────────────────────
@@ -1700,6 +1780,76 @@ function closeTeamsModalDirect() {
   document.getElementById('teamsDetailOverlay').classList.remove('open');
 }
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeTeamsModalDirect(); });
+
+// ── Movers page ────────────────────────────────────────────────────────────────
+let moversPool = 'all';
+let moversLeague = 'all';
+
+function setMoversPool(pool) {
+  moversPool = pool;
+  document.querySelectorAll('.movers-pool-btn[data-pool]').forEach(b =>
+    b.classList.toggle('active', b.dataset.pool === pool));
+  renderMovers();
+}
+
+function setMoversLeague(lg) {
+  moversLeague = lg;
+  document.querySelectorAll('.movers-pool-btn[data-pool-lg]').forEach(b =>
+    b.classList.toggle('active', b.dataset.poolLg === lg));
+  renderMovers();
+}
+
+function renderMovers() {
+  const source = moversPool === 'targets' ? TARGETS : ALL_PITCHERS;
+
+  // Deduplicate by pitcher|team (same name/team might appear twice in edge cases)
+  const seen = new Set();
+  const pool = source.filter(p => {
+    const key = p.pitcher + '|' + p.team;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    if (moversLeague !== 'all' && TEAM_LEAGUE[p.team] !== moversLeague) return false;
+    return p.proj_delta?.FIP != null;
+  });
+
+  const sorted = pool.slice().sort((a, b) => a.proj_delta.FIP - b.proj_delta.FIP);
+  const improvers = sorted.slice(0, 10);
+  const decliners = sorted.slice(-10).reverse();
+
+  document.getElementById('improversPanel').innerHTML = buildMoversList(improvers, 'improve');
+  document.getElementById('declinersPanel').innerHTML = buildMoversList(decliners, 'decline');
+}
+
+function buildMoversList(pitchers, dir) {
+  if (!pitchers.length) return '<div class="movers-empty">No data available.</div>';
+  const rows = pitchers.map((p, i) => {
+    const pre = p.proj_preseason;
+    const ros = p.proj_ros_417;
+    const delta = p.proj_delta?.FIP ?? 0;
+    const sign = delta > 0 ? '+' : '';
+    const deltaClass = dir === 'improve' ? 'improve' : 'decline';
+    const rosColor = dir === 'improve' ? '#2d7a2d' : '#c0392b';
+    const isTarget = TARGET_NAMES.has(p.pitcher + '|' + p.team);
+    const pri = p.acquisition_priority || '';
+    const tierClass = pri.includes('Tier 2') ? 't2' : pri.includes('Tier 3') ? 't3' : pri.includes('Tier 4') ? 't4' : 'none';
+    const tierLabel = pri.includes('Tier 2') ? 'T2' : pri.includes('Tier 3') ? 'T3' : pri.includes('Tier 4') ? 'T4' : '';
+    const preF = pre?.FIP != null ? pre.FIP.toFixed(2) : '—';
+    const rosF = ros?.FIP != null ? ros.FIP.toFixed(2) : '—';
+    const targetDot = isTarget ? '<span style="color:#1a2744;font-size:10px;margin-left:3px" title="Acquisition target">🎯</span>' : '';
+    return `<div class="mover-row" onclick="showPitcherDetail('${p.pitcher.replace(/'/g,"\\'")}','${p.team}')">
+      <span class="mover-rank">${i + 1}</span>
+      <span class="mover-name">${p.pitcher}${targetDot}<span class="mover-team">${p.team}</span></span>
+      <span class="mover-fip-wrap">
+        <span class="mover-fip-pre">${preF}</span>
+        <span class="mover-fip-arrow">→</span>
+        <span class="mover-fip-ros" style="color:${rosColor}">${rosF}</span>
+      </span>
+      <span class="mover-delta ${deltaClass}">${sign}${delta.toFixed(2)}</span>
+      <span class="mover-tier ${tierClass}">${tierLabel}</span>
+    </div>`;
+  }).join('');
+  return `<div class="movers-list">${rows}</div>`;
+}
 
 initApp();
 renderTable();
