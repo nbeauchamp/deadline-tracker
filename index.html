@@ -1177,8 +1177,7 @@ function buildProjModal(p) {
 }
 
 function buildPitcherCard(p) {
-  const priLabel = p.pl_rank ? `#${Math.round(p.pl_rank)}` : 'Unranked';
-  return `<div class="pitcher-card${targetClass}" onclick="this.classList.toggle('expanded')">
+  return `<div class="pitcher-card" onclick="this.classList.toggle('expanded')">
     <div class="pitcher-card-top">
       <div>
         <div class="pitcher-name">${p.pitcher}${p.injury ? '<span class="il-badge">IL</span>' : ''}</div>
