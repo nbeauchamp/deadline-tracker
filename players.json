@@ -28,18 +28,22 @@
       "K_pct": 30.1,
       "BB_pct": 6.8
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 60,
-      "status": "Watchlist",
-      "seller_notes": "Steep freefall from 61% preseason odds; window closing fast"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.11,
       "FIP": 0.1,
       "K_pct": -0.4,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -71,13 +75,22 @@
       "K_pct": 29.0,
       "BB_pct": 6.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.09,
       "FIP": 0.06,
       "K_pct": -0.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -109,13 +122,22 @@
       "K_pct": 30.4,
       "BB_pct": 5.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.03,
       "FIP": 0.01,
       "K_pct": -0.6,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -147,18 +169,22 @@
       "K_pct": 24.6,
       "BB_pct": 5.5
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 58,
-      "status": "Watchlist",
-      "seller_notes": "High odds but big drop; monitor closely \u2014 could tip to seller"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.04,
       "K_pct": -0.5,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -190,13 +216,22 @@
       "K_pct": 25.8,
       "BB_pct": 6.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.04,
       "FIP": 0.01,
       "K_pct": -0.6,
       "BB_pct": -0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -228,13 +263,22 @@
       "K_pct": 22.0,
       "BB_pct": 7.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.01,
       "K_pct": -0.4,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -266,18 +310,22 @@
       "K_pct": 24.6,
       "BB_pct": 6.3
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 35,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.06,
       "FIP": -0.1,
       "K_pct": 0.9,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -309,18 +357,22 @@
       "K_pct": 26.8,
       "BB_pct": 6.0
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 48,
-      "status": "Watchlist",
-      "seller_notes": "High odds but big drop; monitor closely \u2014 could tip to seller"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.01,
       "FIP": -0.05,
       "K_pct": 0.0,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -352,7 +404,6 @@
       "K_pct": 28.8,
       "BB_pct": 8.7
     },
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Arthroscopic elbow surgery (bone chip removal)",
@@ -366,6 +417,16 @@
       "FIP": 0.15,
       "K_pct": 0.0,
       "BB_pct": 0.8
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -397,12 +458,6 @@
       "K_pct": 26.8,
       "BB_pct": 8.5
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 50,
-      "status": "Watchlist",
-      "seller_notes": "Declining window; may sell if >5 games back at deadline"
-    },
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Strained shoulder",
@@ -416,6 +471,16 @@
       "FIP": -0.08,
       "K_pct": 0.7,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -447,13 +512,22 @@
       "K_pct": 28.7,
       "BB_pct": 8.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.1,
       "FIP": -0.11,
       "K_pct": -0.4,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -485,18 +559,22 @@
       "K_pct": 22.7,
       "BB_pct": 5.8
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 45,
-      "status": "Watchlist",
-      "seller_notes": "Development org; will sell expiring and controllable arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.05,
       "FIP": 0.01,
       "K_pct": -0.2,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -528,13 +606,22 @@
       "K_pct": 26.7,
       "BB_pct": 6.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.05,
       "FIP": -0.06,
       "K_pct": 0.1,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -566,18 +653,22 @@
       "K_pct": 26.4,
       "BB_pct": 9.2
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 45,
-      "status": "Watchlist",
-      "seller_notes": "Massive preseason expectations collapse; motivated sellers"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.03,
       "K_pct": 0.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -609,13 +700,22 @@
       "K_pct": 28.3,
       "BB_pct": 6.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.02,
       "FIP": -0.07,
       "K_pct": 0.6,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -647,18 +747,22 @@
       "K_pct": 29.2,
       "BB_pct": 9.3
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 48,
-      "status": "Watchlist",
-      "seller_notes": "Walk-year arms and declining roster; seller profile"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.18,
       "FIP": 0.15,
       "K_pct": -0.5,
       "BB_pct": 0.7
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -690,18 +794,22 @@
       "K_pct": 23.6,
       "BB_pct": 4.9
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 56,
-      "status": "Watchlist",
-      "seller_notes": "High odds but big drop; monitor closely \u2014 could tip to seller"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.07,
       "FIP": 0.02,
       "K_pct": -0.2,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -733,13 +841,22 @@
       "K_pct": 28.6,
       "BB_pct": 8.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.05,
       "FIP": -0.07,
       "K_pct": 0.1,
       "BB_pct": -0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -771,13 +888,22 @@
       "K_pct": 29.0,
       "BB_pct": 6.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.15,
       "FIP": 0.13,
       "K_pct": -0.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -809,13 +935,22 @@
       "K_pct": 25.0,
       "BB_pct": 8.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.01,
       "FIP": -0.01,
       "K_pct": -0.1,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -847,13 +982,22 @@
       "K_pct": 25.3,
       "BB_pct": 9.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.19,
       "FIP": 0.15,
       "K_pct": -0.7,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -885,7 +1029,6 @@
       "K_pct": 27.0,
       "BB_pct": 7.7
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Strained flexor tendon",
@@ -899,6 +1042,16 @@
       "FIP": -0.16,
       "K_pct": 0.7,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -930,7 +1083,6 @@
       "K_pct": 25.1,
       "BB_pct": 9.1
     },
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Hip inflammation",
@@ -944,6 +1096,16 @@
       "FIP": -0.14,
       "K_pct": 0.7,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -975,13 +1137,22 @@
       "K_pct": 22.3,
       "BB_pct": 6.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.04,
       "FIP": -0.09,
       "K_pct": 0.5,
       "BB_pct": -0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1013,13 +1184,22 @@
       "K_pct": 24.8,
       "BB_pct": 8.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.27,
       "FIP": -0.33,
       "K_pct": 1.6,
       "BB_pct": -0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1051,13 +1231,22 @@
       "K_pct": 19.8,
       "BB_pct": 6.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.02,
       "FIP": -0.01,
       "K_pct": -0.1,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1089,13 +1278,22 @@
       "K_pct": 20.7,
       "BB_pct": 8.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.04,
       "FIP": 0.02,
       "K_pct": -0.8,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1127,13 +1325,22 @@
       "K_pct": 24.4,
       "BB_pct": 9.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.01,
       "FIP": 0.01,
       "K_pct": -0.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1165,18 +1372,22 @@
       "K_pct": 28.7,
       "BB_pct": 9.5
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 58,
-      "status": "Watchlist",
-      "seller_notes": "Roster rebuild posture; controllable arms most moveable"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.07,
       "FIP": -0.11,
       "K_pct": 0.8,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1208,18 +1419,22 @@
       "K_pct": 27.1,
       "BB_pct": 7.5
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 35,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.07,
       "FIP": -0.11,
       "K_pct": 0.5,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1251,18 +1466,22 @@
       "K_pct": 24.3,
       "BB_pct": 7.0
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 48,
-      "status": "Watchlist",
-      "seller_notes": "Roster rebuild posture; controllable arms most moveable"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.08,
       "FIP": -0.15,
       "K_pct": 1.0,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1294,13 +1513,22 @@
       "K_pct": 20.3,
       "BB_pct": 7.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.06,
       "FIP": -0.08,
       "K_pct": 0.0,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1332,12 +1560,6 @@
       "K_pct": 24.6,
       "BB_pct": 9.8
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 30,
-      "status": "Watchlist",
-      "seller_notes": "Declining window; may sell if >5 games back at deadline"
-    },
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Arm fatigue",
@@ -1351,6 +1573,16 @@
       "FIP": -0.01,
       "K_pct": 0.2,
       "BB_pct": 0.8
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1382,18 +1614,22 @@
       "K_pct": 23.9,
       "BB_pct": 9.4
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 51,
-      "status": "Watchlist",
-      "seller_notes": "Massive preseason expectations collapse; motivated sellers"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.1,
       "FIP": -0.15,
       "K_pct": 1.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1425,13 +1661,22 @@
       "K_pct": 21.9,
       "BB_pct": 10.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.13,
       "FIP": 0.1,
       "K_pct": 0.1,
       "BB_pct": 1.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1463,7 +1708,6 @@
       "K_pct": 25.8,
       "BB_pct": 10.2
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Shoulder impingement",
@@ -1477,6 +1721,16 @@
       "FIP": 0.05,
       "K_pct": -0.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1503,12 +1757,6 @@
       "IP": 127.0
     },
     "proj_ros": null,
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 33,
-      "status": "Watchlist",
-      "seller_notes": "Borderline; could go either way depending on July standings"
-    },
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Tommy John surgery",
@@ -1517,7 +1765,17 @@
       "eligible_to_return": "04/19/26",
       "latest_update": "Out for 2026 season"
     },
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 592662,
@@ -1548,18 +1806,22 @@
       "K_pct": 24.1,
       "BB_pct": 9.2
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 59,
-      "status": "Watchlist",
-      "seller_notes": "Development org; will sell expiring and controllable arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.04,
       "FIP": 0.01,
       "K_pct": 0.3,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1591,13 +1853,22 @@
       "K_pct": 23.3,
       "BB_pct": 6.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.01,
       "FIP": -0.04,
       "K_pct": 0.5,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1629,18 +1900,22 @@
       "K_pct": 28.4,
       "BB_pct": 10.9
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 25,
-      "status": "Watchlist",
-      "seller_notes": "Underperforming; injury-depleted rotation creates motivation"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.07,
       "FIP": -0.09,
       "K_pct": 1.6,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1672,13 +1947,22 @@
       "K_pct": 27.4,
       "BB_pct": 7.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.08,
       "FIP": 0.08,
       "K_pct": -0.4,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1710,13 +1994,22 @@
       "K_pct": 26.1,
       "BB_pct": 8.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.14,
       "FIP": 0.12,
       "K_pct": -0.4,
       "BB_pct": 1.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1748,18 +2041,22 @@
       "K_pct": 23.8,
       "BB_pct": 8.6
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 30,
-      "status": "Watchlist",
-      "seller_notes": "Walk-year arms and declining roster; seller profile"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.01,
       "FIP": -0.03,
       "K_pct": 0.9,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1791,7 +2088,6 @@
       "K_pct": 29.4,
       "BB_pct": 11.2
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Shoulder fatigue",
@@ -1805,6 +2101,16 @@
       "FIP": 0.03,
       "K_pct": -0.2,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1836,7 +2142,6 @@
       "K_pct": 21.0,
       "BB_pct": 7.6
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Strained oblique",
@@ -1850,6 +2155,16 @@
       "FIP": 0.13,
       "K_pct": -0.2,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1881,18 +2196,22 @@
       "K_pct": 24.9,
       "BB_pct": 10.1
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 15,
-      "status": "Watchlist",
-      "seller_notes": "Borderline; could go either way depending on July standings"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.03,
       "FIP": 0.0,
       "K_pct": -0.5,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1924,13 +2243,22 @@
       "K_pct": 20.8,
       "BB_pct": 7.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.01,
       "K_pct": -0.7,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -1962,18 +2290,22 @@
       "K_pct": 23.6,
       "BB_pct": 5.5
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 28,
-      "status": "Watchlist",
-      "seller_notes": "Borderline; could go either way depending on July standings"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.17,
       "FIP": -0.23,
       "K_pct": 1.4,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2005,18 +2337,22 @@
       "K_pct": 23.9,
       "BB_pct": 6.2
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 41,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": -0.07,
       "K_pct": 0.3,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2048,13 +2384,22 @@
       "K_pct": 27.6,
       "BB_pct": 9.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.06,
       "FIP": -0.09,
       "K_pct": 1.0,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2086,13 +2431,22 @@
       "K_pct": 26.6,
       "BB_pct": 8.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.14,
       "FIP": 0.12,
       "K_pct": -0.6,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2124,13 +2478,22 @@
       "K_pct": 23.8,
       "BB_pct": 8.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.02,
       "FIP": -0.09,
       "K_pct": 1.5,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2162,7 +2525,6 @@
       "K_pct": 24.3,
       "BB_pct": 7.1
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Blister (left index finger)",
@@ -2176,6 +2538,16 @@
       "FIP": -0.04,
       "K_pct": 0.1,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2207,18 +2579,22 @@
       "K_pct": 23.8,
       "BB_pct": 6.5
     },
-    "acquisition": {
-      "priority": "Tier 2 \u2013 Monitor Closely",
-      "score": 48,
-      "status": "Watchlist",
-      "seller_notes": "Steep freefall from 61% preseason odds; window closing fast"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.12,
       "FIP": 0.08,
       "K_pct": -0.9,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2250,18 +2626,22 @@
       "K_pct": 20.7,
       "BB_pct": 7.2
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 35,
-      "status": "Watchlist",
-      "seller_notes": "Steep freefall from 61% preseason odds; window closing fast"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.07,
       "FIP": 0.03,
       "K_pct": -0.1,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2293,18 +2673,22 @@
       "K_pct": 19.8,
       "BB_pct": 7.7
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 40,
-      "status": "Watchlist",
-      "seller_notes": "Walk-year arms and declining roster; seller profile"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.02,
       "FIP": -0.03,
       "K_pct": 0.1,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2336,13 +2720,22 @@
       "K_pct": 24.9,
       "BB_pct": 10.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.03,
       "FIP": 0.0,
       "K_pct": 0.8,
       "BB_pct": 1.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2374,13 +2767,22 @@
       "K_pct": 22.9,
       "BB_pct": 8.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.03,
       "FIP": 0.0,
       "K_pct": -0.3,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2412,13 +2814,22 @@
       "K_pct": 20.0,
       "BB_pct": 7.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.1,
       "FIP": 0.05,
       "K_pct": 0.1,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2450,7 +2861,6 @@
       "K_pct": 22.7,
       "BB_pct": 6.6
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Tommy John surgery",
@@ -2464,6 +2874,16 @@
       "FIP": -0.04,
       "K_pct": 0.9,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2495,13 +2915,22 @@
       "K_pct": 21.2,
       "BB_pct": 7.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.07,
       "FIP": 0.03,
       "K_pct": -0.7,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2533,18 +2962,22 @@
       "K_pct": 25.5,
       "BB_pct": 6.6
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 0,
-      "status": "Watchlist",
-      "seller_notes": "Underperforming; injury-depleted rotation creates motivation"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.04,
       "K_pct": -0.2,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2576,7 +3009,6 @@
       "K_pct": 24.4,
       "BB_pct": 7.5
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Tommy John surgery",
@@ -2590,6 +3022,16 @@
       "FIP": 0.01,
       "K_pct": 0.6,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2621,7 +3063,6 @@
       "K_pct": 28.1,
       "BB_pct": 6.6
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Thoracic outlet depression surgery",
@@ -2635,6 +3076,16 @@
       "FIP": -0.1,
       "K_pct": 1.3,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2666,7 +3117,6 @@
       "K_pct": 25.7,
       "BB_pct": 9.2
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Elbow surgery (bone spur removal)",
@@ -2680,6 +3130,16 @@
       "FIP": 0.06,
       "K_pct": 0.8,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2711,7 +3171,6 @@
       "K_pct": 25.2,
       "BB_pct": 8.5
     },
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Elbow surgery",
@@ -2725,6 +3184,16 @@
       "FIP": -0.16,
       "K_pct": 2.1,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2756,7 +3225,6 @@
       "K_pct": 23.7,
       "BB_pct": 6.0
     },
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Arthroscopic elbow surgery (bone spurs)",
@@ -2770,6 +3238,16 @@
       "FIP": 0.05,
       "K_pct": -0.3,
       "BB_pct": 0.9
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2801,7 +3279,6 @@
       "K_pct": 22.4,
       "BB_pct": 6.0
     },
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Elbow inflammation",
@@ -2815,6 +3292,16 @@
       "FIP": -0.05,
       "K_pct": 0.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2846,12 +3333,6 @@
       "K_pct": 22.6,
       "BB_pct": 7.2
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 31,
-      "status": "Watchlist",
-      "seller_notes": "Borderline; could go either way depending on July standings"
-    },
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Strained biceps",
@@ -2865,6 +3346,16 @@
       "FIP": -0.13,
       "K_pct": 1.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2896,18 +3387,22 @@
       "K_pct": 22.1,
       "BB_pct": 7.1
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "High odds but big drop; monitor closely \u2014 could tip to seller"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.02,
       "FIP": -0.03,
       "K_pct": -0.2,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2939,13 +3434,22 @@
       "K_pct": 20.6,
       "BB_pct": 7.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.1,
       "FIP": 0.06,
       "K_pct": -0.4,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -2972,7 +3476,6 @@
       "IP": 154.0
     },
     "proj_ros": null,
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Tommy John surgery",
@@ -2981,7 +3484,17 @@
       "eligible_to_return": "05/31/26",
       "latest_update": "Out for 2026 season"
     },
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 691725,
@@ -3012,18 +3525,22 @@
       "K_pct": 20.7,
       "BB_pct": 8.8
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 8,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.18,
       "FIP": -0.21,
       "K_pct": 0.7,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3055,7 +3572,6 @@
       "K_pct": 28.0,
       "BB_pct": 9.2
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Strained oblique",
@@ -3069,6 +3585,16 @@
       "FIP": 0.12,
       "K_pct": -0.4,
       "BB_pct": 1.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3100,18 +3626,22 @@
       "K_pct": 24.3,
       "BB_pct": 7.7
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Underperforming; injury-depleted rotation creates motivation"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.04,
       "FIP": -0.06,
       "K_pct": 0.4,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3143,13 +3673,22 @@
       "K_pct": 20.3,
       "BB_pct": 9.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.14,
       "FIP": -0.02,
       "K_pct": 0.1,
       "BB_pct": 1.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3181,13 +3720,22 @@
       "K_pct": 22.2,
       "BB_pct": 7.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.18,
       "FIP": -0.23,
       "K_pct": 1.4,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3219,13 +3767,22 @@
       "K_pct": 22.3,
       "BB_pct": 7.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.02,
       "K_pct": 0.0,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3257,13 +3814,22 @@
       "K_pct": 25.7,
       "BB_pct": 9.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.06,
       "K_pct": 0.0,
       "BB_pct": 0.9
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3295,18 +3861,22 @@
       "K_pct": 23.9,
       "BB_pct": 10.6
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "Massive preseason expectations collapse; motivated sellers"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.01,
       "FIP": -0.04,
       "K_pct": 0.5,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3338,13 +3908,22 @@
       "K_pct": 25.4,
       "BB_pct": 10.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": -0.06,
       "K_pct": 0.6,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3376,13 +3955,22 @@
       "K_pct": 21.0,
       "BB_pct": 5.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.01,
       "FIP": -0.02,
       "K_pct": -0.4,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3409,12 +3997,6 @@
       "IP": 154.0
     },
     "proj_ros": null,
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 30,
-      "status": "Watchlist",
-      "seller_notes": "Roster rebuild posture; controllable arms most moveable"
-    },
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Knee surgery (sprained ACL)",
@@ -3423,7 +4005,17 @@
       "eligible_to_return": "05/30/26",
       "latest_update": "Expected to miss 6 months"
     },
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 678394,
@@ -3454,18 +4046,22 @@
       "K_pct": 19.1,
       "BB_pct": 8.6
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 25,
-      "status": "Watchlist",
-      "seller_notes": "Steep freefall from 61% preseason odds; window closing fast"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.1,
       "FIP": 0.06,
       "K_pct": -0.4,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3497,18 +4093,22 @@
       "K_pct": 19.9,
       "BB_pct": 7.7
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 25,
-      "status": "Watchlist",
-      "seller_notes": "Walk-year arms and declining roster; seller profile"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.15,
       "FIP": -0.19,
       "K_pct": 0.3,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3540,18 +4140,22 @@
       "K_pct": 22.6,
       "BB_pct": 9.2
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 33,
-      "status": "Watchlist",
-      "seller_notes": "Development org; will sell expiring and controllable arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.16,
       "FIP": -0.19,
       "K_pct": 0.8,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3583,18 +4187,22 @@
       "K_pct": 20.3,
       "BB_pct": 8.2
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 33,
-      "status": "Watchlist",
-      "seller_notes": "Development org; will sell expiring and controllable arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.18,
       "FIP": 0.15,
       "K_pct": 0.4,
       "BB_pct": 0.8
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3626,18 +4234,22 @@
       "K_pct": 23.1,
       "BB_pct": 6.9
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 25,
-      "status": "Watchlist",
-      "seller_notes": "Roster rebuild posture; controllable arms most moveable"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.21,
       "FIP": 0.17,
       "K_pct": -0.4,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3669,7 +4281,6 @@
       "K_pct": 19.0,
       "BB_pct": 8.6
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Thoracic outlet syndrome",
@@ -3683,6 +4294,16 @@
       "FIP": 0.06,
       "K_pct": -0.6,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3714,13 +4335,22 @@
       "K_pct": 22.9,
       "BB_pct": 9.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.11,
       "FIP": 0.09,
       "K_pct": 0.2,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3752,13 +4382,22 @@
       "K_pct": 22.2,
       "BB_pct": 9.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.03,
       "FIP": 0.02,
       "K_pct": 0.1,
       "BB_pct": 0.8
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3790,13 +4429,22 @@
       "K_pct": 22.9,
       "BB_pct": 9.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": -0.06,
       "K_pct": 0.4,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3828,12 +4476,6 @@
       "K_pct": 20.8,
       "BB_pct": 10.8
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Declining window; may sell if >5 games back at deadline"
-    },
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Strained shoulder",
@@ -3847,6 +4489,16 @@
       "FIP": 0.21,
       "K_pct": -1.2,
       "BB_pct": 0.8
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3878,13 +4530,22 @@
       "K_pct": 21.7,
       "BB_pct": 6.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.07,
       "FIP": 0.2,
       "K_pct": -1.7,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3916,18 +4577,22 @@
       "K_pct": 22.5,
       "BB_pct": 8.2
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "Declining window; may sell if >5 games back at deadline"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.16,
       "FIP": 0.14,
       "K_pct": -1.0,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3959,13 +4624,22 @@
       "K_pct": 22.2,
       "BB_pct": 9.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.08,
       "FIP": 0.04,
       "K_pct": -0.3,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -3997,7 +4671,6 @@
       "K_pct": 25.2,
       "BB_pct": 8.6
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Shoulder inflammation",
@@ -4011,6 +4684,16 @@
       "FIP": -0.03,
       "K_pct": 0.3,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4042,13 +4725,22 @@
       "K_pct": 24.3,
       "BB_pct": 10.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.1,
       "FIP": -0.08,
       "K_pct": 0.9,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4080,13 +4772,22 @@
       "K_pct": 23.6,
       "BB_pct": 10.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.23,
       "FIP": 0.2,
       "K_pct": -0.8,
       "BB_pct": 1.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4118,13 +4819,22 @@
       "K_pct": 23.2,
       "BB_pct": 8.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.01,
       "FIP": -0.06,
       "K_pct": 0.3,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4156,13 +4866,22 @@
       "K_pct": 26.1,
       "BB_pct": 8.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.11,
       "FIP": -0.14,
       "K_pct": 0.4,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4194,13 +4913,22 @@
       "K_pct": 24.1,
       "BB_pct": 8.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.11,
       "FIP": 0.08,
       "K_pct": -0.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4232,13 +4960,22 @@
       "K_pct": 24.8,
       "BB_pct": 9.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.14,
       "FIP": 0.1,
       "K_pct": 0.2,
       "BB_pct": 1.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4270,13 +5007,22 @@
       "K_pct": 22.7,
       "BB_pct": 11.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.09,
       "FIP": -0.11,
       "K_pct": 0.4,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4308,13 +5054,22 @@
       "K_pct": 20.3,
       "BB_pct": 8.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.1,
       "FIP": 0.06,
       "K_pct": -1.2,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4346,18 +5101,22 @@
       "K_pct": 24.7,
       "BB_pct": 9.4
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 18,
-      "status": "Watchlist",
-      "seller_notes": "Underperforming; injury-depleted rotation creates motivation"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.02,
       "K_pct": 0.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4389,13 +5148,22 @@
       "K_pct": 21.6,
       "BB_pct": 10.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.1,
       "FIP": -0.1,
       "K_pct": 0.5,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4427,13 +5195,22 @@
       "K_pct": 22.1,
       "BB_pct": 8.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.15,
       "FIP": -0.16,
       "K_pct": 0.7,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4458,7 +5235,6 @@
       "K_pct": 21.9,
       "BB_pct": 9.7
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Shoulder inflammation",
@@ -4467,7 +5243,17 @@
       "eligible_to_return": "04/28/26",
       "latest_update": "No timetable for return"
     },
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 608337,
@@ -4498,13 +5284,22 @@
       "K_pct": 20.7,
       "BB_pct": 9.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": 0.03,
       "K_pct": 0.2,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4536,7 +5331,6 @@
       "K_pct": 22.0,
       "BB_pct": 7.5
     },
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Strained elbow",
@@ -4550,6 +5344,16 @@
       "FIP": -0.11,
       "K_pct": 0.7,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4581,18 +5385,22 @@
       "K_pct": 23.7,
       "BB_pct": 9.3
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 41,
-      "status": "Watchlist",
-      "seller_notes": "Steep freefall from 61% preseason odds; window closing fast"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.08,
       "FIP": 0.04,
       "K_pct": 0.1,
       "BB_pct": 0.7
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4624,13 +5432,22 @@
       "K_pct": 23.1,
       "BB_pct": 8.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": 0.09,
       "K_pct": -1.1,
       "BB_pct": 0.9
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4662,13 +5479,22 @@
       "K_pct": 18.7,
       "BB_pct": 9.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.11,
       "FIP": 0.0,
       "K_pct": 0.3,
       "BB_pct": 0.9
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4700,18 +5526,22 @@
       "K_pct": 20.1,
       "BB_pct": 9.6
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 10,
-      "status": "Watchlist",
-      "seller_notes": "Underperforming; injury-depleted rotation creates motivation"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.17,
       "FIP": 0.16,
       "K_pct": 0.2,
       "BB_pct": 0.9
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4743,13 +5573,22 @@
       "K_pct": 23.6,
       "BB_pct": 11.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.25,
       "FIP": 0.23,
       "K_pct": -0.6,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4781,13 +5620,22 @@
       "K_pct": 19.8,
       "BB_pct": 8.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.17,
       "FIP": 0.14,
       "K_pct": -1.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4819,13 +5667,22 @@
       "K_pct": 24.3,
       "BB_pct": 8.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.05,
       "FIP": 0.02,
       "K_pct": -0.2,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4857,13 +5714,22 @@
       "K_pct": 19.8,
       "BB_pct": 9.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.11,
       "FIP": 0.09,
       "K_pct": -0.1,
       "BB_pct": 1.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4895,7 +5761,6 @@
       "K_pct": 22.8,
       "BB_pct": 9.8
     },
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Strained elbow (flexor)",
@@ -4909,6 +5774,16 @@
       "FIP": 0.06,
       "K_pct": 0.0,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4940,13 +5815,22 @@
       "K_pct": 22.9,
       "BB_pct": 10.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.11,
       "FIP": -0.14,
       "K_pct": 1.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -4966,7 +5850,6 @@
     "flag_sequence": null,
     "proj_preseason": null,
     "proj_ros": null,
-    "acquisition": null,
     "injury": {
       "il_type": "60-Day IL",
       "injury": "Torn knee ligament",
@@ -4975,7 +5858,17 @@
       "eligible_to_return": "05/24/26",
       "latest_update": "Out for 2026 season"
     },
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 687570,
@@ -5006,13 +5899,22 @@
       "K_pct": 22.0,
       "BB_pct": 9.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.18,
       "FIP": -0.14,
       "K_pct": 0.7,
       "BB_pct": 1.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5044,13 +5946,22 @@
       "K_pct": 22.0,
       "BB_pct": 12.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": 0.08,
       "K_pct": -0.6,
       "BB_pct": 1.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5082,13 +5993,22 @@
       "K_pct": 20.1,
       "BB_pct": 9.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.12,
       "K_pct": -0.1,
       "BB_pct": 1.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5120,13 +6040,22 @@
       "K_pct": 20.1,
       "BB_pct": 7.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.02,
       "FIP": -0.03,
       "K_pct": -0.1,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5158,18 +6087,22 @@
       "K_pct": 16.3,
       "BB_pct": 7.9
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 15,
-      "status": "Watchlist",
-      "seller_notes": "Development org; will sell expiring and controllable arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.03,
       "K_pct": -0.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5201,13 +6134,22 @@
       "K_pct": 15.9,
       "BB_pct": 9.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.12,
       "FIP": 0.1,
       "K_pct": -0.3,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5239,13 +6181,22 @@
       "K_pct": 15.9,
       "BB_pct": 9.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.12,
       "FIP": 0.1,
       "K_pct": -0.3,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5277,13 +6228,22 @@
       "K_pct": 18.5,
       "BB_pct": 9.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.11,
       "FIP": 0.12,
       "K_pct": -0.5,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5315,13 +6275,22 @@
       "K_pct": 21.6,
       "BB_pct": 7.6
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.04,
       "FIP": 0.02,
       "K_pct": -0.3,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5353,13 +6322,22 @@
       "K_pct": 21.4,
       "BB_pct": 5.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.01,
       "FIP": -0.04,
       "K_pct": 0.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5391,13 +6369,22 @@
       "K_pct": 18.7,
       "BB_pct": 9.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.2,
       "FIP": 0.17,
       "K_pct": -0.4,
       "BB_pct": 0.7
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5429,13 +6416,22 @@
       "K_pct": 19.9,
       "BB_pct": 7.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.08,
       "FIP": 0.05,
       "K_pct": -0.7,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5467,13 +6463,22 @@
       "K_pct": 19.7,
       "BB_pct": 8.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.04,
       "FIP": -0.08,
       "K_pct": 0.5,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5505,13 +6510,22 @@
       "K_pct": 22.1,
       "BB_pct": 8.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.16,
       "FIP": 0.12,
       "K_pct": -1.1,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5543,13 +6557,22 @@
       "K_pct": 20.9,
       "BB_pct": 8.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.09,
       "FIP": -0.13,
       "K_pct": 0.4,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5581,13 +6604,22 @@
       "K_pct": 21.3,
       "BB_pct": 7.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.04,
       "K_pct": 0.5,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5619,18 +6651,22 @@
       "K_pct": 21.1,
       "BB_pct": 8.1
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Underperforming; injury-depleted rotation creates motivation"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.05,
       "FIP": 0.03,
       "K_pct": -0.8,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5662,13 +6698,22 @@
       "K_pct": 20.4,
       "BB_pct": 10.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.05,
       "FIP": -0.09,
       "K_pct": 0.8,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5700,13 +6745,22 @@
       "K_pct": 20.2,
       "BB_pct": 8.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.12,
       "FIP": 0.1,
       "K_pct": -0.6,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5738,13 +6792,22 @@
       "K_pct": 18.7,
       "BB_pct": 6.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.02,
       "FIP": -0.02,
       "K_pct": 0.3,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5776,18 +6839,22 @@
       "K_pct": 19.1,
       "BB_pct": 9.0
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 23,
-      "status": "Watchlist",
-      "seller_notes": "Massive preseason expectations collapse; motivated sellers"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.09,
       "FIP": 0.06,
       "K_pct": 0.0,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5812,12 +6879,6 @@
       "K_pct": 21.2,
       "BB_pct": 11.2
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 10,
-      "status": "Watchlist",
-      "seller_notes": "Declining window; may sell if >5 games back at deadline"
-    },
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Mid-back inflammation",
@@ -5826,7 +6887,17 @@
       "eligible_to_return": "04/28/26",
       "latest_update": "No timetable for return"
     },
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 607067,
@@ -5857,18 +6928,22 @@
       "K_pct": 18.5,
       "BB_pct": 6.9
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Borderline; could go either way depending on July standings"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.08,
       "FIP": 0.04,
       "K_pct": -0.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5900,18 +6975,22 @@
       "K_pct": 24.6,
       "BB_pct": 6.3
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.06,
       "FIP": -0.1,
       "K_pct": 0.9,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5943,18 +7022,22 @@
       "K_pct": 21.0,
       "BB_pct": 9.4
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 15,
-      "status": "Watchlist",
-      "seller_notes": "Massive preseason expectations collapse; motivated sellers"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.03,
       "K_pct": 0.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -5986,13 +7069,22 @@
       "K_pct": 18.6,
       "BB_pct": 8.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.04,
       "FIP": -0.05,
       "K_pct": 0.3,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6024,13 +7116,22 @@
       "K_pct": 20.6,
       "BB_pct": 7.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.08,
       "FIP": 0.04,
       "K_pct": 0.4,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6062,13 +7163,22 @@
       "K_pct": 20.8,
       "BB_pct": 8.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.02,
       "K_pct": -0.3,
       "BB_pct": -0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6100,13 +7210,22 @@
       "K_pct": 20.1,
       "BB_pct": 8.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.02,
       "K_pct": -0.8,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6138,18 +7257,22 @@
       "K_pct": 20.1,
       "BB_pct": 7.3
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 18,
-      "status": "Watchlist",
-      "seller_notes": "High odds but big drop; monitor closely \u2014 could tip to seller"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.14,
       "FIP": -0.21,
       "K_pct": 1.3,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6181,18 +7304,22 @@
       "K_pct": 21.8,
       "BB_pct": 8.1
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "Roster rebuild posture; controllable arms most moveable"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.13,
       "FIP": 0.08,
       "K_pct": 0.1,
       "BB_pct": 0.7
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6224,13 +7351,22 @@
       "K_pct": 17.0,
       "BB_pct": 8.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.04,
       "FIP": -0.05,
       "K_pct": 0.1,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6262,13 +7398,22 @@
       "K_pct": 25.3,
       "BB_pct": 9.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.19,
       "FIP": 0.15,
       "K_pct": -0.7,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6300,13 +7445,22 @@
       "K_pct": 21.2,
       "BB_pct": 7.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.02,
       "K_pct": 0.0,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6338,13 +7492,22 @@
       "K_pct": 20.3,
       "BB_pct": 11.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.2,
       "FIP": 0.19,
       "K_pct": -0.6,
       "BB_pct": 1.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6376,13 +7539,22 @@
       "K_pct": 18.0,
       "BB_pct": 8.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.16,
       "FIP": 0.13,
       "K_pct": 0.0,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6414,13 +7586,22 @@
       "K_pct": 18.0,
       "BB_pct": 8.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.16,
       "FIP": 0.13,
       "K_pct": 0.0,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6452,13 +7633,22 @@
       "K_pct": 21.5,
       "BB_pct": 8.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.16,
       "FIP": 0.12,
       "K_pct": -0.6,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6490,13 +7680,22 @@
       "K_pct": 14.7,
       "BB_pct": 9.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.0,
       "FIP": -0.04,
       "K_pct": 0.5,
       "BB_pct": 1.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6528,13 +7727,22 @@
       "K_pct": 18.3,
       "BB_pct": 8.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.02,
       "FIP": -0.01,
       "K_pct": 0.6,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6566,18 +7774,22 @@
       "K_pct": 18.9,
       "BB_pct": 6.2
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Borderline; could go either way depending on July standings"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.09,
       "FIP": 0.04,
       "K_pct": 0.4,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6609,13 +7821,22 @@
       "K_pct": 17.1,
       "BB_pct": 5.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.04,
       "FIP": 0.0,
       "K_pct": 0.0,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6647,18 +7868,22 @@
       "K_pct": 18.6,
       "BB_pct": 9.1
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Borderline; could go either way depending on July standings"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.21,
       "FIP": 0.17,
       "K_pct": -1.0,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6690,13 +7915,22 @@
       "K_pct": 20.3,
       "BB_pct": 7.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.11,
       "FIP": -0.15,
       "K_pct": 0.1,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6728,18 +7962,22 @@
       "K_pct": 27.1,
       "BB_pct": 7.5
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.07,
       "FIP": -0.11,
       "K_pct": 0.5,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6771,7 +8009,6 @@
       "K_pct": 26.0,
       "BB_pct": 12.6
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Strained elbow",
@@ -6785,6 +8022,16 @@
       "FIP": -0.07,
       "K_pct": 0.2,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6816,13 +8063,22 @@
       "K_pct": 14.8,
       "BB_pct": 9.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.15,
       "FIP": 0.11,
       "K_pct": -0.3,
       "BB_pct": 0.7
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6854,13 +8110,22 @@
       "K_pct": 22.9,
       "BB_pct": 10.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.11,
       "FIP": -0.14,
       "K_pct": 1.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6892,13 +8157,22 @@
       "K_pct": 23.2,
       "BB_pct": 8.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.17,
       "FIP": -0.2,
       "K_pct": 1.0,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6930,7 +8204,6 @@
       "K_pct": 19.4,
       "BB_pct": 7.9
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Hip inflammation",
@@ -6944,6 +8217,16 @@
       "FIP": 0.07,
       "K_pct": -0.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -6975,13 +8258,22 @@
       "K_pct": 19.6,
       "BB_pct": 7.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.1,
       "FIP": -0.15,
       "K_pct": 0.4,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7013,18 +8305,22 @@
       "K_pct": 23.9,
       "BB_pct": 10.6
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 23,
-      "status": "Watchlist",
-      "seller_notes": "Massive preseason expectations collapse; motivated sellers"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.01,
       "FIP": -0.04,
       "K_pct": 0.5,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7056,13 +8352,22 @@
       "K_pct": 21.4,
       "BB_pct": 7.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.05,
       "FIP": 0.02,
       "K_pct": 0.3,
       "BB_pct": 0.7
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7094,7 +8399,6 @@
       "K_pct": 17.2,
       "BB_pct": 6.2
     },
-    "acquisition": null,
     "injury": {
       "il_type": "15-Day IL",
       "injury": "Shoulder inflammation",
@@ -7108,6 +8412,16 @@
       "FIP": -0.05,
       "K_pct": 0.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7139,13 +8453,22 @@
       "K_pct": 18.8,
       "BB_pct": 8.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.13,
       "FIP": 0.09,
       "K_pct": -0.8,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7177,18 +8500,22 @@
       "K_pct": 22.6,
       "BB_pct": 11.1
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 10,
-      "status": "Watchlist",
-      "seller_notes": "Declining window; may sell if >5 games back at deadline"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.15,
       "FIP": -0.17,
       "K_pct": 0.8,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7213,14 +8540,18 @@
       "K_pct": 20.3,
       "BB_pct": 7.5
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "Roster rebuild posture; controllable arms most moveable"
-    },
     "injury": null,
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 679883,
@@ -7244,14 +8575,18 @@
       "K_pct": 19.4,
       "BB_pct": 10.3
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "Walk-year arms and declining roster; seller profile"
-    },
     "injury": null,
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 806960,
@@ -7282,13 +8617,22 @@
       "K_pct": 20.0,
       "BB_pct": 10.1
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.3,
       "FIP": 0.28,
       "K_pct": -0.7,
       "BB_pct": 0.8
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7320,13 +8664,22 @@
       "K_pct": 19.8,
       "BB_pct": 8.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.01,
       "FIP": -0.02,
       "K_pct": 0.8,
       "BB_pct": 1.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7358,13 +8711,22 @@
       "K_pct": 17.2,
       "BB_pct": 8.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.05,
       "FIP": 0.03,
       "K_pct": -0.5,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7389,9 +8751,18 @@
       "K_pct": 21.4,
       "BB_pct": 6.9
     },
-    "acquisition": null,
     "injury": null,
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 669461,
@@ -7422,13 +8793,22 @@
       "K_pct": 19.1,
       "BB_pct": 7.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.22,
       "FIP": 0.17,
       "K_pct": -0.6,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7460,13 +8840,22 @@
       "K_pct": 21.8,
       "BB_pct": 8.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.01,
       "FIP": -0.04,
       "K_pct": 0.4,
       "BB_pct": 0.6
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7498,13 +8887,22 @@
       "K_pct": 17.6,
       "BB_pct": 8.4
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.03,
       "FIP": 0.01,
       "K_pct": -0.3,
       "BB_pct": -0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7536,13 +8934,22 @@
       "K_pct": 16.5,
       "BB_pct": 5.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.07,
       "FIP": 0.02,
       "K_pct": -0.1,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7574,13 +8981,22 @@
       "K_pct": 24.2,
       "BB_pct": 9.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": -0.05,
       "K_pct": 0.7,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7612,18 +9028,22 @@
       "K_pct": 19.0,
       "BB_pct": 7.1
     },
-    "acquisition": {
-      "priority": "Tier 3 \u2013 Watchlist",
-      "score": 28,
-      "status": "Watchlist",
-      "seller_notes": "Walk-year arms and declining roster; seller profile"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": -0.06,
       "FIP": -0.09,
       "K_pct": 0.3,
       "BB_pct": 0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7643,14 +9063,18 @@
     "flag_sequence": "+",
     "proj_preseason": null,
     "proj_ros": null,
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
-    "proj_delta": null
+    "proj_delta": null,
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
+    }
   },
   {
     "mlbamid": 571945,
@@ -7681,13 +9105,22 @@
       "K_pct": 15.4,
       "BB_pct": 6.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.2,
       "FIP": 0.15,
       "K_pct": -0.2,
       "BB_pct": 0.5
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7719,13 +9152,22 @@
       "K_pct": 20.1,
       "BB_pct": 7.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.05,
       "FIP": 0.01,
       "K_pct": -0.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7757,13 +9199,22 @@
       "K_pct": 17.9,
       "BB_pct": 6.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.11,
       "FIP": 0.05,
       "K_pct": -0.2,
       "BB_pct": 0.2
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7795,18 +9246,22 @@
       "K_pct": 19.0,
       "BB_pct": 7.6
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "Roster rebuild posture; controllable arms most moveable"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.1,
       "FIP": 0.01,
       "K_pct": 0.7,
       "BB_pct": -0.1
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7838,13 +9293,22 @@
       "K_pct": 17.1,
       "BB_pct": 8.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.17,
       "FIP": -0.19,
       "K_pct": 1.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7876,13 +9340,22 @@
       "K_pct": 17.1,
       "BB_pct": 8.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.17,
       "FIP": -0.19,
       "K_pct": 1.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7914,18 +9387,22 @@
       "K_pct": 20.7,
       "BB_pct": 7.2
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 20,
-      "status": "Watchlist",
-      "seller_notes": "Steep freefall from 61% preseason odds; window closing fast"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.07,
       "FIP": 0.03,
       "K_pct": -0.1,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7957,13 +9434,22 @@
       "K_pct": 18.0,
       "BB_pct": 7.8
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.03,
       "FIP": -0.02,
       "K_pct": -0.3,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -7995,13 +9481,22 @@
       "K_pct": 18.5,
       "BB_pct": 9.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.16,
       "FIP": 0.11,
       "K_pct": -0.3,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8033,13 +9528,22 @@
       "K_pct": 21.1,
       "BB_pct": 10.2
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.05,
       "FIP": -0.08,
       "K_pct": -0.2,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8071,13 +9575,22 @@
       "K_pct": 20.0,
       "BB_pct": 6.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.04,
       "K_pct": 0.1,
       "BB_pct": 0.7
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8109,13 +9622,22 @@
       "K_pct": 21.6,
       "BB_pct": 6.9
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.03,
       "FIP": -0.06,
       "K_pct": 0.7,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8147,18 +9669,22 @@
       "K_pct": 16.1,
       "BB_pct": 8.6
     },
-    "acquisition": {
-      "priority": "Tier 4 \u2013 Low Priority",
-      "score": 5,
-      "status": "Watchlist",
-      "seller_notes": "Expected contender underperforming; unlikely to sell top arms"
-    },
     "injury": null,
     "proj_delta": {
       "ERA": 0.09,
       "FIP": 0.05,
       "K_pct": 0.0,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8190,13 +9716,22 @@
       "K_pct": 23.4,
       "BB_pct": 8.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.16,
       "FIP": -0.17,
       "K_pct": 0.9,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8228,13 +9763,22 @@
       "K_pct": 14.4,
       "BB_pct": 5.5
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.05,
       "FIP": -0.01,
       "K_pct": 0.3,
       "BB_pct": 0.0
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8266,13 +9810,22 @@
       "K_pct": 19.8,
       "BB_pct": 9.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": -0.06,
       "FIP": -0.09,
       "K_pct": 0.4,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8304,13 +9857,22 @@
       "K_pct": 23.0,
       "BB_pct": 9.7
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.28,
       "FIP": 0.25,
       "K_pct": -0.5,
       "BB_pct": 0.3
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8342,13 +9904,22 @@
       "K_pct": 23.7,
       "BB_pct": 9.0
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.06,
       "FIP": 0.02,
       "K_pct": -0.1,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   },
   {
@@ -8380,13 +9951,22 @@
       "K_pct": 17.5,
       "BB_pct": 5.3
     },
-    "acquisition": null,
     "injury": null,
     "proj_delta": {
       "ERA": 0.13,
       "FIP": 0.1,
       "K_pct": -0.1,
       "BB_pct": 0.4
+    },
+    "tags": {
+      "dev_op": [],
+      "history_proj": [],
+      "injury_risk": [],
+      "recent_change": [],
+      "role_risk": [],
+      "trade_cost_tier": null,
+      "tier_note": null,
+      "tag_notes": {}
     }
   }
 ]

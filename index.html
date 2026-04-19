@@ -38,8 +38,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .chart-tooltip .tt-row{display:flex;justify-content:space-between;gap:16px;margin:2px 0;color:#888}
 .chart-tooltip .tt-val{color:#1a1a18;font-weight:500}
 .chart-tooltip .tt-tag{margin-top:8px;font-size:11px;padding:3px 10px;border-radius:5px;display:inline-block}
-.chart-tooltip .tt-targets{margin-top:8px;padding-top:8px;border-top:1px solid #eee}
-.chart-tooltip .tt-targets-label{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#aaa;margin-bottom:4px}
 .chart-tooltip .tt-pitcher{font-size:11px;color:#1a2744;margin:2px 0}
 .chart-tooltip .tt-view{font-size:10px;color:#1a2744;margin-top:6px;cursor:pointer;text-decoration:underline}
 
@@ -66,14 +64,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .panel-empty-icon{font-size:32px;margin-bottom:.75rem}
 .panel-team-meta{font-size:12px;color:#888;margin-top:2px}
 .panel-tag{display:inline-block;font-size:10px;padding:2px 8px;border-radius:4px;margin-top:4px}
-.panel-seller-tag{background:#fde8d8;color:#8b3a1a}
-.panel-fringe-tag{background:#fef3d0;color:#7a5200}
-.panel-buyer-tag{background:#dff0d8;color:#2d6a1f}
-.panel-twins-tag{background:#dce8f8;color:#1a3d7a}
 .pitcher-card{border:1px solid #eee;border-radius:8px;padding:.75rem 1rem;margin-bottom:.625rem;cursor:pointer;transition:all .15s;background:#fff}
 .pitcher-card:hover{border-color:#b0c4de;background:#f8fafd}
 .pitcher-card.expanded{border-color:#1a2744;background:#f8fafd}
-.pitcher-card.is-target{border-left:3px solid #2d7a2d}
 .pitcher-card-top{display:flex;align-items:flex-start;justify-content:space-between;gap:8px}
 .pitcher-name{font-size:13px;font-weight:600;color:#1a1a18}
 .pitcher-rank{font-size:10px;color:#aaa;margin-top:1px}
@@ -83,11 +76,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .flag-plus{color:#2d7a2d}
 .flag-minus{color:#c0392b}
 .flag-neutral{color:#aaa}
-.pitcher-priority{font-size:10px;padding:2px 7px;border-radius:4px;white-space:nowrap}
-.pri-t2{background:#d9ead3;color:#2d5a1f}
-.pri-t3{background:#cfe2f3;color:#1a3d7a}
-.pri-t4{background:#f3f3f3;color:#666}
-.pri-none{background:#f8f0ff;color:#5a2d8a}
 .pitcher-detail{margin-top:.625rem;padding-top:.625rem;border-top:1px solid #f0ede8;display:none;font-size:11px;color:#555;line-height:1.5}
 .pitcher-card.expanded .pitcher-detail{display:block}
 .detail-label{font-size:10px;text-transform:uppercase;letter-spacing:.4px;color:#aaa;margin-top:.5rem;margin-bottom:2px}
@@ -134,10 +122,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .targets-table th.sorted .sort-arrow{opacity:1}
 .targets-table td{padding:8px 10px;border-bottom:1px solid #f0ede8;vertical-align:top;line-height:1.4}
 .targets-table tr:hover td{background:#f8fafd}
-.targets-table tr.row-t2 td{background:#f6fbf4}
-.targets-table tr.row-t2:hover td{background:#edf7ea}
-.targets-table tr.row-t3 td{background:#f6f9fd}
-.targets-table tr.row-t3:hover td{background:#edf3fb}
 .td-name{font-weight:600;color:#1a1a18;white-space:nowrap}
 .td-team{font-size:11px;font-weight:600;color:#fff;background:#1a2744;border-radius:4px;padding:1px 6px;display:inline-block;white-space:nowrap}
 .td-rank{color:#888;text-align:center}
@@ -147,14 +131,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .health-ok{color:#2d7a2d}
 .health-warn{color:#b8820a}
 .health-risk{color:#c0392b}
-.td-seller{font-size:11px;white-space:nowrap}
-.seller-label{display:inline-block;padding:1px 7px;border-radius:4px;font-size:10px}
-.seller-tag{background:#fde8d8;color:#8b3a1a}
-.fringe-tag-sm{background:#fef3d0;color:#7a5200}
-.tc-seller{background:#fde8d8;color:#8b3a1a}
-.tc-fringe{background:#fef3d0;color:#7a5200}
-.tc-buyer{background:#dff0d8;color:#2d6a1f}
-.tc-twins{background:#dce8f8;color:#1a3d7a}
 @media(max-width:900px){.main{grid-template-columns:1fr}.panel-section{display:none}.table-section{padding:1rem}}
 .org-card{background:#f8f7f4;border:1px solid #e8e5df;border-radius:8px;padding:.75rem 1rem;margin-bottom:.75rem;font-size:12px}
 .org-card-row{display:flex;gap:12px;margin-bottom:.5rem}
@@ -202,12 +178,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .teams-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:.875rem}
 
 /* Deadline status view */
-.deadline-block{margin-bottom:1.75rem}
-.deadline-block-header{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;padding:.4rem .875rem;border-radius:6px;display:inline-block;margin-bottom:.625rem}
-.dh-seller{background:#fde8d8;color:#8b3a1a}
-.dh-fringe{background:#fef3d0;color:#7a5200}
-.dh-buyer{background:#dff0d8;color:#2d6a1f}
-.dh-twins{background:#dce8f8;color:#1a3d7a}
 
 /* Team card */
 .team-card{background:#fff;border:1px solid #e0ddd5;border-radius:10px;overflow:hidden;transition:box-shadow .15s}
@@ -217,17 +187,12 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .team-code{font-size:14px;font-weight:700;color:#1a1a18}
 .team-record{font-size:11px;color:#999}
 .team-deadline-badge{font-size:10px;padding:2px 8px;border-radius:4px;font-weight:600}
-.tdb-seller{background:#fde8d8;color:#8b3a1a}
-.tdb-fringe{background:#fef3d0;color:#7a5200}
-.tdb-buyer{background:#dff0d8;color:#2d6a1f}
-.tdb-twins{background:#dce8f8;color:#1a3d7a}
 .team-card-toggle{font-size:12px;color:#bbb;transition:transform .2s}
 .team-card-toggle.open{transform:rotate(180deg)}
 .team-pitcher-list{padding:.375rem 0}
 .team-pitcher-row{display:flex;align-items:center;gap:0;padding:.35rem .875rem;cursor:pointer;border-bottom:1px solid #f5f4f0;transition:background .12s;position:relative}
 .team-pitcher-row:last-child{border-bottom:none}
 .team-pitcher-row:hover{background:#f8fafd}
-.team-pitcher-row.is-target{border-left:3px solid #2d7a2d;padding-left:calc(.875rem - 3px)}
 .tpr-name{font-size:12px;font-weight:600;color:#1a1a18;min-width:130px;flex-shrink:0}
 .tpr-flags{font-size:11px;color:#888;min-width:44px;flex-shrink:0;letter-spacing:1px}
 .tpr-archetype{font-size:11px;color:#666;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;flex:1}
@@ -250,8 +215,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 .tdm-flag-plus{color:#2d7a2d}
 .tdm-flag-minus{color:#c0392b}
 .tdm-flag-neutral{color:#ccc}
-.tdm-score-badge{background:#1a2744;color:#fff;font-size:12px;font-weight:700;padding:3px 10px;border-radius:6px}
-.tdm-target-banner{background:#f0f8f0;border:1px solid #b5d9b5;border-radius:8px;padding:.5rem .875rem;font-size:12px;color:#2d6a1f;margin-bottom:.875rem;display:flex;align-items:center;gap:6px}
 
 /* ── Movers page ────────────────────────────────────────────────────────────── */
 .movers-page{max-width:1100px;margin:0 auto;padding:1.25rem 1rem 2rem}
@@ -322,7 +285,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="chart-section">
     <div class="controls">
       <button class="filter-btn active" data-filter="all">All teams</button>
-      <button class="filter-btn" data-filter="seller">Likely sellers</button>
       <button class="filter-btn" data-filter="fringe">Fringe</button>
       <button class="filter-btn" data-filter="buyer">Likely buyers</button>
       <div class="toggle-group" style="margin-left:auto">
@@ -346,7 +308,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <svg width="36" height="12" style="vertical-align:middle"><line x1="2" y1="6" x2="18" y2="6" stroke="#bbb" stroke-width="1.5" stroke-dasharray="3,2"/><circle cx="2" cy="6" r="4" fill="#ccc"/><circle cx="20" cy="6" r="5" fill="#888"/><polygon points="26,6 34,3 34,9" fill="#444"/></svg>
         Preseason → Current
       </div>
-      <div class="legend-item"><div class="legend-dot" style="background:#1a2744;border-radius:2px;width:12px;height:8px"></div>Has tracked targets</div>
     </div>
     <p class="chart-note">Arrow = direction &amp; size of change from preseason · filled dot = current odds · open dot = preseason baseline · Click any row to view team's pitchers</p>
   </div>
@@ -379,16 +340,11 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
   <div class="section-header">
     <div>
       <div class="section-title">Active Watch — SP Acquisition Targets</div>
-      <div class="section-subtitle">Seller &amp; fringe team targets · click column headers to sort</div>
+      <div class="section-subtitle">All tracked starters · click column headers to sort</div>
     </div>
     <div class="table-controls">
       <input class="search-input" type="text" id="tableSearch" placeholder="Search pitcher or team...">
-      <select class="tier-filter" id="tierFilter">
-        <option value="all">All tiers</option>
-        <option value="t2">Tier 2 – Monitor Closely</option>
-        <option value="t3">Tier 3 – Watchlist</option>
-        <option value="t4">Tier 4 – Low Priority</option>
-      </select>
+      
       <select class="tier-filter" id="leagueFilter">
         <option value="all">AL + NL</option>
         <option value="AL">AL only</option>
@@ -401,7 +357,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <thead><tr>
         <th data-col="pitcher" class="sorted">Pitcher <span class="sort-arrow">↕</span></th>
         <th data-col="team">Team <span class="sort-arrow">↕</span></th>
-        <th data-col="acquisition_score">Score <span class="sort-arrow">↓</span></th>
         <th data-col="pl_rank">Rank <span class="sort-arrow">↕</span></th>
         <th data-col="flag_sequence">Flags <span class="sort-arrow">↕</span></th>
         <th data-col="plus_flags">+ <span class="sort-arrow">↕</span></th>
@@ -414,7 +369,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
         <th data-col="profile_archetype">Archetype <span class="sort-arrow">↕</span></th>
         <th data-col="preseason_health_flag">Health <span class="sort-arrow">↕</span></th>
         <th data-col="team_deadline_label">Seller Status <span class="sort-arrow">↕</span></th>
-        <th data-col="acquisition_priority">Priority <span class="sort-arrow">↕</span></th>
       </tr></thead>
       <tbody id="tableBody"></tbody>
     </table>
@@ -432,7 +386,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="movers-filter-row">
         <label class="movers-filter-label">Pool:</label>
         <button class="movers-pool-btn active" data-pool="all" onclick="setMoversPool('all')">All Pitchers</button>
-        <button class="movers-pool-btn" data-pool="targets" onclick="setMoversPool('targets')">Targets Only</button>
         <label class="movers-filter-label" style="margin-left:1rem">League:</label>
         <button class="movers-pool-btn active" data-pool-lg="all" onclick="setMoversLeague('all')">All</button>
         <button class="movers-pool-btn" data-pool-lg="AL" onclick="setMoversLeague('AL')">AL</button>
@@ -914,7 +867,6 @@ let WIN_TOTALS = [];
 
 // ── Player data — loaded from players.json ────────────────────────────────────
 let ALL_PITCHERS = [];
-let TARGETS = [];
 
 async function loadPlayers() {
   const res = await fetch('players.json');
@@ -922,32 +874,13 @@ async function loadPlayers() {
   ALL_PITCHERS = players.map(p => ({
     ...p,
     proj_ros_417: p.proj_ros,   // keep legacy key for existing code
-    proj_delta:   p.proj_delta ?? null,  // explicitly carry through
-    // Flatten acquisition fields for backwards compat with table/panel code
-    acquisition_priority: p.acquisition?.priority ?? null,
-    acquisition_score:    p.acquisition?.score ?? null,
-    team_deadline_label:  null,  // populated later from WIN_TOTALS
-    team_playoff_odds:    null,
-    team_odds_diff:       null,
-    team_seller_notes:    p.acquisition?.seller_notes ?? null,
-    status:               p.acquisition?.status ?? null,
-  }));
-  TARGETS = ALL_PITCHERS.filter(p => p.acquisition !== null);
+    proj_delta:   p.proj_delta ?? null,  // explicitly carry through  }));
 }
 const TEAM_LEAGUE = {};
 WIN_TOTALS.forEach(t => TEAM_LEAGUE[t.team] = t.league);
-let TARGET_TEAMS = new Set();
-let TARGET_MAP = {};
 let ROSTER_MAP = {};
-let TARGET_NAMES = new Set();
 
 function buildPlayerMaps() {
-  TARGET_TEAMS = new Set(TARGETS.map(t => t.team));
-  TARGET_MAP = {};
-  TARGETS.forEach(t => {
-    if (!TARGET_MAP[t.team]) TARGET_MAP[t.team] = [];
-    TARGET_MAP[t.team].push(t);
-  });
   ROSTER_MAP = {};
   ALL_PITCHERS.forEach(p => {
     if (!ROSTER_MAP[p.team]) ROSTER_MAP[p.team] = [];
@@ -963,10 +896,7 @@ function buildPlayerMaps() {
       p.team_odds_diff    = wt.oddsDiff;
     }
   });
-  TARGET_NAMES = new Set(TARGETS.map(t => t.pitcher + '|' + t.team));
 }
-
-function isTarget(name, team) { return TARGET_NAMES.has(name + '|' + team); }
 
 // ── Countdown ─────────────────────────────────────────────────────────────────
 function updateCountdown() {
@@ -1041,7 +971,6 @@ function renderDumbbell() {
     const preX = scaleX(t.playoffOdds - t.oddsDiff);
     const curX = scaleX(t.playoffOdds);
     const isSelected = activeTeam === t.team;
-    const hasTargets = TARGET_TEAMS.has(t.team);
 
     // Row hover bg (transparent rect for events)
     html += `<rect class="db-row" data-team="${t.team}" x="0" y="${y - rowH/2}" width="${ww}" height="${rowH}" fill="${isSelected ? 'rgba(26,39,68,.06)' : 'transparent'}" style="cursor:pointer"/>`;
@@ -1049,7 +978,7 @@ function renderDumbbell() {
     // Team label
     const isTwins = t.team === 'MIN';
     html += `<text x="${pad.left - 8}" y="${y + 4}" text-anchor="end" font-size="11.5" fill="${isSelected ? colorDark : '#1a1a18'}" font-weight="${isTwins ? '700' : '400'}">${t.name}</text>`;
-    if (hasTargets) {
+    if (false) {
       html += `<rect x="${pad.left - 7}" y="${y + 6}" width="6" height="6" rx="1" fill="#1a2744" opacity="0.7"/>`;
     }
 
@@ -1091,7 +1020,6 @@ function renderDumbbell() {
       const cat = classify(t);
       const tagClass = cat === 'twins' ? 'tc-twins' : `tc-${cat}`;
       const tagLabel = cat === 'twins' ? 'Your team' : CLABELS[cat];
-      const teamTargets = (TARGET_MAP[team]||[]).filter(x=>['Tier 2 \u2013 Monitor Closely','Tier 3 \u2013 Watchlist'].includes(x.acquisition_priority)).slice(0,3);
       let targetsHtml = '';
       if (teamTargets.length) {
         targetsHtml = `<div class="tt-targets"><div class="tt-targets-label">Tracked targets</div>${teamTargets.map(x=>`<div class="tt-pitcher"><span style="color:${x.plus_flags>0?'#2d7a2d':x.minus_flags>0?'#c0392b':'#aaa'}">${x.flag_sequence}</span> ${x.pitcher} <span style="color:#aaa">#${x.pl_rank||'—'}</span></div>`).join('')}<div class="tt-view" onclick="showPanel('${team}')">View all →</div></div>`;
@@ -1108,7 +1036,7 @@ function renderDumbbell() {
         <div class="tt-row"><span>Change</span><span class="tt-val" style="color:${t.oddsDiff>=0?'#3B6D11':'#993C1D'}">${t.oddsDiff>0?'+':''}${t.oddsDiff}%</span></div>
         <div class="tt-row"><span>Proj. wins</span><span class="tt-val">${t.wins.toFixed(1)} (${t.winsDiff>0?'+':''}${t.winsDiff.toFixed(1)})</span></div>
         ${cbtRow}
-        <span class="tt-tag ${tagClass}">${tagLabel}</span>${targetsHtml}`;
+        <span class="tt-tag ${tagClass}">${tagLabel}</span>`;
       tip.style.display = 'block';
       const svgRect = svg.getBoundingClientRect();
       const rowY = parseFloat(rect.getAttribute('y'));
@@ -1147,7 +1075,6 @@ function flagHtml(seq) {
 }
 function healthIcon(h){if(!h)return'';const hl=h.toLowerCase();if(hl.includes('no significant')||hl.includes('no health')||hl.includes('no injury'))return'✓';if(hl.includes('surgery')||hl.includes('tjs')||hl.includes('rotator')||hl.includes('elbow'))return'⚠';return'◦';}
 function healthClass(h){if(!h)return'';const hl=h.toLowerCase();if(hl.includes('no significant')||hl.includes('no health')||hl.includes('no injury'))return'health-ok';if(hl.includes('surgery')||hl.includes('tjs')||hl.includes('rotator')||hl.includes('elbow')||hl.includes('shoulder'))return'health-risk';return'health-warn';}
-function priClass(p){if(!p)return'pri-none';if(p.includes('Tier 2'))return'pri-t2';if(p.includes('Tier 3'))return'pri-t3';if(p.includes('Tier 4'))return'pri-t4';return'pri-none';}
 
 function buildProjStrip(p) {
   const pre = p.proj_preseason, ros = p.proj_ros_417;
@@ -1232,13 +1159,8 @@ function buildProjModal(p) {
   return html;
 }
 
-function buildPitcherCard(p, targetInfo) {
-  const acqPri = targetInfo ? targetInfo.acquisition_priority : null;
-  const acqScore = targetInfo ? targetInfo.acquisition_score : null;
-  const targetClass = targetInfo ? ' is-target' : '';
-  const priLabel = acqPri ? acqPri.replace('Tier ','T').replace(' – ',' – ') : (p.pl_rank ? `#${Math.round(p.pl_rank)}` : 'Unranked');
-  const sellerNote = targetInfo ? `<div class="detail-label">Seller context</div><div style="color:#8b3a1a">${targetInfo.team_seller_notes}</div>` : '';
-  const scoreHtml = acqScore != null ? `<div style="font-size:10px;color:#888">Acq. score: <strong style="color:#1a2744">${acqScore}</strong></div>` : '';
+function buildPitcherCard(p) {
+  const priLabel = p.pl_rank ? `#${Math.round(p.pl_rank)}` : 'Unranked';
   return `<div class="pitcher-card${targetClass}" onclick="this.classList.toggle('expanded')">
     <div class="pitcher-card-top">
       <div>
@@ -1248,8 +1170,6 @@ function buildPitcherCard(p, targetInfo) {
       </div>
       <div style="text-align:right;flex-shrink:0">
         <div class="pitcher-flags">${flagHtml(p.flag_sequence)}</div>
-        ${acqPri ? `<span class="pitcher-priority ${priClass(acqPri)}">${priLabel}</span>` : ''}
-        ${scoreHtml}
       </div>
     </div>
     <div class="pitcher-detail">
@@ -1258,7 +1178,6 @@ function buildPitcherCard(p, targetInfo) {
       ${p.primary_weapons ? `<div class="detail-label">Primary weapons</div><div>${p.primary_weapons}</div>` : (p.arsenal ? `<div class="detail-label">Arsenal</div><div>${p.arsenal}</div>` : '')}
       ${p.key_identified_flaw ? `<div class="detail-label">Key flaw</div><div>${p.key_identified_flaw}</div>` : ''}
       ${p.preseason_health_flag ? `<div class="detail-label">Health / History</div><div class="health-flag"><span class="health-icon ${healthClass(p.preseason_health_flag)}">${healthIcon(p.preseason_health_flag)}</span><span>${p.preseason_health_flag}</span></div>` : ''}
-      ${sellerNote}
     </div>
   </div>`;
 }
@@ -1287,9 +1206,6 @@ function showPanel(teamCode) {
     return a.pitcher.localeCompare(b.pitcher);
   });
 
-  // Separate targets vs other
-  const targets = sorted.filter(p => isTarget(p.pitcher, p.team));
-  const others = sorted.filter(p => !isTarget(p.pitcher, p.team));
 
   const org = ORG_INFO[teamCode] || {};
   const fmt = v => v != null ? '$' + Math.round(v/1e6) + 'M' : '—';
@@ -1344,8 +1260,7 @@ function showPanel(teamCode) {
   if(targets.length) {
     html += `<div class="panel-section-divider">🎯 Acquisition targets (${targets.length})</div>`;
     targets.forEach(p => {
-      const tInfo = (TARGET_MAP[teamCode]||[]).find(t=>t.pitcher===p.pitcher);
-      html += buildPitcherCard(p, tInfo);
+      html += buildPitcherCard(p);
     });
   }
   if(others.length) {
@@ -1388,10 +1303,8 @@ panelSearch.addEventListener('input', () => {
   ).slice(0, 12);
   if(!matches.length) { searchResults.style.display='none'; return; }
   searchResults.innerHTML = matches.map(p => {
-    const tInfo = (TARGET_MAP[p.team]||[]).find(t=>t.pitcher===p.pitcher);
-    const targetBadge = tInfo ? `<span style="color:#2d7a2d;font-size:10px"> · Target</span>` : '';
     return `<div class="search-result-item" onclick="showPitcherDetail('${p.pitcher.replace(/'/g,"\'")}','${p.team}')">
-      <div class="search-result-name">${p.pitcher}${targetBadge}</div>
+      <div class="search-result-name">${p.pitcher}</div>
       <div class="search-result-meta">${p.team} ${TEAM_LEAGUE[p.team]||''} ${p.pl_rank?`· #${Math.round(p.pl_rank)} · ${p.pl_tier_label||''}`:'· Unranked'}</div>
     </div>`;
   }).join('');
@@ -1407,7 +1320,6 @@ function showPitcherDetail(name, team) {
   panelSearch.value='';
   const p = ALL_PITCHERS.find(x=>x.pitcher===name && x.team===team);
   if(!p) return;
-  const tInfo = (TARGET_MAP[team]||[]).find(t=>t.pitcher===name);
   const panelTitle = document.getElementById('panelTitle');
   const panelContent = document.getElementById('panelContent');
   const panelClose = document.getElementById('panelClose');
@@ -1428,24 +1340,19 @@ function showPitcherDetail(name, team) {
     ${org2.context_blurb ? `<div style="font-size:11px;color:#777;font-style:italic;margin-bottom:.625rem;line-height:1.4">"${org2.context_blurb}"</div>` : ''}`;
   }
 
-  panelContent.innerHTML = teamInfo + buildPitcherCard(p, tInfo) +
+  panelContent.innerHTML = teamInfo + buildPitcherCard(p) +
     `<div style="margin-top:.75rem"><button onclick="showPanel('${team}')" style="font-size:12px;padding:5px 12px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer;color:#1a2744">View all ${team} pitchers →</button></div>`;
 }
 
-// ── Targets Table ─────────────────────────────────────────────────────────────
-let sortCol='acquisition_score', sortDir=-1;
+// ── Pitchers Table ────────────────────────────────────────────────────────────
+let sortCol='pl_rank', sortDir=1;
 const leagueFilter=document.getElementById('leagueFilter');
 
 function renderTable() {
   const search=document.getElementById('tableSearch').value.toLowerCase();
-  const tier=document.getElementById('tierFilter').value;
   const league=leagueFilter.value;
-  let rows=TARGETS.filter(p=>{
-    if(search && !p.pitcher.toLowerCase().includes(search) && !p.team.toLowerCase().includes(search)) return false;
-    if(tier==='t2'&&!p.acquisition_priority.includes('Tier 2')) return false;
-    if(tier==='t3'&&!p.acquisition_priority.includes('Tier 3')) return false;
-    if(tier==='t4'&&!p.acquisition_priority.includes('Tier 4')) return false;
-    if(league!=='all'&&TEAM_LEAGUE[p.team]!==league) return false;
+  let rows=ALL_PITCHERS.filter(p=>{
+    if(search && !p.pitcher.toLowerCase().includes(search) && !p.team.toLowerCase().includes(search)) return false;    if(league!=='all'&&TEAM_LEAGUE[p.team]!==league) return false;
     return true;
   });
   rows.sort((a,b)=>{
@@ -1470,10 +1377,8 @@ function renderTable() {
   });
   const tbody=document.getElementById('tableBody');
   tbody.innerHTML=rows.map(p=>{
-    const rowClass=p.acquisition_priority.includes('Tier 2')?'row-t2':p.acquisition_priority.includes('Tier 3')?'row-t3':'';
     const hClass=healthClass(p.preseason_health_flag||'');
     const sellerClass=p.team_deadline_label==='Likely Seller'?'seller-tag':'fringe-tag-sm';
-    const priShort=(p.acquisition_priority||'').replace('Tier 2 – Monitor Closely','T2 – Monitor').replace('Tier 3 – Watchlist','T3 – Watchlist').replace('Tier 4 – Low Priority','T4 – Low');
     const lg=TEAM_LEAGUE[p.team]||'';
     // Look up projection from ALL_PITCHERS
     const rp = ALL_PITCHERS.find(x => x.pitcher===p.pitcher && x.team===p.team) || ALL_PITCHERS.find(x => x.pitcher===p.pitcher);
@@ -1488,10 +1393,9 @@ function renderTable() {
     const fipDelta = delta?.FIP ?? null;
     const fipDeltaDisp = fipDelta != null ? (fipDelta > 0 ? '+' : '') + fipDelta.toFixed(2) : '—';
     const fipDeltaStyle = fipDelta == null ? '' : fipDelta < -0.1 ? 'color:#2d7a2d;font-weight:600' : fipDelta > 0.1 ? 'color:#c0392b;font-weight:600' : 'color:#888';
-    return `<tr class="${rowClass}" style="cursor:pointer" onclick="showPitcherDetail('${p.pitcher.replace(/'/g,"\'")}','${p.team}')">
+    return `<tr class="" style="cursor:pointer" onclick="showPitcherDetail('${p.pitcher.replace(/'/g,"\'")}','${p.team}')">
       <td class="td-name">${p.pitcher}${rp?.injury ? '<span class="il-badge">IL</span>' : ''}<br><span style="font-size:10px;color:#aaa;font-weight:400">${lg}</span></td>
       <td><span class="td-team">${p.team}</span></td>
-      <td class="td-rank" style="font-weight:600;color:#1a2744">${p.acquisition_score}</td>
       <td class="td-rank">${p.pl_rank?Math.round(p.pl_rank):'—'}</td>
       <td class="td-flags">${flagHtml(p.flag_sequence)}</td>
       <td class="td-rank" style="color:#2d7a2d;font-weight:600">${p.plus_flags||0}</td>
@@ -1504,10 +1408,9 @@ function renderTable() {
       <td class="td-archetype">${p.profile_archetype||'—'}</td>
       <td class="td-health ${hClass}">${p.preseason_health_flag?p.preseason_health_flag.substring(0,80)+(p.preseason_health_flag.length>80?'…':''):'—'}</td>
       <td class="td-seller"><span class="seller-label ${sellerClass}">${p.team_deadline_label}</span></td>
-      <td><span class="pitcher-priority ${priClass(p.acquisition_priority)}">${priShort}</span></td>
     </tr>`;
   }).join('');
-  document.getElementById('tableCount').textContent=`Showing ${rows.length} of ${TARGETS.length} tracked pitchers · click any row to view full profile`;
+  document.getElementById('tableCount').textContent=`Showing ${rows.length} of ${ALL_PITCHERS.length} pitchers · click any row to view full profile`;
   document.querySelectorAll('.targets-table th').forEach(th=>{
     th.classList.remove('sorted');
     const arrow=th.querySelector('.sort-arrow');
@@ -1517,11 +1420,10 @@ function renderTable() {
 }
 document.querySelectorAll('.targets-table th[data-col]').forEach(th=>th.addEventListener('click',()=>{
   if(sortCol===th.dataset.col) sortDir*=-1;
-  else{sortCol=th.dataset.col;sortDir=th.dataset.col==='acquisition_score'?-1:1;}
+  else{sortCol=th.dataset.col;sortDir=th.dataset.col==='pl_rank'?1:-1;}
   renderTable();
 }));
 document.getElementById('tableSearch').addEventListener('input',renderTable);
-document.getElementById('tierFilter').addEventListener('change',renderTable);
 leagueFilter.addEventListener('change',e=>{
   activeLeague=e.target.value;
   document.querySelectorAll('.toggle-btn').forEach(b=>b.classList.toggle('active',b.dataset.league===activeLeague));
@@ -1675,14 +1577,13 @@ function buildTeamCard(teamObj) {
   const badgeLabel = status === 'twins' ? 'Your Team' : {seller:'Likely Seller',fringe:'Fringe',buyer:'Likely Buyer'}[status];
   const pitchers = ROSTER_MAP[code] || [];
   const isOpen = !!teamsExpanded[code];
-  const hasTargets = TARGET_TEAMS.has(code);
 
   // Compact header — always visible
   const header = `
     <div class="team-card-header" data-team="${code}">
       <div class="team-card-left">
         <span class="team-code">${code}</span>
-        ${hasTargets ? '<span style="font-size:9px;font-weight:700;color:#2d7a2d;letter-spacing:.3px">●TGT</span>' : ''}
+        ${false ? '<span style="font-size:9px;font-weight:700;color:#2d7a2d;letter-spacing:.3px">●TGT</span>' : ''}
         <span class="team-record" style="margin-left:4px">${teamObj.playoffOdds}% playoff</span>
       </div>
       <div style="display:flex;align-items:center;gap:8px">
@@ -1700,16 +1601,13 @@ function buildTeamCard(teamObj) {
 
   // Expanded: full pitcher list
   const rows = pitchers.map(p => {
-    const tgt = isTarget(p.pitcher, code);
-    const tInfo = (TARGET_MAP[code]||[]).find(t => t.pitcher === p.pitcher);
-    const score = tInfo ? `<span class="tpr-score">${tInfo.acquisition_score}</span>` : '';
     const arch = p.profile_archetype ? p.profile_archetype.substring(0, 38) + (p.profile_archetype.length > 38 ? '…' : '') : '—';
     const safeName = p.pitcher.replace(/'/g, "\\'");
-    return `<div class="team-pitcher-row${tgt?' is-target':''}" data-pitcher="${safeName}" data-team="${code}">
+    return `<div class="team-pitcher-row" data-pitcher="${safeName}" data-team="${code}">
       <span class="tpr-name">${p.pitcher}${p.injury ? '<span class="il-badge">IL</span>' : ''}</span>
       <span class="tpr-flags">${p.flag_sequence||'—'}</span>
       <span class="tpr-archetype">${arch}</span>
-      ${score}
+      
     </div>`;
   }).join('');
 
@@ -1733,14 +1631,9 @@ function openTeamsModal(name, team) {
   const p = ALL_PITCHERS.find(x => x.pitcher === name && x.team === team)
          || ALL_PITCHERS.find(x => x.pitcher === name); // fallback any team
   if (!p) return;
-
-  const tInfo = (TARGET_MAP[team]||[]).find(t => t.pitcher === name);
   const overlay = document.getElementById('teamsDetailOverlay');
   document.getElementById('tdmName').textContent = name;
   document.getElementById('tdmTeam').textContent = `${team} · ${TEAM_LEAGUE[team]||''}`;
-
-  const scoreHtml = tInfo ? `<span class="tdm-score-badge">Score ${tInfo.acquisition_score}</span>` : '';
-  const targetBanner = tInfo ? `<div class="tdm-target-banner">✅ Active acquisition target — ${tInfo.acquisition_priority||''}</div>` : '';
 
   const sections = [
     { label: 'Profile Archetype', val: p.profile_archetype },
@@ -1760,9 +1653,8 @@ function openTeamsModal(name, team) {
   }).join('');
 
   const body = `
-    ${targetBanner}
     ${buildILModal(p)}
-    <div class="tdm-flags-row">${flagChars} <span style="font-size:12px;color:#aaa;margin-left:4px">${p.plus_flags||0}+ / ${p.minus_flags||0}−</span> ${scoreHtml}</div>
+    <div class="tdm-flags-row">${flagChars} <span style="font-size:12px;color:#aaa;margin-left:4px">${p.plus_flags||0}+ / ${p.minus_flags||0}−</span></div>
     ${buildProjModal(p)}
     ${sections.filter(s => s.val).map(s => `
       <div class="tdm-section">
@@ -1812,7 +1704,7 @@ function getFipDelta(p) {
 }
 
 function renderMovers() {
-  const source = moversPool === 'targets' ? TARGETS : ALL_PITCHERS;
+  const source = ALL_PITCHERS;
 
   // Deduplicate by pitcher|team
   const seen = new Set();
@@ -1841,23 +1733,18 @@ function buildMoversList(pitchers, dir) {
     const sign = delta > 0 ? '+' : '';
     const deltaClass = dir === 'improve' ? 'improve' : 'decline';
     const rosColor = dir === 'improve' ? '#2d7a2d' : '#c0392b';
-    const isTarget = TARGET_NAMES.has(p.pitcher + '|' + p.team);
-    const pri = p.acquisition_priority || '';
-    const tierClass = pri.includes('Tier 2') ? 't2' : pri.includes('Tier 3') ? 't3' : pri.includes('Tier 4') ? 't4' : 'none';
-    const tierLabel = pri.includes('Tier 2') ? 'T2' : pri.includes('Tier 3') ? 'T3' : pri.includes('Tier 4') ? 'T4' : '';
     const preF = pre?.FIP != null ? pre.FIP.toFixed(2) : '—';
     const rosF = ros?.FIP != null ? ros.FIP.toFixed(2) : '—';
-    const targetDot = isTarget ? '<span style="color:#1a2744;font-size:10px;margin-left:3px" title="Acquisition target">🎯</span>' : '';
     return `<div class="mover-row" onclick="showPitcherDetail('${p.pitcher.replace(/'/g,"\\'")}','${p.team}')">
       <span class="mover-rank">${i + 1}</span>
-      <span class="mover-name">${p.pitcher}${targetDot}<span class="mover-team">${p.team}</span></span>
+      <span class="mover-name">${p.pitcher}<span class="mover-team">${p.team}</span></span>
       <span class="mover-fip-wrap">
         <span class="mover-fip-pre">${preF}</span>
         <span class="mover-fip-arrow">→</span>
         <span class="mover-fip-ros" style="color:${rosColor}">${rosF}</span>
       </span>
       <span class="mover-delta ${deltaClass}">${sign}${delta.toFixed(2)}</span>
-      <span class="mover-tier ${tierClass}">${tierLabel}</span>
+      
     </div>`;
   }).join('');
   return `<div class="movers-list">${rows}</div>`;
