@@ -1040,10 +1040,7 @@ function renderDumbbell() {
       const cat = classify(t);
       const tagClass = cat === 'twins' ? 'tc-twins' : `tc-${cat}`;
       const tagLabel = cat === 'twins' ? 'Your team' : CLABELS[cat];
-      let targetsHtml = '';
-      if (teamTargets.length) {
-        targetsHtml = `<div class="tt-targets"><div class="tt-targets-label">Tracked targets</div>${teamTargets.map(x=>`<div class="tt-pitcher"><span style="color:${x.plus_flags>0?'#2d7a2d':x.minus_flags>0?'#c0392b':'#aaa'}">${x.flag_sequence}</span> ${x.pitcher} <span style="color:#aaa">#${x.pl_rank||'—'}</span></div>`).join('')}<div class="tt-view" onclick="showPanel('${team}')">View all →</div></div>`;
-      }
+
       const org = ORG_INFO[team] || {};
       const cbtLabel = org.cbt_status_2026 || '';
       const cbtClass2 = cbtLabel === '3+-Time' ? 'cbt-repeat' : cbtLabel === '2nd-Time' ? 'cbt-second' : cbtLabel === '1st-Time' ? 'cbt-first' : 'cbt-none';
@@ -1277,12 +1274,8 @@ function showPanel(teamCode) {
   </div>
   <span class="panel-tag ${tagClass}">${tagLabel}</span>
   <div style="margin-top:.625rem;margin-bottom:.5rem">${orgCardHtml}</div>
-  <div style="font-size:11px;color:#aaa;margin-bottom:.5rem">${sorted.length} tracked pitchers</div>`;
-
   if(sorted.length) {
     sorted.forEach(p => { html += buildPitcherCard(p); });
-  } else {
-    html += `<div style="text-align:center;color:#aaa;font-size:13px;margin-top:2rem">No pitchers tracked for this team.</div>`;
   }
 
   panelContent.innerHTML = html;
