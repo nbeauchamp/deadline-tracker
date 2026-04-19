@@ -1279,17 +1279,9 @@ function showPanel(teamCode) {
   <div style="margin-top:.625rem;margin-bottom:.5rem">${orgCardHtml}</div>
   <div style="font-size:11px;color:#aaa;margin-bottom:.5rem">${sorted.length} tracked pitchers</div>`;
 
-  if(targets.length) {
-    html += `<div class="panel-section-divider">🎯 Acquisition targets (${targets.length})</div>`;
-    targets.forEach(p => {
-      html += buildPitcherCard(p);
-    });
-  }
-  if(others.length) {
-    html += `<div class="panel-section-divider">Other pitchers on roster (${others.length})</div>`;
-    others.forEach(p => { html += buildPitcherCard(p, null); });
-  }
-  if(!sorted.length) {
+  if(sorted.length) {
+    sorted.forEach(p => { html += buildPitcherCard(p); });
+  } else {
     html += `<div style="text-align:center;color:#aaa;font-size:13px;margin-top:2rem">No pitchers tracked for this team.</div>`;
   }
 
@@ -1307,13 +1299,16 @@ function clearPanel() {
 const panelSearch = document.getElementById('panelSearch');
 const searchResults = document.getElementById('searchResults');
 
-// Deduplicate all pitchers for search — prefer ranked version
-const searchIndex = [];
-const seen = new Set();
-[...ALL_PITCHERS].sort((a,b)=>(a.pl_rank||999)-(b.pl_rank||999)).forEach(p => {
-  const key = p.pitcher.toLowerCase() + '|' + p.team;
-  if(!seen.has(key)) { seen.add(key); searchIndex.push(p); }
-});
+// Deduplicate all pitchers for search — rebuilt after data loads in initApp
+let searchIndex = [];
+function buildSearchIndex() {
+  searchIndex = [];
+  const seen = new Set();
+  [...ALL_PITCHERS].sort((a,b)=>(a.pl_rank||999)-(b.pl_rank||999)).forEach(p => {
+    const key = p.pitcher.toLowerCase() + '|' + p.team;
+    if(!seen.has(key)) { seen.add(key); searchIndex.push(p); }
+  });
+}
 
 panelSearch.addEventListener('input', () => {
   const q = panelSearch.value.trim().toLowerCase();
@@ -1536,6 +1531,8 @@ async function initApp() {
   }
   renderDumbbell();
   buildPlayerMaps(); // rebuild after WIN_TOTALS populated so team labels are correct
+  buildSearchIndex(); // build search index after ALL_PITCHERS is populated
+  renderTable();     // render players table after data loaded
   renderMovers();    // prime movers panel now that all data is ready
   window.addEventListener('resize', () => renderDumbbell());
 }
@@ -1827,7 +1824,6 @@ function buildMoversList(pitchers, dir) {
 }
 
 initApp();
-renderTable();
 </script>
 </body>
 </html>

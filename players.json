@@ -610,7 +610,7 @@
   {
     "mlbamid": 657277,
     "pitcher": "Logan Webb",
-    "team": "SFG",
+    "team": "SF",
     "pl_rank": 12.0,
     "pl_tier_label": "Tier 3 \u2013 AGA 2",
     "profile_archetype": "SWATCH / Durability workhorse",
@@ -825,7 +825,7 @@
   {
     "mlbamid": 666142,
     "pitcher": "Cole Ragans",
-    "team": "KCR",
+    "team": "KC",
     "pl_rank": 16.0,
     "pl_tier_label": "Tier 4 \u2013 AGA Injury Risk",
     "profile_archetype": "SWATCH with elite fastball",
@@ -1152,7 +1152,7 @@
   {
     "mlbamid": 601713,
     "pitcher": "Nick Pivetta",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": 22.0,
     "pl_tier_label": "Tier 5 \u2013 AGA Holly",
     "profile_archetype": "Discount Joe Ryan / Low-walk arm",
@@ -1210,7 +1210,7 @@
   {
     "mlbamid": 686752,
     "pitcher": "Ryan Pepiot",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": 23.0,
     "pl_tier_label": "Tier 5 \u2013 AGA Holly",
     "profile_archetype": "Park-upgrade workhorse",
@@ -1270,7 +1270,7 @@
   {
     "mlbamid": 656876,
     "pitcher": "Drew Rasmussen",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": 24.0,
     "pl_tier_label": "Tier 5 \u2013 AGA Holly",
     "profile_archetype": "Safe ratio arm / Low-K ceiling",
@@ -1488,7 +1488,7 @@
   {
     "mlbamid": 650633,
     "pitcher": "Michael King",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": 28.0,
     "pl_tier_label": "Tier 6 \u2013 Cherry Bomb",
     "profile_archetype": "Command-ceiling arm / Health question",
@@ -2030,7 +2030,7 @@
   {
     "mlbamid": 592662,
     "pitcher": "Robbie Ray",
-    "team": "SFG",
+    "team": "SF",
     "pl_rank": 38.0,
     "pl_tier_label": "Tier 8 \u2013 Cherry Bomb But Moreso",
     "profile_archetype": "High-velo LHP / Inconsistent secondary",
@@ -2250,7 +2250,7 @@
   {
     "mlbamid": 663556,
     "pitcher": "Shane McClanahan",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": 42.0,
     "pl_tier_label": "Tier 9 \u2013 Cherry Bomb But Moreso Moreso",
     "profile_archetype": "Health-dependent SWATCH",
@@ -2306,7 +2306,7 @@
   {
     "mlbamid": 663460,
     "pitcher": "Kris Bubic",
-    "team": "KCR",
+    "team": "KC",
     "pl_rank": 43.0,
     "pl_tier_label": "Tier 9 \u2013 Cherry Bomb But Moreso Moreso",
     "profile_archetype": "SWATCH / Health question",
@@ -3045,7 +3045,7 @@
   {
     "mlbamid": 702070,
     "pitcher": "Noah Cameron",
-    "team": "KCR",
+    "team": "KC",
     "pl_rank": 56.0,
     "pl_tier_label": "Tier 12 \u2013 Toby Upside 1",
     "profile_archetype": "Command pitcher / HOTEL 2025",
@@ -3210,7 +3210,7 @@
   {
     "mlbamid": 669194,
     "pitcher": "Ryne Nelson",
-    "team": "ARI",
+    "team": "AZ",
     "pl_rank": 59.0,
     "pl_tier_label": "Tier 12 \u2013 Toby Upside 1",
     "profile_archetype": "Elite 4-seam / No secondary",
@@ -3264,7 +3264,7 @@
   {
     "mlbamid": 605397,
     "pitcher": "Joe Musgrove",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": 60.0,
     "pl_tier_label": "Tier 12 \u2013 Toby Upside 1",
     "profile_archetype": "Return from injury / Command-dependent",
@@ -3324,7 +3324,7 @@
   {
     "mlbamid": 668678,
     "pitcher": "Zac Gallen",
-    "team": "ARI",
+    "team": "AZ",
     "pl_rank": 61.0,
     "pl_tier_label": "Tier 12 \u2013 Toby Upside 1",
     "profile_archetype": "Deathball / Command-dependent",
@@ -3843,7 +3843,7 @@
   {
     "mlbamid": 518876,
     "pitcher": "Merrill Kelly",
-    "team": "ARI",
+    "team": "AZ",
     "pl_rank": 71.0,
     "pl_tier_label": "Tier 14 \u2013 Toby Upside 2",
     "profile_archetype": "Reliable Holly / Dad pick that works",
@@ -4502,7 +4502,7 @@
   {
     "mlbamid": 607625,
     "pitcher": "Seth Lugo",
-    "team": "KCR",
+    "team": "KC",
     "pl_rank": 85.0,
     "pl_tier_label": "Tier 16 \u2013 Toby Upside 3",
     "profile_archetype": "Curveball-dependent / Back injury",
@@ -4549,7 +4549,7 @@
   {
     "mlbamid": 694738,
     "pitcher": "Landen Roupp",
-    "team": "SFG",
+    "team": "SF",
     "pl_rank": 86.0,
     "pl_tier_label": "Tier 16 \u2013 Toby Upside 3",
     "profile_archetype": "Elite curveball / Sinker location gap",
@@ -4596,7 +4596,7 @@
   {
     "mlbamid": 641816,
     "pitcher": "Tyler Mahle",
-    "team": "SFG",
+    "team": "SF",
     "pl_rank": 87.0,
     "pl_tier_label": "Tier 16 \u2013 Toby Upside 3",
     "profile_archetype": "HOTEL 2025 / Velocity watch",
@@ -4791,7 +4791,7 @@
   {
     "mlbamid": 681343,
     "pitcher": "Shane Smith",
-    "team": "CHW",
+    "team": "CWS",
     "pl_rank": 91.0,
     "pl_tier_label": "Tier 17 \u2013 Late Upside",
     "profile_archetype": "Velocity surprise / Team context problem",
@@ -5888,7 +5888,7 @@
   {
     "mlbamid": 687931,
     "pitcher": "Carson Whisenhunt",
-    "team": "SFG",
+    "team": "SF",
     "pl_rank": 114.0,
     "pl_tier_label": "Tier 19 \u2013 Dope But No Job",
     "profile_archetype": "Velocity jump / Watch in spring",
@@ -6123,7 +6123,7 @@
   {
     "mlbamid": 676917,
     "pitcher": "Cade Cavalli",
-    "team": "WSN",
+    "team": "WSH",
     "pl_rank": 119.0,
     "pl_tier_label": "Tier 20 \u2013 Late Upside 2",
     "profile_archetype": "Empty velocity / HIPSTER",
@@ -6496,7 +6496,7 @@
   {
     "mlbamid": 605288,
     "pitcher": "Adrian Houser",
-    "team": "SFG",
+    "team": "SF",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -6637,7 +6637,7 @@
   {
     "mlbamid": 641743,
     "pitcher": "Anthony Kay",
-    "team": "CHW",
+    "team": "CWS",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -6731,7 +6731,7 @@
   {
     "mlbamid": 694297,
     "pitcher": "Brandon Pfaadt",
-    "team": "ARI",
+    "team": "AZ",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -7478,7 +7478,7 @@
   {
     "mlbamid": 663436,
     "pitcher": "Davis Martin",
-    "team": "CHW",
+    "team": "CWS",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -7619,7 +7619,7 @@
   {
     "mlbamid": 593958,
     "pitcher": "Eduardo Rodriguez",
-    "team": "ARI",
+    "team": "AZ",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -7760,7 +7760,7 @@
   {
     "mlbamid": 607200,
     "pitcher": "Erick Fedde",
-    "team": "CHW",
+    "team": "CWS",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -7854,7 +7854,7 @@
   {
     "mlbamid": 656492,
     "pitcher": "Foster Griffin",
-    "team": "WSN",
+    "team": "WSH",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -7948,7 +7948,7 @@
   {
     "mlbamid": 608566,
     "pitcher": "German Marquez",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -7995,7 +7995,7 @@
   {
     "mlbamid": 608566,
     "pitcher": "Germ\u00e1n M\u00e1rquez",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -8136,7 +8136,7 @@
   {
     "mlbamid": 663623,
     "pitcher": "Jake Irvin",
-    "team": "WSN",
+    "team": "WSH",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -8418,7 +8418,7 @@
   {
     "mlbamid": 671212,
     "pitcher": "Joe Boyle",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -8991,7 +8991,7 @@
   {
     "mlbamid": 679883,
     "pitcher": "Luinder Avila",
-    "team": "KCR",
+    "team": "KC",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9167,7 +9167,7 @@
   {
     "mlbamid": 669438,
     "pitcher": "Mason Englert",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9390,7 +9390,7 @@
   {
     "mlbamid": 647336,
     "pitcher": "Michael Soroka",
-    "team": "ARI",
+    "team": "AZ",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9437,7 +9437,7 @@
   {
     "mlbamid": 608379,
     "pitcher": "Michael Wacha",
-    "team": "KCR",
+    "team": "KC",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9514,7 +9514,7 @@
   {
     "mlbamid": 571945,
     "pitcher": "Miles Mikolas",
-    "team": "WSN",
+    "team": "WSH",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9608,7 +9608,7 @@
   {
     "mlbamid": 607259,
     "pitcher": "Nick Martinez",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9702,7 +9702,7 @@
   {
     "mlbamid": 681190,
     "pitcher": "Randy Vasquez",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9749,7 +9749,7 @@
   {
     "mlbamid": 681190,
     "pitcher": "Randy V\u00e1squez",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -9937,7 +9937,7 @@
   {
     "mlbamid": 680732,
     "pitcher": "Sean Burke",
-    "team": "CHW",
+    "team": "CWS",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -10031,7 +10031,7 @@
   {
     "mlbamid": 571927,
     "pitcher": "Steven Matz",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -10219,7 +10219,7 @@
   {
     "mlbamid": 621111,
     "pitcher": "Walker Buehler",
-    "team": "SDP",
+    "team": "SD",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -10266,7 +10266,7 @@
   {
     "mlbamid": 672782,
     "pitcher": "Yoendrys Gomez",
-    "team": "TBR",
+    "team": "TB",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
@@ -10360,7 +10360,7 @@
   {
     "mlbamid": 641793,
     "pitcher": "Zack Littell",
-    "team": "WSN",
+    "team": "WSH",
     "pl_rank": null,
     "pl_tier_label": null,
     "profile_archetype": null,
