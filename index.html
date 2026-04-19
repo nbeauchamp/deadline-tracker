@@ -1273,10 +1273,9 @@ function showPanel(teamCode) {
     ${teamCode} &nbsp;·&nbsp; ${teamData.playoffOdds}% playoff odds &nbsp;·&nbsp; ${teamData.oddsDiff>0?'+':''}${teamData.oddsDiff}% vs preseason
   </div>
   <span class="panel-tag ${tagClass}">${tagLabel}</span>
-  <div style="margin-top:.625rem;margin-bottom:.5rem">${orgCardHtml}</div>
-  if(sorted.length) {
-    sorted.forEach(p => { html += buildPitcherCard(p); });
-  }
+  <div style="margin-top:.625rem;margin-bottom:.5rem">${orgCardHtml}</div>`;
+
+  sorted.forEach(p => { html += buildPitcherCard(p); });
 
   panelContent.innerHTML = html;
 }
