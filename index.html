@@ -51,15 +51,6 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 /* Panel */
 .panel-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:.75rem;padding-bottom:.75rem;border-bottom:1px solid #eee}
 .panel-title{font-size:14px;font-weight:600;color:#1a1a18}
-.panel-search-wrap{margin-bottom:.875rem}
-.panel-search{width:100%;font-size:12px;padding:7px 10px;border:1px solid #ddd;border-radius:8px;outline:none}
-.panel-search:focus{border-color:#1a2744}
-.search-results{background:#fff;border:1px solid #ddd;border-radius:8px;margin-top:4px;max-height:260px;overflow-y:auto;display:none}
-.search-result-item{padding:8px 12px;cursor:pointer;border-bottom:1px solid #f0ede8;font-size:12px}
-.search-result-item:last-child{border-bottom:none}
-.search-result-item:hover{background:#f8fafd}
-.search-result-name{font-weight:600;color:#1a1a18}
-.search-result-meta{font-size:11px;color:#aaa;margin-top:1px}
 .panel-empty{text-align:center;padding:3rem 1rem;color:#aaa;font-size:13px}
 .panel-empty-icon{font-size:32px;margin-bottom:.75rem}
 .panel-team-meta{font-size:12px;color:#888;margin-top:2px}
@@ -337,16 +328,10 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
       <div class="panel-title" id="panelTitle">SP Lookup</div>
       <div id="panelClose" style="display:none;cursor:pointer;color:#aaa;font-size:18px" onclick="clearPanel()">×</div>
     </div>
-
-    <div class="panel-search-wrap">
-      <input class="panel-search" id="panelSearch" type="text" placeholder="Search any starter in the league…" autocomplete="off">
-      <div class="search-results" id="searchResults"></div>
-    </div>
-
     <div id="panelContent">
       <div class="panel-empty">
         <div class="panel-empty-icon">⚾</div>
-        <div>Click any team bubble to see their pitchers, or search above for any starter in the league.</div>
+        <div>Click any team row to see their pitchers and org intel.</div>
       </div>
     </div>
   </div>
@@ -1286,72 +1271,108 @@ function clearPanel() {
   document.getElementById('panelContent').innerHTML=`<div class="panel-empty"><div class="panel-empty-icon">⚾</div><div>Click any team bubble to see their pitchers, or search above for any starter in the league.</div></div>`;
 }
 
-// ── Global pitcher search ─────────────────────────────────────────────────────
-const panelSearch = document.getElementById('panelSearch');
-const searchResults = document.getElementById('searchResults');
+// ── Scout panel ───────────────────────────────────────────────────────────────
+function showPanel(teamCode) {
+  activeTeam = teamCode;
+  renderDumbbell();
 
-// Deduplicate all pitchers for search — rebuilt after data loads in initApp
-let searchIndex = [];
-function buildSearchIndex() {
-  searchIndex = [];
-  const seen = new Set();
-  [...ALL_PITCHERS].sort((a,b)=>(a.pl_rank||999)-(b.pl_rank||999)).forEach(p => {
-    const key = p.pitcher.toLowerCase() + '|' + p.team;
-    if(!seen.has(key)) { seen.add(key); searchIndex.push(p); }
-  });
-}
-
-panelSearch.addEventListener('input', () => {
-  const q = panelSearch.value.trim().toLowerCase();
-  if(q.length < 2) { searchResults.style.display='none'; return; }
-  const matches = searchIndex.filter(p =>
-    p.pitcher.toLowerCase().includes(q) ||
-    p.team.toLowerCase().includes(q) ||
-    (p.profile_archetype||'').toLowerCase().includes(q)
-  ).slice(0, 12);
-  if(!matches.length) { searchResults.style.display='none'; return; }
-  searchResults.innerHTML = matches.map(p => {
-    return `<div class="search-result-item" onclick="showPitcherDetail('${p.pitcher.replace(/'/g,"\'")}','${p.team}')">
-      <div class="search-result-name">${p.pitcher}</div>
-      <div class="search-result-meta">${p.team} ${TEAM_LEAGUE[p.team]||''} ${p.pl_rank?`· #${Math.round(p.pl_rank)} · ${p.pl_tier_label||''}`:'· Unranked'}</div>
-    </div>`;
-  }).join('');
-  searchResults.style.display='block';
-});
-
-document.addEventListener('click', e => {
-  if(!searchResults.contains(e.target) && e.target!==panelSearch) searchResults.style.display='none';
-});
-
-function showPitcherDetail(name, team) {
-  searchResults.style.display='none';
-  panelSearch.value='';
-  const p = ALL_PITCHERS.find(x=>x.pitcher===name && x.team===team);
-  if(!p) return;
+  const teamData = WIN_TOTALS.find(t => t.team === teamCode);
   const panelTitle = document.getElementById('panelTitle');
   const panelContent = document.getElementById('panelContent');
   const panelClose = document.getElementById('panelClose');
-  const teamData = WIN_TOTALS.find(t=>t.team===team);
-  panelTitle.textContent = name;
-  panelClose.style.display='block';
-  activeTeam=null; renderDumbbell();
 
-  let teamInfo='';
-  if(teamData) {
-    const cat=classify(teamData);
-    const tagClass=cat==='twins'?'panel-twins-tag':`panel-${cat}-tag`;
-    const tagLabel=cat==='twins'?'Your team':CLABELS[cat];
-    const org2 = ORG_INFO[team] || {};
-    const leaderLine = org2.manager ? `<span style="color:#999"> · ${org2.baseball_head||''} / ${org2.manager}</span>` : '';
-    teamInfo=`<div style="font-size:12px;color:#888;margin-bottom:.375rem">${team} ${TEAM_LEAGUE[team]||''} &nbsp;·&nbsp; ${teamData.playoffOdds}% playoff odds &nbsp;·&nbsp; ${teamData.oddsDiff>0?'+':''}${teamData.oddsDiff}% vs preseason${leaderLine}</div>
-    <span class="panel-tag ${tagClass}" style="margin-bottom:.5rem;display:inline-block">${tagLabel}</span>
-    ${org2.context_blurb ? `<div style="font-size:11px;color:#777;font-style:italic;margin-bottom:.625rem;line-height:1.4">"${org2.context_blurb}"</div>` : ''}`;
-  }
+  if (!teamData) return;
 
-  panelContent.innerHTML = teamInfo + buildPitcherCard(p) +
-    `<div style="margin-top:.75rem"><button onclick="showPanel('${team}')" style="font-size:12px;padding:5px 12px;border:1px solid #ccc;border-radius:6px;background:#fff;cursor:pointer;color:#1a2744">View all ${team} pitchers →</button></div>`;
+  panelTitle.textContent = teamData.name;
+  panelClose.style.display = 'block';
+
+  const cat = classify(teamData);
+  const catColors = { seller: '#d85a30', fringe: '#ba7517', buyer: '#639922', twins: '#378add' };
+  const catLabels = { seller: 'Likely Seller', fringe: 'Fringe', buyer: 'Likely Buyer', twins: 'Your Team' };
+  const catColor = catColors[cat] || '#888';
+  const catLabel = catLabels[cat] || '';
+
+  const org = ORG_INFO[teamCode] || {};
+  const fmt = v => v != null ? '$' + Math.round(v / 1e6) + 'M' : '—';
+  const overThreshold = org.space != null && org.space < 0;
+  const taxPct = org.tax_payroll && org.cbt_threshold
+    ? Math.min(100, Math.round(org.tax_payroll / org.cbt_threshold * 100)) : 0;
+  const cbtLabel = org.cbt_status_2026 || 'Non-Tax';
+  const cbtClass = cbtLabel === '3+-Time' ? 'cbt-repeat'
+    : cbtLabel === '2nd-Time' ? 'cbt-second'
+    : cbtLabel === '1st-Time' ? 'cbt-first' : 'cbt-none';
+
+  const payrollHtml = org.tax_payroll ? `
+    <div class="payroll-bar-wrap">
+      <div class="payroll-bar-label">
+        <span>Tax payroll ${fmt(org.tax_payroll)}</span>
+        <span style="color:#c0392b;opacity:.7">CBT ${fmt(org.cbt_threshold)}</span>
+      </div>
+      <div class="payroll-bar-track">
+        <div class="payroll-bar-fill" style="width:${taxPct}%;background:${overThreshold ? '#c0392b' : '#1a2744'}"></div>
+        <div class="payroll-bar-cbt" style="left:100%"></div>
+      </div>
+      <div class="payroll-meta">
+        <span>${overThreshold ? '⚠ ' + fmt(Math.abs(org.space)) + ' over CBT' : fmt(org.space) + ' CBT space'}</span>
+        <span>CBT: <span class="cbt-tag ${cbtClass}">${cbtLabel}</span>${org.tax_bill_est ? ' + ' + fmt(org.tax_bill_est) + ' est. tax' : ''}</span>
+      </div>
+    </div>` : '';
+
+  const orgCardHtml = (org.baseball_head || org.manager) ? `
+    <div class="org-card">
+      <div class="org-card-row">
+        <div class="org-person">
+          <div class="org-person-label">Baseball Head</div>
+          <div class="org-person-name">${org.baseball_head || '—'}</div>
+          <div class="org-person-tenure">${org.bh_tenure ? org.bh_tenure + ' yr' + (org.bh_tenure !== 1 ? 's' : '') : ''}</div>
+        </div>
+        <div class="org-person">
+          <div class="org-person-label">Manager</div>
+          <div class="org-person-name">${org.manager || '—'}</div>
+          <div class="org-person-tenure">${org.mgr_tenure ? org.mgr_tenure + ' yr' + (org.mgr_tenure !== 1 ? 's' : '') : ''}</div>
+        </div>
+      </div>
+      ${org.context_blurb ? '<div class="org-blurb">"' + org.context_blurb + '"</div>' : ''}
+      ${payrollHtml}
+    </div>` : '';
+
+  const preOdds = teamData.playoffOdds - teamData.oddsDiff;
+  const diffStr = (teamData.oddsDiff > 0 ? '+' : '') + teamData.oddsDiff + '%';
+  const diffColor = teamData.oddsDiff >= 0 ? '#3B6D11' : '#993C1D';
+
+  let html = `
+    <div style="font-size:12px;color:#888;margin-bottom:.5rem">
+      ${teamCode} &nbsp;·&nbsp; ${teamData.playoffOdds}% playoff odds
+      &nbsp;·&nbsp; <span style="color:${diffColor};font-weight:600">${diffStr} vs preseason</span>
+    </div>
+    <div style="display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:4px;background:${catColor}22;color:${catColor};border:1px solid ${catColor}55;margin-bottom:.625rem">${catLabel}</div>
+    ${orgCardHtml}`;
+
+  const pitchers = (ROSTER_MAP[teamCode] || []).slice().sort((a, b) => {
+    if (a.pl_rank && b.pl_rank) return a.pl_rank - b.pl_rank;
+    if (a.pl_rank) return -1;
+    if (b.pl_rank) return 1;
+    return a.pitcher.localeCompare(b.pitcher);
+  });
+
+  pitchers.forEach(p => { html += buildPitcherCard(p); });
+
+  panelContent.innerHTML = html;
 }
 
+function clearPanel() {
+  activeTeam = null;
+  renderDumbbell();
+  document.getElementById('panelTitle').textContent = 'SP Lookup';
+  document.getElementById('panelClose').style.display = 'none';
+  document.getElementById('panelContent').innerHTML = `
+    <div class="panel-empty">
+      <div class="panel-empty-icon">⚾</div>
+      <div>Click any team row to see their pitchers and org intel.</div>
+    </div>`;
+}
+
+// ── Pitchers Table ────────────────────────────────────────────────────────────
 // ── Pitchers Table ────────────────────────────────────────────────────────────
 let sortCol='pl_rank', sortDir=1;
 function renderTable() {
@@ -1522,7 +1543,6 @@ async function initApp() {
   }
   renderDumbbell();
   buildPlayerMaps(); // rebuild after WIN_TOTALS populated so team labels are correct
-  buildSearchIndex(); // build search index after ALL_PITCHERS is populated
   renderTable();     // render players table after data loaded
   renderMovers();    // prime movers panel now that all data is ready
   window.addEventListener('resize', () => renderDumbbell());
