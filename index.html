@@ -884,33 +884,7 @@ let WIN_TOTALS = [];
 // ── Player data — loaded from players.json ────────────────────────────────────
 let ALL_PITCHERS = [];
 
-function buildContractHtml(name, style='modal') {
-  const c = getContract(name);
-  if (!c) return '';
-  const yr2026 = 2026;
-  const yrsRemaining = c.end - yr2026 + 1;
-  const yrsLabel = yrsRemaining <= 0 ? 'Expiring' : yrsRemaining === 1 ? '1 yr left' : yrsRemaining + ' yrs left';
-  const expColor = yrsRemaining <= 1 ? '#c0392b' : yrsRemaining <= 2 ? '#b8820a' : '#2d7a2d';
-  // Clean AAV to readable
-  const aavNum = parseFloat(c.aav.replace(/[$,]/g,''));
-  const aavDisp = aavNum >= 1e6 ? '$' + (aavNum/1e6).toFixed(1) + 'M' : '$' + Math.round(aavNum/1e3) + 'K';
-  const endYear = c.end;
-  
-  if (style === 'modal') {
-    return `<div class="tdm-section contract-section">
-      <div class="tdm-label">Contract</div>
-      <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:2px">
-        <span class="contract-aav">${aavDisp}<span class="contract-aav-label">/yr</span></span>
-        <span class="contract-thru">thru ${endYear}</span>
-        <span class="contract-yrs" style="color:${expColor}">${yrsLabel}</span>
-      </div>
-      ${c.team_signed !== c.currently_with ? `<div style="font-size:10px;color:#aaa;margin-top:3px">Signed with ${c.team_signed} · ${c.years}-yr ${c.value}</div>` : `<div style="font-size:10px;color:#aaa;margin-top:3px">${c.years}-yr deal · ${c.value}</div>`}
-    </div>`;
-  } else {
-    // table cell style
-    return `<div class="contract-cell"><span class="contract-aav-sm">${aavDisp}</span><span class="contract-yr-sm" style="color:${expColor}">'${String(endYear).slice(2)}</span></div>`;
-  }
-}
+
 
 
 async function loadPlayers() {
